@@ -181,29 +181,25 @@ html {
   background-color: #6C5C3E;
 }
 
-/* Mobile Menu Drawer Kinetic Expansion */
-#mobile-menu {
-  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.35s ease,
-              border-color 0.35s ease;
-  overflow: hidden !important;
-  will-change: max-height, opacity;
+/* Mobile Menu Drawer Kinetic Expansion with Bulletproof Fallback */
+@keyframes mobileMenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#mobile-menu.menu-collapsed {
-  max-height: 0 !important;
-  opacity: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  pointer-events: none !important;
-  border-top-color: transparent !important;
+#mobile-menu.hidden {
+  display: none !important;
 }
 
-#mobile-menu.menu-expanded {
-  max-height: 720px !important;
-  opacity: 1 !important;
-  pointer-events: auto !important;
+#mobile-menu:not(.hidden) {
+  display: flex !important;
+  animation: mobileMenuSlideDown 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* 4. "What We Do" Editorial Rows Seamless Reveal & Hover */
@@ -350,12 +346,12 @@ html {
 
 /* 7. Back-to-Top Floating Navigation Action */
 #back-to-top-btn {
-  overflow: hidden;
   position: fixed;
   bottom: 1.75rem;
   right: 1.75rem;
   width: 2.75rem;
   height: 2.75rem;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
