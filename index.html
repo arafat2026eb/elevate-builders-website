@@ -146,16 +146,45 @@
         opacity: 0.85;
       }
 
-      /* Hero Mobile Layout */
+      /* Hero Mobile Layout - Full Bleed 100% Seamless Mobile Viewport */
+      main {
+        padding-top: 0 !important;
+      }
+
+      #hero-section {
+        position: relative !important;
+        margin-top: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        height: 100svh !important;
+        height: 100dvh !important;
+        min-height: 100vh !important;
+        min-height: 100svh !important;
+        min-height: 100dvh !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        overflow: hidden !important;
+      }
+
       .hero-mobile-container {
-        height: 100svh;
-        min-height: 600px;
-        padding-left: 24px;
-        padding-right: 24px;
-        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        padding-top: calc(80px + env(safe-area-inset-top, 0px)) !important;
+        padding-bottom: calc(36px + env(safe-area-inset-bottom, 0px)) !important;
+        box-sizing: border-box !important;
       }
 
       .hero-mobile-content {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
         animation: heroFadeUp 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
 
@@ -449,11 +478,11 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="w-full pt-20 bg-surface flex-1">
+  <main class="w-full pt-0 lg:pt-20 bg-surface flex-1">
     <div class="flex flex-col w-full">
 
       <!-- SECTION 1: HERO VIEWPORT (Image-First Full-Bleed on Mobile / Editorial 2-Col on Desktop) -->
-      <section class="relative w-full overflow-hidden border-b border-tertiary-fixed -mt-16 lg:mt-0 lg:pt-12 min-h-[100svh] min-h-[600px] lg:min-h-0 lg:h-auto flex flex-col justify-between bg-[#080237] lg:bg-surface">
+      <section id="hero-section" class="relative w-full overflow-hidden border-b border-tertiary-fixed h-[100dvh] min-h-[100dvh] lg:h-auto lg:min-h-0 lg:pt-12 flex flex-col justify-between bg-[#080237] lg:bg-surface">
 
         <!-- MOBILE FULL-BLEED BACKGROUND & OVERLAY TINT (Keep exact same image, crop, position & tint) -->
         <div class="lg:hidden absolute inset-0 w-full h-full pointer-events-none select-none z-0">
