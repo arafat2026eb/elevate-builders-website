@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Contact — Elevate Builders | Direct Inquiries, Tender &amp; Estimation Desk</title>
+  <meta name="description" content="Contact Elevate Builders' tender &amp; estimation desk in Riyadh. Submit bills of quantities, project inquiries, and RFQs for civil engineering, infrastructure, and finishing works across Saudi Arabia."/>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8783bc",
+            "primary-fixed": "#e3dfff",
+            "primary-fixed-dim": "#c5c0fd",
+            "on-primary-fixed": "#181446",
+            "on-primary-fixed-variant": "#444174",
+            "inverse-primary": "#c5c0fd",
+
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#706142",
+            "secondary-fixed": "#f5e0ba",
+            "secondary-fixed-dim": "#d8c49f",
+            "on-secondary-fixed": "#241a03",
+            "on-secondary-fixed-variant": "#534529",
+
+            "tertiary": "#0b0c09",
+            "tertiary-container": "#22221f",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#8a8984",
+            "tertiary-fixed": "#e4e2dc",
+            "tertiary-fixed-dim": "#c8c6c1",
+            "on-tertiary-fixed": "#1b1c18",
+            "on-tertiary-fixed-variant": "#474743",
+
+            "surface": "#faf9f5",
+            "surface-dim": "#dbdad6",
+            "surface-bright": "#faf9f5",
+            "surface-variant": "#e3e2df",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "surface-container-high": "#e9e8e4",
+            "surface-container-highest": "#e3e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "inverse-surface": "#30312e",
+            "inverse-on-surface": "#f2f1ed",
+            "surface-tint": "#5c588e",
+
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a",
+
+            "outline": "#787680",
+            "outline-variant": "#c8c5d0",
+
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.5rem",
+            "margin": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "display-mobile": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-eyebrow": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-eyebrow": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png"/>
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering"/>
+  <meta property="og:description" content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909."/>
+  <meta property="og:image" content="/assets/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering"/>
+  <meta name="twitter:description" content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909."/>
+  <meta name="twitter:image" content="/assets/og-image.png"/>
+  <link rel="stylesheet" href="/assets/motion.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+    <div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="/assets/logo.png"/>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation with Animated Sliding Hairlines -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="nav-link active-link text-primary-container font-semibold" href="/contact">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA with Shimmer & Mobile Toggle -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200" href="/contact">
+          Request a quote
+        </a>
+        
+        <!-- Mobile Menu Button - Strictly hidden on md and up -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 flex items-center justify-center border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
+        <div class="pb-2 border-b border-tertiary-fixed mb-1">
+          <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png"/>
+        </div>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="py-2 border-b border-tertiary-fixed text-primary-container font-semibold" href="/contact">Contact</a>
+      </nav>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase py-3.5 border border-primary-container hover:bg-secondary transition-colors" href="/contact">
+          Request a quote
+        </a>
+      </div>
+      <div class="pt-2 flex flex-col text-on-surface-variant font-label-sm text-label-sm gap-1">
+        <span>Riyadh Desk: <a href="tel:+966558943663" class="text-primary-container underline">+966 558943663</a></span>
+        <span>Commercial Registration: 7049953909</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full">
+
+      <!-- Subtle Architectural Datum Header Band -->
+      <section class="w-full border-b border-tertiary-fixed bg-surface">
+        <div class="w-full px-margin-mobile lg:px-margin py-space-xl lg:py-16">
+          <div class="max-w-7xl mx-auto">
+            <!-- Technical Spec Eyebrow with Monospaced Blueprint Cadence -->
+            <div class="flex items-center gap-space-sm mb-space-md">
+              <span class="inline-block w-2 h-2 bg-secondary"></span>
+              <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em]">
+                CONTACT // DIRECT INQUIRIES // TENDER &amp; ESTIMATION DESK
+              </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+              <div class="lg:col-span-8">
+                <h1 class="font-headline-lg lg:font-display text-headline-lg lg:text-display text-primary-container font-serif tracking-tight">
+                  Tell us about your project.
+                </h1>
+              </div>
+              <div class="lg:col-span-4 pb-1 mt-4 lg:mt-0">
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Direct engagement for general contracting, civil infrastructure, structural engineering, and specialized subcontracts across Riyadh and the Kingdom.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Engagement Grid -->
+      <section class="w-full bg-surface">
+        <div class="w-full px-margin-mobile lg:px-margin py-space-xl lg:py-20">
+          <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16">
+            
+            <!-- Left Column: Architectural Minimal Quotation Ledger -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between border-b border-tertiary-fixed pb-space-sm mb-space-xl">
+                  <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">
+                    Project Specification Docket // Ref. 2026-EB
+                  </span>
+                  <span class="font-label-sm text-label-sm uppercase text-secondary">
+                    Transmission Form
+                  </span>
+                </div>
+
+                <form class="space-y-space-xl" id="contact-inquiry-form">
+                  <!-- Name & Company (Two Columns) -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="full-name">
+                        01. Full Name *
+                      </label>
+                      <input class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150" id="full-name" name="full_name" placeholder="Eng. Abdullah Al-Mansoor" required type="text"/>
+                    </div>
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="company">
+                        02. Enterprise / Client Entity
+                      </label>
+                      <input class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150" id="company" name="company" placeholder="Diriyah Developments Co." type="text"/>
+                    </div>
+                  </div>
+
+                  <!-- Phone & Email (Two Columns) -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="phone">
+                        03. Telephone Direct *
+                      </label>
+                      <input class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150" id="phone" name="phone" placeholder="+966 5X XXX XXXX" required type="tel"/>
+                    </div>
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="email">
+                        04. Official Email *
+                      </label>
+                      <input class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150" id="email" name="email" placeholder="tenders@enterprise.com.sa" required type="email"/>
+                    </div>
+                  </div>
+
+                  <!-- Service of Interest & Project Location -->
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl">
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="service-scope">
+                        05. Service Scope *
+                      </label>
+                      <div class="relative">
+                        <select class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md focus:outline-none focus:border-primary-container transition-colors duration-150 appearance-none pr-6 cursor-pointer" id="service-scope" name="service_scope" required>
+                          <option class="bg-surface text-outline-variant" disabled selected value="">Select Primary Discipline</option>
+                          <option class="bg-surface text-primary-container" value="civil-structural">Civil &amp; Structural Works</option>
+                          <option class="bg-surface text-primary-container" value="infrastructure">Major Infrastructure</option>
+                          <option class="bg-surface text-primary-container" value="fitout-finishing">High-End Fit-out &amp; Finishing</option>
+                          <option class="bg-surface text-primary-container" value="manpower-supply">Specialized Engineering Manpower Supply</option>
+                          <option class="bg-surface text-primary-container" value="other">Integrated Turnkey / Other</option>
+                        </select>
+                        <span class="material-symbols-outlined pointer-events-none absolute right-0 top-3 text-secondary text-sm">
+                          expand_more
+                        </span>
+                      </div>
+                    </div>
+                    <div class="group relative">
+                      <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="project-location">
+                        06. Project Location *
+                      </label>
+                      <input class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150" id="project-location" name="project_location" placeholder="e.g. Riyadh, Diriyah, Eastern Province" required type="text"/>
+                    </div>
+                  </div>
+
+                  <!-- Message -->
+                  <div class="group relative">
+                    <label class="block font-label-eyebrow text-label-eyebrow uppercase text-primary-container mb-space-xs" for="project-message">
+                      07. Scope Brief &amp; Tender Parameters *
+                    </label>
+                    <textarea class="w-full bg-transparent border-0 border-b border-tertiary-fixed rounded-none py-2.5 px-0 text-primary-container font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:border-primary-container transition-colors duration-150 resize-y" id="project-message" name="message" placeholder="Outline key structural metrics, target start dates, site status, or BoQ transfer requirements..." required rows="4"></textarea>
+                  </div>
+
+                  <!-- Submit Button & Assurances -->
+                  <div class="pt-space-md space-y-space-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-space-md">
+                      <button class="inline-flex items-center justify-center gap-space-sm bg-primary-container text-on-primary font-label-md text-label-md uppercase px-8 py-3.5 border border-primary-container rounded-[2px] hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-colors duration-150" type="submit">
+                        <span>Send Request</span>
+                        <span class="material-symbols-outlined text-base">arrow_forward</span>
+                      </button>
+                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary flex items-center gap-space-xs">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+                        We reply within one working day.
+                      </span>
+                    </div>
+
+                    <!-- Compliance / NDA Protocol Notice -->
+                    <div class="pt-space-md border-t border-tertiary-fixed">
+                      <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-xl">
+                        All project documentation, schematics, and BoQs submitted through this portal are held strictly privileged and reviewed under institutional non-disclosure protocols by our senior engineering estimation directorate.
+                      </p>
+                    </div>
+
+                    <!-- Live Client-side Acknowledgement Banner -->
+                    <div class="hidden mt-space-md p-space-md bg-surface-container border border-secondary text-primary-container" id="form-feedback">
+                      <div class="flex items-start gap-space-sm">
+                        <span class="material-symbols-outlined text-secondary text-lg mt-0.5">verified</span>
+                        <div>
+                          <p class="font-label-md text-label-md uppercase font-semibold">Tender Docket Transmitted</p>
+                          <p class="font-body-sm text-body-sm text-on-surface-variant">Your submission has been cataloged. Our Riyadh estimation desk will initiate review under Reference EB-2026 within 24 hours.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Right Column: Institutional Contact Registry & Blueprint Framing -->
+            <div class="lg:col-span-5 flex flex-col justify-between space-y-space-xl lg:space-y-0 mt-8 lg:mt-0">
+              <!-- Corporate Registry Ledger -->
+              <div class="bg-surface-container-lowest border border-tertiary-fixed p-space-lg lg:p-space-xl">
+                <div class="flex items-center justify-between border-b border-tertiary-fixed pb-space-sm mb-space-lg">
+                  <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary">
+                    Registry Index
+                  </span>
+                  <span class="font-label-sm text-label-sm font-mono text-on-surface-variant">
+                    KSA-HQ-01
+                  </span>
+                </div>
+
+                <!-- Ledger Entries -->
+                <div class="divide-y divide-tertiary-fixed">
+                  <!-- Direct Line -->
+                  <div class="py-space-md">
+                    <span class="block font-label-eyebrow text-label-eyebrow uppercase text-secondary mb-space-xs">
+                      Direct Telephone
+                    </span>
+                    <a class="block font-headline-sm text-headline-sm text-primary-container hover:text-secondary transition-colors font-serif" href="tel:+966558943663">
+                      +966 558943663
+                    </a>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                      Direct line · Sun–Thu 08:00–17:00 AST
+                    </p>
+                  </div>
+
+                  <!-- Official Email -->
+                  <div class="py-space-md">
+                    <span class="block font-label-eyebrow text-label-eyebrow uppercase text-secondary mb-space-xs">
+                      Direct Inquiries &amp; Tenders
+                    </span>
+                    <a class="block font-body-lg text-body-lg text-primary-container hover:underline font-medium" href="mailto:Info@elevatebuilders.com.sa">
+                      Info@elevatebuilders.com.sa
+                    </a>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                      Tender packages, RFQs &amp; pre-qualifications
+                    </p>
+                  </div>
+
+                  <!-- Registered Address -->
+                  <div class="py-space-md">
+                    <span class="block font-label-eyebrow text-label-eyebrow uppercase text-secondary mb-space-xs">
+                      Registered Headquarters
+                    </span>
+                    <p class="font-body-md text-body-md text-primary-container font-medium leading-snug">
+                      7755 Prince Abdulaziz ibn Mussaed ibn Jalawi,<br/>
+                      Al Murabba Dist. 12612,<br/>
+                      Riyadh, Saudi Arabia
+                    </p>
+                  </div>
+
+                  <!-- CR & Chamber -->
+                  <div class="py-space-md">
+                    <span class="block font-label-eyebrow text-label-eyebrow uppercase text-secondary mb-space-xs">
+                      Commercial Registration &amp; Accreditation
+                    </span>
+                    <div class="flex items-center gap-space-sm text-primary-container font-mono text-body-sm font-semibold">
+                      <span>CR: 7049953909</span>
+                      <span class="text-tertiary-fixed-dim">·</span>
+                      <span class="font-body-sm text-on-surface-variant font-normal">Chamber of Commerce Certified</span>
+                    </div>
+                  </div>
+
+                  <!-- Operational Protocol Notice -->
+                  <div class="pt-space-md">
+                    <div class="flex items-start gap-space-sm bg-surface-container-low p-space-sm border border-tertiary-fixed">
+                      <span class="material-symbols-outlined text-secondary text-base mt-0.5">timer</span>
+                      <div>
+                        <span class="block font-label-sm text-label-sm uppercase font-semibold text-primary-container">
+                          Technical Estimation Desk
+                        </span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">
+                          48-hour BoQ &amp; scope preliminary review standard turnaround.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Architectural Interactive Headquarters Map -->
+              <div class="mt-space-lg">
+                <div class="border border-tertiary-fixed bg-surface-container-lowest p-space-md relative overflow-hidden shadow-sm">
+                  <!-- Coordinate & Live Status Header Bar -->
+                  <div class="flex items-center justify-between border-b border-tertiary-fixed pb-space-xs mb-space-md">
+                    <div class="flex items-center gap-space-xs">
+                      <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                      </span>
+                      <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold">
+                        Riyadh Headquarters · Live Location
+                      </span>
+                    </div>
+                    <span class="font-label-sm text-label-sm font-mono text-secondary">
+                      24.6738° N, 46.7082° E
+                    </span>
+                  </div>
+
+                  <!-- Actual Interactive Map Viewport with Pin -->
+                  <div class="relative w-full h-72 border border-tertiary-fixed overflow-hidden bg-surface-container">
+                    <iframe
+                      title="Elevate Builders Riyadh Headquarters Map"
+                      src="https://maps.google.com/maps?q=7755+Prince+Abdulaziz+ibn+Mussaed+ibn+Jalawi,+Al+Murabba,+Riyadh+12612,+Saudi+Arabia&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      class="w-full h-full border-0 filter contrast-[105%]"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+
+                    <!-- Architectural Floating Location Pin Stamp -->
+                    <div class="absolute bottom-3 left-3 pointer-events-none bg-surface/95 backdrop-blur-md border border-tertiary-fixed px-3 py-2 flex items-center gap-2 shadow-sm">
+                      <div class="w-6 h-6 bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+                      </div>
+                      <div class="flex flex-col text-left">
+                        <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container font-semibold">Elevate Builders HQ</span>
+                        <span class="font-mono text-[10px] text-on-surface-variant">Al Murabba Dist. 12612</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Footer Micro-Metadata -->
+                  <div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                    <span>Elevation: 612m AMSL</span>
+                    <a class="text-secondary hover:text-primary-container uppercase tracking-wider flex items-center gap-1 font-semibold hover:underline"
+                      href="https://maps.google.com/?q=7755+Prince+Abdulaziz+ibn+Mussaed+ibn+Jalawi,+Al+Murabba,+Riyadh+12612"
+                      target="_blank" rel="noopener noreferrer">
+                      <span>Get Directions</span>
+                      <span class="material-symbols-outlined text-xs">directions</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+        
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-lg">
+          <div class="space-y-space-md">
+            <a href="/" class="inline-block focus:outline-none mb-2">
+              <img alt="Elevate Builders - CR: 7049953909" class="h-12 sm:h-14 w-auto object-contain" src="/assets/logo.png"/>
+            </a>
+            <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Premier Civil Contracting &amp; Engineering</p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Civil, infrastructure and finishing works across Saudi Arabia.</p>
+          </div>
+          <div class="pt-space-lg border-t border-tertiary-fixed mt-space-lg">
+            <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-space-xs">Registered Headquarters</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-sm">
+              7755 Prince Abdulaziz ibn Mussaed ibn Jalawi, Al Murabba Dist. 12612, Riyadh, Saudi Arabia
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-3 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Navigation</span>
+          <nav class="flex flex-col space-y-space-sm border-l border-tertiary-fixed pl-space-md">
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="about.html">About</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="services.html">Services</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="projects.html">Projects</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="credentials.html">Credentials</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="index.html#quote-dialog">Request a Quote</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Status -->
+        <div class="lg:col-span-4 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Direct Inquiries</span>
+          <div class="space-y-space-md border-l border-tertiary-fixed pl-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Telephone</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="tel:+966558943663">+966 558943663</a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Direct Correspondence</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:Info@elevatebuilders.com.sa">Info@elevatebuilders.com.sa</a>
+            </div>
+            <div class="pt-space-sm">
+              <div class="inline-flex items-center gap-space-xs px-3 py-1.5 bg-surface border border-tertiary-fixed">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase text-primary-container">Riyadh Operations Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-space-xl pt-space-md border-t border-tertiary-fixed flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+        <p>© 2026 Elevate Builders Company. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <span class="text-secondary uppercase tracking-widest">Commercial Registration 7049953909</span>
+          <span class="hidden md:inline text-tertiary-fixed-dim">|</span>
+          <span class="uppercase">Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactivity Scripts: Form Handler & Mobile Menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Form submission simulation
+      const form = document.getElementById('contact-inquiry-form');
+      const feedback = document.getElementById('form-feedback');
+      if (form && feedback) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          feedback.classList.remove('hidden');
+          form.reset();
+        });
+      }
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+  <script src="/assets/motion.js" defer></script>
+</body>
+</html>
+

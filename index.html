@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>Elevate Builders — Civil, Infrastructure &amp; Finishing Works | Riyadh, Saudi Arabia</title>
+  <meta name="description"
+    content="Elevate Builders delivers high-spec civil engineering, infrastructure, and finishing works across Saudi Arabia, governed under ISO 9001, 14001, and 45001 standards." />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8783bc",
+            "primary-fixed": "#e3dfff",
+            "primary-fixed-dim": "#c5c0fd",
+            "on-primary-fixed": "#181446",
+            "on-primary-fixed-variant": "#444174",
+            "inverse-primary": "#c5c0fd",
+
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#706142",
+            "secondary-fixed": "#f5e0ba",
+            "secondary-fixed-dim": "#d8c49f",
+            "on-secondary-fixed": "#241a03",
+            "on-secondary-fixed-variant": "#534529",
+
+            "tertiary": "#0b0c09",
+            "tertiary-container": "#22221f",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#8a8984",
+            "tertiary-fixed": "#e4e2dc",
+            "tertiary-fixed-dim": "#c8c6c1",
+            "on-tertiary-fixed": "#1b1c18",
+            "on-tertiary-fixed-variant": "#474743",
+
+            "surface": "#faf9f5",
+            "surface-dim": "#dbdad6",
+            "surface-bright": "#faf9f5",
+            "surface-variant": "#e3e2df",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "surface-container-high": "#e9e8e4",
+            "surface-container-highest": "#e3e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "inverse-surface": "#30312e",
+            "inverse-on-surface": "#f2f1ed",
+            "surface-tint": "#5c588e",
+
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a",
+
+            "outline": "#787680",
+            "outline-variant": "#c8c5d0",
+
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.5rem",
+            "margin": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "display-mobile": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-eyebrow": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-eyebrow": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png" />
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering" />
+  <meta property="og:description"
+    content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering" />
+  <meta name="twitter:description"
+    content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909." />
+  <meta name="twitter:image" content="/assets/og-image.png" />
+  <link rel="stylesheet" href="/assets/motion.css" />
+</head>
+
+<body
+  class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+    <div
+      class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+
+      <!-- Brand Logo -->
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909"
+            class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+            src="/assets/logo.png" />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation with Animated Sliding Hairlines -->
+      <nav
+        class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
+        <a class="nav-link active-link text-primary-container font-semibold" href="/">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA with Shimmer & Mobile Toggle -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200"
+          href="/contact">
+          Request a quote
+        </a>
+
+        <!-- Mobile Menu Button - Strictly hidden on md and up -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu"
+          class="md:hidden w-10 h-10 flex items-center justify-center border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
+        <div class="pb-2 border-b border-tertiary-fixed mb-1">
+          <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png" />
+        </div>
+        <a class="py-2 border-b border-tertiary-fixed text-primary-container font-semibold" href="/">Home</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container"
+          href="/about">About</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container"
+          href="/services">Services</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container"
+          href="/projects">Projects</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container"
+          href="/credentials">Credentials</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container"
+          href="/contact">Contact</a>
+      </nav>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase py-3.5 border border-primary-container hover:bg-secondary transition-colors"
+          href="/contact">
+          Request a quote
+        </a>
+      </div>
+      <div class="pt-2 flex flex-col text-on-surface-variant font-label-sm text-label-sm gap-1">
+        <span>Riyadh Desk: <a href="tel:+966558943663" class="text-primary-container underline">+966
+            558943663</a></span>
+        <span>Commercial Registration: 7049953909</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full">
+
+      <!-- SECTION 1: HERO VIEWPORT -->
+      <section class="w-full px-margin-mobile lg:px-margin pt-12 pb-24 border-b border-tertiary-fixed bg-surface">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+
+          <!-- Narrative Architectural Column -->
+          <div class="lg:col-span-6 flex flex-col justify-between pr-0 lg:pr-space-lg">
+            <div class="space-y-space-lg">
+              <div class="flex items-center gap-space-sm">
+                <span class="w-1.5 h-1.5 bg-secondary"></span>
+                <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em]">
+                  Riyadh, Saudi Arabia — CR: 7049953909
+                </span>
+              </div>
+              <h1
+                class="font-display text-display-mobile lg:text-display text-primary-container leading-[1.08] max-w-xl">
+                Civil, infrastructure and finishing works across Saudi Arabia.
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
+                Elevate Builders delivers high-spec construction and technical engineering execution from Riyadh,
+                governed under verified ISO 9001, 14001, and 45001 management systems.
+              </p>
+            </div>
+
+            <div
+              class="pt-space-xl mt-space-xl border-t border-tertiary-fixed flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+              <a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-8 py-4 border border-primary-container hover:bg-secondary hover:border-secondary transition-colors duration-150"
+                href="#quote-dialog">
+                Request a quote
+              </a>
+              <a class="inline-flex items-center justify-center bg-transparent text-primary-container font-label-md text-label-md uppercase px-8 py-4 border border-primary-container hover:bg-primary-container hover:text-on-primary transition-colors duration-150"
+                href="projects.html">
+                View projects
+              </a>
+              <div class="hidden xl:flex items-center pl-6 text-on-surface-variant font-label-sm text-label-sm">
+                <span class="text-secondary font-mono mr-2">24°42'42"N</span>
+                <span class="text-tertiary-fixed-dim mr-2">/</span>
+                <span class="text-secondary font-mono">46°40'35"E</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architectural Elevation Framing / Visual Viewport -->
+          <div class="lg:col-span-6 mt-space-lg lg:mt-0">
+            <div
+              class="relative w-full h-[420px] sm:h-[500px] lg:h-full min-h-[460px] bg-[#EAE8E2] border border-tertiary-fixed overflow-hidden flex flex-col justify-between p-6">
+
+              <!-- Top Technical Markers -->
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm border-b border-tertiary-fixed pb-3">
+                <span class="tracking-widest uppercase text-secondary font-semibold">Elevate Drawing Registry</span>
+                <span class="font-mono text-tertiary">REF: PL-2026-RYD</span>
+              </div>
+
+              <!-- Center Crosshair & Editorial Image Frame -->
+              <div class="relative w-full flex-1 flex items-center justify-center py-6">
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+                  <div class="w-full h-[1px] bg-tertiary-fixed"></div>
+                  <div class="absolute h-full w-[1px] bg-tertiary-fixed"></div>
+                  <div class="w-12 h-12 border border-secondary"></div>
+                </div>
+
+                <!-- Authentic Concrete Infrastructure Photography -->
+                <div
+                  class="relative z-10 w-4/5 h-4/5 border border-tertiary-fixed overflow-hidden bg-surface-container-high shadow-none">
+                  <img
+                    class="w-full h-full object-cover grayscale contrast-125 hover:scale-[1.02] transition-transform duration-700"
+                    alt="Monolithic architectural reinforced concrete structure under clear high-contrast desert sunlight in Riyadh Saudi Arabia."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzAdacaqvaxb3qVMZ__7dl0k2MYQVhDvzVUu5KAIlOXzm-bPwWOMPWpEum3qH1EX3O8F4aQBD4RqAJMSqeKIAvpB0XUFuDinYZOw57TPE4nC_dlys6pe-Vqf3wjT_IfsWnvOvhPW_mLGBICozOkaR8wcEBpBurXRaBLPdsNhBE6TaIFsSWGEM-tHOCS5IlN30Cgx0kWxaMijV3h0DehT397W32GtAzP3crK8W8pJJJ" />
+                  <div
+                    class="absolute bottom-2 left-2 bg-surface/90 px-2.5 py-1 text-primary-container font-label-sm text-label-sm border border-tertiary-fixed">
+                    Plate 01: Riyadh Civil Infrastructure
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom Coordinates & Ratio Notation -->
+              <div
+                class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm border-t border-tertiary-fixed pt-3">
+                <span class="font-mono uppercase text-secondary">Ratio 16:9 • Scale 1:200</span>
+                <span class="font-mono tracking-wider">SEC: 01-CIVIL</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 2: WHAT WE DO (Numbered Hairline Rows) -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface border-b border-tertiary-fixed">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+          <div class="space-y-space-xs">
+            <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em]">Capabilities
+              &amp; Scope</span>
+            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary-container font-serif">
+              What we do</h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+            Execution of high-tolerance structural, sub-grade, and finish programs governed by strict quality controls
+            and local municipal standards.
+          </p>
+        </div>
+
+        <!-- Editorial Rows -->
+        <div class="w-full border-t border-tertiary-fixed">
+
+          <!-- Row 01 -->
+          <a class="what-we-do-row group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-tertiary-fixed hover:bg-surface-container-low px-2 md:px-4 reveal stagger-1"
+            href="services.html#civil">
+            <div class="flex items-baseline gap-space-lg md:w-1/3">
+              <span class="row-number font-label-md text-label-md text-secondary font-mono tracking-widest">01</span>
+              <span
+                class="font-headline-sm text-headline-sm text-primary-container group-hover:text-secondary transition-colors">Civil
+                &amp; Structural</span>
+            </div>
+            <div class="md:w-1/2 my-3 md:my-0">
+              <p class="font-body-md text-body-md text-on-surface-variant">Reinforced concrete casting, specialized
+                heavy foundation systems, structural steel fabrication &amp; erection, concrete masonry units.</p>
+            </div>
+            <div class="md:w-1/6 flex items-center justify-end">
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-primary-container group-hover:translate-x-1.5 transition-transform duration-150 inline-flex items-center gap-1">
+                Services <span class="row-arrow material-symbols-outlined text-base">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Row 02 -->
+          <a class="what-we-do-row group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-tertiary-fixed hover:bg-surface-container-low px-2 md:px-4 reveal stagger-2"
+            href="services.html#infrastructure">
+            <div class="flex items-baseline gap-space-lg md:w-1/3">
+              <span class="row-number font-label-md text-label-md text-secondary font-mono tracking-widest">02</span>
+              <span
+                class="font-headline-sm text-headline-sm text-primary-container group-hover:text-secondary transition-colors">Infrastructure</span>
+            </div>
+            <div class="md:w-1/2 my-3 md:my-0">
+              <p class="font-body-md text-body-md text-on-surface-variant">Arterial roadways, stormwater drainage
+                networks, deep underground wet/dry utilities, bulk earthworks and terrain stabilization.</p>
+            </div>
+            <div class="md:w-1/6 flex items-center justify-end">
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-primary-container group-hover:translate-x-1.5 transition-transform duration-150 inline-flex items-center gap-1">
+                Services <span class="row-arrow material-symbols-outlined text-base">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Row 03 -->
+          <a class="what-we-do-row group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-tertiary-fixed hover:bg-surface-container-low px-2 md:px-4 reveal stagger-3"
+            href="services.html#fitout">
+            <div class="flex items-baseline gap-space-lg md:w-1/3">
+              <span class="row-number font-label-md text-label-md text-secondary font-mono tracking-widest">03</span>
+              <span
+                class="font-headline-sm text-headline-sm text-primary-container group-hover:text-secondary transition-colors">Fit-out
+                &amp; Finishing</span>
+            </div>
+            <div class="md:w-1/2 my-3 md:my-0">
+              <p class="font-body-md text-body-md text-on-surface-variant">Engineered gypsum assemblies, acoustic
+                treatments, porcelain and natural stone tiling, commercial painting, heavy-duty epoxy coating.</p>
+            </div>
+            <div class="md:w-1/6 flex items-center justify-end">
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-primary-container group-hover:translate-x-1.5 transition-transform duration-150 inline-flex items-center gap-1">
+                Services <span class="row-arrow material-symbols-outlined text-base">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Row 04 -->
+          <a class="what-we-do-row group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-tertiary-fixed hover:bg-surface-container-low px-2 md:px-4 reveal stagger-4"
+            href="services.html#manpower">
+            <div class="flex items-baseline gap-space-lg md:w-1/3">
+              <span class="row-number font-label-md text-label-md text-secondary font-mono tracking-widest">04</span>
+              <span
+                class="font-headline-sm text-headline-sm text-primary-container group-hover:text-secondary transition-colors">Manpower
+                Supply</span>
+            </div>
+            <div class="md:w-1/2 my-3 md:my-0">
+              <p class="font-body-md text-body-md text-on-surface-variant">Fully compliant, credentialed trade crews:
+                certified master carpenters, MEP technicians, site safety supervisors, and registered civil engineers.
+              </p>
+            </div>
+            <div class="md:w-1/6 flex items-center justify-end">
+              <span
+                class="font-label-md text-label-md uppercase tracking-wider text-primary-container group-hover:translate-x-1.5 transition-transform duration-150 inline-flex items-center gap-1">
+                Services <span class="row-arrow material-symbols-outlined text-base">arrow_forward</span>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: SELECTED PROJECTS (Asymmetric Editorial Grid) -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface border-b border-tertiary-fixed">
+        <div class="flex items-end justify-between mb-space-xl pb-space-sm border-b border-tertiary-fixed">
+          <div class="space-y-space-xs">
+            <span
+              class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em]">Portfolio</span>
+            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary-container font-serif">
+              Selected projects</h2>
+          </div>
+          <a class="font-label-md text-label-md uppercase text-primary-container hover:text-secondary border-b border-secondary pb-0.5 transition-colors inline-flex items-center gap-1"
+            href="projects.html">
+            All projects →
+          </a>
+        </div>
+
+        <!-- Asymmetric Layout: 7-Col Dominant Project / 5-Col Stacked Secondary Projects -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+
+          <!-- Dominant Feature: Diriyah Gate -->
+          <div class="lg:col-span-7 flex flex-col border border-tertiary-fixed bg-surface-container-lowest">
+            <div
+              class="relative w-full h-[360px] sm:h-[420px] lg:h-[480px] bg-[#EAE8E2] border-b border-tertiary-fixed overflow-hidden">
+              <img
+                class="w-full h-full object-cover grayscale contrast-110 hover:scale-105 transition-transform duration-700"
+                alt="Extensive civil engineering trench and subterranean concrete culvert infrastructure works in the historic Diriyah district Riyadh."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyYWBzTexBMn4anZ8QvF8YCBNIn_ekK09wo_g4mzQhTHUAoeHnU83ObZCW3Dv1DdIx1-fQOK-YG2nDj20rJfUZqAjTVWkNn6yhj505p5ensjr0WtBWB6CVQJTXYAmxJS9SeIvryBk6U1UfizdaaFkF1fCAQDPOPXEXkhb4BzOZ76JWoa5disd7hQKurRDzj3m9iY_aT9OJjj7ynuRgcoR50hO13aCKvfL9rLq58hvy" />
+              <div
+                class="absolute top-4 left-4 bg-surface/90 px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest text-primary-container border border-tertiary-fixed">
+                Civil Infrastructure
+              </div>
+              <div
+                class="absolute bottom-4 right-4 bg-surface/90 px-3 py-1 font-mono text-label-sm text-secondary border border-tertiary-fixed">
+                DIRIYAH GATE DEV. AUTHORITY
+              </div>
+            </div>
+            <div class="p-space-lg flex flex-col justify-between flex-1">
+              <div>
+                <div
+                  class="flex items-center justify-between text-secondary font-label-eyebrow text-label-eyebrow uppercase mb-2">
+                  <span>Riyadh, KSA</span>
+                  <span>Spec: MV-Culvert Package</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container mb-3">
+                  Diriyah Gate MV-Culvert Infrastructure
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Execution of deep structural concrete culvert systems, intermediate access chambers, utility
+                  relocations, and protective backfill for high-voltage and medium-voltage civil distribution networks
+                  across the Diriyah heritage framework.
+                </p>
+              </div>
+              <div
+                class="mt-6 pt-4 border-t border-tertiary-fixed flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+                <span>Scope: Civil &amp; Concrete Utilities</span>
+                <span class="font-mono text-primary-container">Status: Completed 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Projects Stack -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-gutter">
+
+            <!-- Project 2: Banan Al Riyadh -->
+            <div class="border border-tertiary-fixed bg-surface-container-lowest flex flex-col flex-1">
+              <div class="relative w-full h-[220px] bg-[#E2E0D8] border-b border-tertiary-fixed overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale contrast-110 hover:scale-105 transition-transform duration-700"
+                  alt="Modern smart residential suburb architectural facade under construction in Banan Al Riyadh."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjiuf_4ld9OwcA7oX8_W65DeYJzV-AkpK1MZFywdyHyDMwKecULfPVT27B5oaaO0cIhFGyGiAFxJ82lpPm3EWo4jf9oMPfw83CbD1JeCNsABB6KrvxktMW37dZshOu3pI4nsoH5CBw42Hp7GDnoJXWK-T9WSMOvay4gzRSbVD7kxoi9wdJIOWsu1liVQrraOBGoKWF7pScOBPcwmbLFUse6iG-qTuhlXxWQRynpSfn" />
+                <div
+                  class="absolute top-3 left-3 bg-surface/90 px-2.5 py-0.5 font-label-sm text-label-sm uppercase tracking-wider text-primary-container border border-tertiary-fixed">
+                  Finishing Works
+                </div>
+              </div>
+              <div class="p-space-md flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary block mb-1">Riyadh North
+                    Corridor</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary-container mb-2 text-xl">
+                    Banan Al Riyadh Smart Housing Suburb
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Comprehensive interior and exterior architectural painting, expansive floor screeding, precision
+                    ceramic and porcelain tile installation across multiple residential cluster modules.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-tertiary-fixed flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+                  <span>Tiling &amp; Finishes</span>
+                  <span class="font-mono text-primary-container">Package: Lot B</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3: Almarai PPP4 -->
+            <div class="border border-tertiary-fixed bg-surface-container-lowest flex flex-col flex-1">
+              <div class="relative w-full h-[220px] bg-[#E2E0D8] border-b border-tertiary-fixed overflow-hidden">
+                <img
+                  class="w-full h-full object-cover grayscale contrast-110 hover:scale-105 transition-transform duration-700"
+                  alt="Industrial automotive logistics facility parking area and commercial industrial wash bay in Riyadh."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs8K-tol8GcjZyYigj3YmXFIzqcV5ak1yZeUe79KW1Nx7jPqDUapHp7TKqyq8c6BBe8mlxA30Xli-dXv2MajY8BZQHz7QfljyikI9c93hOQkH3lHajZbq61YXZ3LNBkj3qQAGpJYyW89n4yIX5UR0YlB9az97B5JFznqybpZkaI3keu1BUAXvrrtz1Rmq35nqelHTPruc9Jrp196OhSNLOlIlbwOMBAxeq1MLrNC29" />
+                <div
+                  class="absolute top-3 left-3 bg-surface/90 px-2.5 py-0.5 font-label-sm text-label-sm uppercase tracking-wider text-primary-container border border-tertiary-fixed">
+                  Civil &amp; Commercial MEP
+                </div>
+              </div>
+              <div class="p-space-md flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary block mb-1">Riyadh
+                    Industrial Sector</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary-container mb-2 text-xl">
+                    PPP4 Facility for Almarai
+                  </h4>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Turnkey civil construction of heavy fleet parking bays, automated fuel depot dispensing pad,
+                    interceptor drainage, and automated vehicle wash station structure.
+                  </p>
+                </div>
+                <div
+                  class="mt-4 pt-3 border-t border-tertiary-fixed flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+                  <span>Client: Almarai Company</span>
+                  <span class="font-mono text-primary-container">Delivered 2024</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: CLIENTS WE'VE WORKED WITH (Infinite Marquee Slideshow) -->
+      <section class="w-full px-margin-mobile lg:px-margin py-16 bg-surface-container-low border-b border-tertiary-fixed overflow-hidden">
+        <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          <div class="lg:w-1/4 shrink-0">
+            <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em] block mb-1">
+              Institutional Standing
+            </span>
+            <h2 class="font-headline-sm text-headline-sm text-primary-container font-serif">
+              Clients we’ve worked with
+            </h2>
+          </div>
+          
+          <!-- Infinite Slideshow Track with Dual-side Fade Mask -->
+          <div class="lg:w-3/4 overflow-hidden relative marquee-mask">
+            <div class="marquee-track">
+              <!-- Set 1 -->
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-01.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-02.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-03.png" alt="Consolidated Contractors Company (CCC)" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-04.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-05.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-06.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-07.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-08.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-09.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <!-- Set 2 (Identical Clone for Infinite Seamless Loop) -->
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-01.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-02.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-03.png" alt="Consolidated Contractors Company (CCC)" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-04.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-05.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-06.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-07.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-08.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/clients/client-09.png" alt="Partner Client" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hairline Divider between Clients and Partners -->
+        <div class="w-full border-t border-tertiary-fixed my-12"></div>
+
+        <!-- Row 2: Our Partners & Vendors (Clockwise Flow: Marquee on Left, Text on Right) -->
+        <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          
+          <!-- Infinite Slideshow Track (Animated Clockwise / Left-to-Right via marquee-track-reverse) -->
+          <div class="lg:w-3/4 overflow-hidden relative marquee-mask order-2 lg:order-1">
+            <div class="marquee-track-reverse">
+              <!-- Set 1 -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <!-- Repeated set to ensure seamless wide-screen continuity -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <!-- Set 2 (Identical Clone for Infinite Seamless Loop) -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Column on the RIGHT -->
+          <div class="lg:w-1/4 shrink-0 text-left lg:text-right order-1 lg:order-2">
+            <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em] block mb-1">
+              Procurement &amp; Supply Chain
+            </span>
+            <h2 class="font-headline-sm text-headline-sm text-primary-container font-serif">
+              Our Partners
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CERTIFIED (Micro-Architectural Lattice Underlay) -->
+      <section
+        class="relative w-full px-margin-mobile lg:px-margin py-16 bg-surface border-b border-tertiary-fixed overflow-hidden">
+        <!-- Restrained Mashrabiya Geometric Lattice Underlay (SVG Hairline Pattern) -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.035] flex items-center justify-center">
+          <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern height="60" id="mashrabiya-pattern" patternUnits="userSpaceOnUse" width="60">
+                <path d="M 30 0 L 60 30 L 30 60 L 0 30 Z" fill="none" stroke="#1F1B4D" stroke-width="0.75"></path>
+                <path d="M 30 15 L 45 30 L 30 45 L 15 30 Z" fill="none" stroke="#1F1B4D" stroke-width="0.5"></path>
+                <circle cx="30" cy="30" fill="none" r="4" stroke="#1F1B4D" stroke-width="0.5"></circle>
+                <line stroke="#1F1B4D" stroke-width="0.5" x1="0" x2="60" y1="0" y2="60"></line>
+                <line stroke="#1F1B4D" stroke-width="0.5" x1="60" x2="0" y1="0" y2="60"></line>
+              </pattern>
+            </defs>
+            <rect fill="url(#mashrabiya-pattern)" height="100%" width="100%"></rect>
+          </svg>
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+          <div class="flex items-center gap-4">
+            <span class="w-2.5 h-2.5 border border-primary-container"></span>
+            <span
+              class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container tracking-[0.25em]">Quality
+              &amp; Safety Compliance</span>
+          </div>
+
+          <!-- Single Crisp Certification Banner -->
+          <div
+            class="flex flex-wrap items-center gap-space-md text-primary-container font-label-md text-label-md tracking-wider">
+            <span class="px-3.5 py-1.5 border border-tertiary-fixed bg-surface-container-lowest font-mono">ISO
+              9001:2015</span>
+            <span class="text-tertiary-fixed-dim">|</span>
+            <span class="px-3.5 py-1.5 border border-tertiary-fixed bg-surface-container-lowest font-mono">ISO
+              14001:2015</span>
+            <span class="text-tertiary-fixed-dim">|</span>
+            <span class="px-3.5 py-1.5 border border-tertiary-fixed bg-surface-container-lowest font-mono">ISO
+              45001:2018</span>
+          </div>
+
+          <div>
+            <a class="font-label-md text-label-md uppercase text-secondary hover:text-primary-container border-b border-secondary hover:border-primary-container pb-0.5 transition-colors inline-flex items-center gap-1"
+              href="credentials.html">
+              Credentials page →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CLOSING DIRECT CALL TO ACTION / RFQ -->
+      <section class="w-full px-margin-mobile lg:px-margin py-24 sm:py-28 bg-surface" id="quote-dialog">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center space-y-space-lg">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.25em]">Procurement
+            &amp; Tendering</span>
+          <h2 class="font-display text-display-mobile lg:text-display text-primary-container leading-tight">
+            Have a project in Riyadh or the Kingdom?
+          </h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Our estimating office reviews bills of quantities, structural drawings, and project schedules for civil
+            engineering, sub-grade networks, and premium interior finishings.
+          </p>
+
+          <!-- Interactive Fast Estimating Box -->
+          <div
+            class="w-full max-w-xl bg-surface-container-lowest border border-tertiary-fixed p-6 sm:p-8 text-left mt-space-md">
+            <label
+              class="block font-label-eyebrow text-label-eyebrow text-primary-container uppercase tracking-wider mb-2"
+              for="rfq-email">
+              Direct Estimating Submission
+            </label>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input
+                class="flex-1 h-12 px-space-md bg-surface-container-low text-primary-container font-body-md text-body-md border border-tertiary-fixed placeholder:text-outline focus:outline-none focus:border-primary-container"
+                id="rfq-email" placeholder="eng.partner@company.com.sa" type="email" />
+              <button
+                class="h-12 bg-primary-container text-on-primary font-label-md text-label-md uppercase px-6 tracking-wider transition-colors hover:bg-secondary flex items-center justify-center gap-space-xs"
+                id="submit-rfq-btn" type="button">
+                <span>Initiate Review</span>
+                <span class="material-symbols-outlined text-[18px]">send</span>
+              </button>
+            </div>
+            <div class="hidden font-label-sm text-label-sm text-secondary tracking-wide pt-3" id="rfq-feedback">
+              ✓ Tender submission recorded. Our Riyadh estimating desk will contact you within 24 business hours.
+            </div>
+          </div>
+
+          <div class="pt-space-md flex flex-col sm:flex-row items-center gap-space-md">
+            <a class="inline-flex items-center justify-center bg-transparent text-primary-container font-label-md text-label-md uppercase px-8 py-4 border border-tertiary-fixed hover:border-primary-container transition-colors duration-150"
+              href="contact.html">
+              Direct Inquiries
+            </a>
+            <a class="inline-flex items-center justify-center bg-transparent text-secondary font-label-md text-label-md uppercase px-8 py-4 border border-tertiary-fixed hover:border-secondary transition-colors duration-150"
+              href="tel:+966558943663">
+              Call Desk: +966 558943663
+            </a>
+          </div>
+
+          <div
+            class="pt-space-lg flex flex-wrap items-center justify-center gap-space-md sm:gap-space-lg text-on-surface-variant font-label-sm text-label-sm">
+            <span>Riyadh Commercial Registration: 7049953909</span>
+            <span class="text-tertiary-fixed-dim">•</span>
+            <span>Standard Response Window: 24 Business Hours</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-lg">
+          <div class="space-y-space-md">
+            <a href="/" class="inline-block focus:outline-none mb-2">
+              <img alt="Elevate Builders - CR: 7049953909" class="h-12 sm:h-14 w-auto object-contain"
+                src="/assets/logo.png" />
+            </a>
+            <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Premier Civil
+              Contracting &amp; Engineering</p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Civil, infrastructure and finishing
+              works across Saudi Arabia.</p>
+          </div>
+          <div class="pt-space-lg border-t border-tertiary-fixed mt-space-lg">
+            <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-space-xs">Registered
+              Headquarters</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-sm">
+              7755 Prince Abdulaziz ibn Mussaed ibn Jalawi, Al Murabba Dist. 12612, Riyadh, Saudi Arabia
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-3 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Navigation</span>
+          <nav class="flex flex-col space-y-space-sm border-l border-tertiary-fixed pl-space-md">
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="about.html">About</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="services.html">Services</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="projects.html">Projects</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="credentials.html">Credentials</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors"
+              href="#quote-dialog">Request a Quote</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Status -->
+        <div class="lg:col-span-4 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Direct Inquiries</span>
+          <div class="space-y-space-md border-l border-tertiary-fixed pl-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Telephone</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="tel:+966558943663">+966
+                558943663</a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Direct Correspondence</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline"
+                href="mailto:Info@elevatebuilders.com.sa">Info@elevatebuilders.com.sa</a>
+            </div>
+            <div class="pt-space-sm">
+              <div class="inline-flex items-center gap-space-xs px-3 py-1.5 bg-surface border border-tertiary-fixed">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase text-primary-container">Riyadh Operations
+                  Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hairline Divider between Clients and Partners -->
+        <div class="w-full border-t border-tertiary-fixed my-12"></div>
+
+        <!-- Row 2: Our Partners & Vendors (Clockwise Flow: Marquee on Left, Text on Right) -->
+        <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+          
+          <!-- Infinite Slideshow Track (Animated Clockwise / Left-to-Right via marquee-track-reverse) -->
+          <div class="lg:w-3/4 overflow-hidden relative marquee-mask order-2 lg:order-1">
+            <div class="marquee-track-reverse">
+              <!-- Set 1 -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <!-- Repeated set to ensure seamless wide-screen continuity -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <!-- Set 2 (Identical Clone for Infinite Seamless Loop) -->
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-01.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-02.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-03.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+              <div class="client-logo-item">
+                <img src="/assets/vendors/vendor-04.png" alt="Partner Vendor" class="h-16 sm:h-20 w-auto max-w-[220px] object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Column on the RIGHT -->
+          <div class="lg:w-1/4 shrink-0 text-left lg:text-right order-1 lg:order-2">
+            <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em] block mb-1">
+              Procurement &amp; Supply Chain
+            </span>
+            <h2 class="font-headline-sm text-headline-sm text-primary-container font-serif">
+              Our Partners
+            </h2>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div
+        class="mt-space-xl pt-space-md border-t border-tertiary-fixed flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+        <p>© 2026 Elevate Builders Company. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <span class="text-secondary uppercase tracking-widest">Commercial Registration 7049953909</span>
+          <span class="hidden md:inline text-tertiary-fixed-dim">|</span>
+          <span class="uppercase">Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactivity Scripts -->
+  <script>
+    // RFQ Quick Submission Handler
+    (function () {
+      const btn = document.getElementById('submit-rfq-btn');
+      const input = document.getElementById('rfq-email');
+      const feedback = document.getElementById('rfq-feedback');
+
+      if (btn && input && feedback) {
+        btn.addEventListener('click', function () {
+          if (input.value && input.value.indexOf('@') !== -1) {
+            btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Received';
+            btn.classList.remove('bg-primary-container');
+            btn.classList.add('bg-secondary');
+            feedback.classList.remove('hidden');
+            input.disabled = true;
+          } else {
+            input.focus();
+            input.classList.add('border-error');
+          }
+        });
+      }
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function () {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    })();
+  </script>
+  <script src="/assets/motion.js" defer></script>
+</body>
+
+</html>

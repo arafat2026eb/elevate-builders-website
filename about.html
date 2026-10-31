@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>About Us — Elevate Builders | Planning, Coordination &amp; Safe Delivery</title>
+  <meta name="description" content="Elevate Builders is a construction and contracting company based in Riyadh, Saudi Arabia, working across civil construction, infrastructure, finishing works and manpower supply."/>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8783bc",
+            "primary-fixed": "#e3dfff",
+            "primary-fixed-dim": "#c5c0fd",
+            "on-primary-fixed": "#181446",
+            "on-primary-fixed-variant": "#444174",
+            "inverse-primary": "#c5c0fd",
+
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#706142",
+            "secondary-fixed": "#f5e0ba",
+            "secondary-fixed-dim": "#d8c49f",
+            "on-secondary-fixed": "#241a03",
+            "on-secondary-fixed-variant": "#534529",
+
+            "tertiary": "#0b0c09",
+            "tertiary-container": "#22221f",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#8a8984",
+            "tertiary-fixed": "#e4e2dc",
+            "tertiary-fixed-dim": "#c8c6c1",
+            "on-tertiary-fixed": "#1b1c18",
+            "on-tertiary-fixed-variant": "#474743",
+
+            "surface": "#faf9f5",
+            "surface-dim": "#dbdad6",
+            "surface-bright": "#faf9f5",
+            "surface-variant": "#e3e2df",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "surface-container-high": "#e9e8e4",
+            "surface-container-highest": "#e3e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "inverse-surface": "#30312e",
+            "inverse-on-surface": "#f2f1ed",
+            "surface-tint": "#5c588e",
+
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a",
+
+            "outline": "#787680",
+            "outline-variant": "#c8c5d0",
+
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.5rem",
+            "margin": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "display-mobile": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-eyebrow": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-eyebrow": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png"/>
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering"/>
+  <meta property="og:description" content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909."/>
+  <meta property="og:image" content="/assets/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Elevate Builders | Premier Civil Contracting &amp; Engineering"/>
+  <meta name="twitter:description" content="Precision civil construction, infrastructure corridors, and monolithic structural engineering across Saudi Arabia. CR: 7049953909."/>
+  <meta name="twitter:image" content="/assets/og-image.png"/>
+  <link rel="stylesheet" href="/assets/motion.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+
+    <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+    <div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="/assets/logo.png"/>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation with Animated Sliding Hairlines -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="nav-link active-link text-primary-container font-semibold" href="/about">About</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA with Shimmer & Mobile Toggle -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200" href="/contact">
+          Request a quote
+        </a>
+        
+        <!-- Mobile Menu Button - Strictly hidden on md and up -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 flex items-center justify-center border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
+        <div class="pb-2 border-b border-tertiary-fixed mb-1">
+          <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png"/>
+        </div>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="py-2 border-b border-tertiary-fixed text-primary-container font-semibold" href="/about">About</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase py-3.5 border border-primary-container hover:bg-secondary transition-colors" href="/contact">
+          Request a quote
+        </a>
+      </div>
+      <div class="pt-2 flex flex-col text-on-surface-variant font-label-sm text-label-sm gap-1">
+        <span>Riyadh Desk: <a href="tel:+966558943663" class="text-primary-container underline">+966 558943663</a></span>
+        <span>Commercial Registration: 7049953909</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full bg-surface text-on-surface">
+
+      <!-- Architectural Top Header Section -->
+      <section class="w-full px-margin-mobile lg:px-margin pt-16 pb-20 border-b border-tertiary-fixed relative">
+        <!-- Faint Mashrabiya Geometric Lattice Watermark Underlay -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.035] overflow-hidden">
+          <svg class="w-full h-full text-primary-container" fill="none" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern height="64" id="architectural-grid" patternUnits="userSpaceOnUse" width="64">
+                <path d="M0 32 L32 0 L64 32 L32 64 Z" stroke="currentColor" stroke-width="0.75"></path>
+                <path d="M16 16 L48 16 L48 48 L16 48 Z" stroke="currentColor" stroke-width="0.5"></path>
+                <circle cx="32" cy="32" r="3" stroke="currentColor" stroke-width="0.5"></circle>
+                <path d="M0 0 L64 64 M64 0 L0 64" stroke="currentColor" stroke-width="0.35"></path>
+              </pattern>
+            </defs>
+            <rect fill="url(#architectural-grid)" height="100%" width="100%"></rect>
+          </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="flex items-center gap-space-sm mb-6">
+            <span class="w-2.5 h-[1px] bg-secondary"></span>
+            <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">ABOUT ELEVATE BUILDERS</span>
+            <span class="text-tertiary-fixed-dim text-xs font-mono ml-auto hidden sm:inline-block">DOC // REF 7049953909-SA</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <div class="lg:col-span-10">
+              <h1 class="font-display text-headline-lg lg:text-display text-primary-container leading-[1.12] tracking-tight max-w-5xl">
+                A contractor built on planning, coordination and safe delivery.
+              </h1>
+            </div>
+            <div class="lg:col-span-2 hidden lg:flex flex-col items-end justify-between self-stretch text-right font-mono text-[11px] text-on-surface-variant pt-3 border-l border-tertiary-fixed pl-4">
+              <span class="text-secondary uppercase tracking-widest font-label-eyebrow">Riyadh, KSA</span>
+              <div class="space-y-1">
+                <p class="text-on-surface">CIVIL / INFRA</p>
+                <p class="text-on-surface-variant">EST. OPERATIONS</p>
+                <p class="text-secondary font-semibold">ISO CERTIFIED STDS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro Editorial Section (Golden Ratio 5 / 7 Asymmetry) -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl border-b border-tertiary-fixed bg-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+          
+          <!-- Left Column: Editorial Statement -->
+          <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-8 py-2">
+            <div class="space-y-space-lg">
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs text-secondary tracking-widest">[01]</span>
+                <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase">Corporate Profile</span>
+              </div>
+              <p class="font-body-lg text-body-lg text-primary-container leading-relaxed font-normal">
+                Elevate Builders is a construction and contracting company based in Riyadh, Saudi Arabia, working across civil construction, infrastructure, finishing works and manpower supply.
+              </p>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                We combine engineering expertise, skilled manpower and clear project management so that projects are completed on time, within budget and to high safety and quality standards.
+              </p>
+            </div>
+            <div class="pt-10 mt-10 border-t border-tertiary-fixed grid grid-cols-2 gap-4">
+              <div>
+                <div class="font-label-eyebrow text-label-eyebrow text-secondary uppercase mb-1">Execution Base</div>
+                <div class="font-body-sm text-body-sm text-primary-container">Al Murabba, Riyadh</div>
+              </div>
+              <div>
+                <div class="font-label-eyebrow text-label-eyebrow text-secondary uppercase mb-1">Core Competency</div>
+                <div class="font-body-sm text-body-sm text-primary-container">Turnkey Contracting</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Precision Viewport Image Placement -->
+          <div class="lg:col-span-7 flex flex-col mt-6 lg:mt-0">
+            <div class="relative w-full aspect-[16/11] bg-surface-container-high border border-tertiary-fixed overflow-hidden group">
+              <img class="w-full h-full object-cover grayscale contrast-[1.08] group-hover:scale-[1.01] transition-transform duration-700 ease-out" alt="Monolithic architectural concrete and limestone building under clear Riyadh sun, showcasing precise sharp geometric reveals" src="/assets/projects/riyadh-skyline.jpg"/>
+              
+              <!-- Framing Crosshair Overlays -->
+              <div class="absolute top-4 left-4 z-10 flex items-center gap-2 bg-surface/90 px-3 py-1.5 border border-tertiary-fixed">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                <span class="font-mono text-[10px] text-primary-container tracking-wider uppercase">Project Elevation // Ref 1600 × 1100</span>
+              </div>
+              <div class="absolute bottom-4 right-4 z-10 hidden sm:flex items-center gap-3 bg-surface/90 px-3 py-1.5 border border-tertiary-fixed">
+                <span class="font-mono text-[10px] text-on-surface-variant">24°42'40"N 46°42'18"E</span>
+                <span class="text-tertiary-fixed-dim">|</span>
+                <span class="font-label-sm text-label-sm text-secondary uppercase">Project photo</span>
+              </div>
+
+              <!-- Thin Optical Crosshairs -->
+              <div class="absolute top-1/2 left-4 right-4 h-[1px] bg-white/20 pointer-events-none"></div>
+              <div class="absolute left-1/2 top-4 bottom-4 w-[1px] bg-white/20 pointer-events-none"></div>
+            </div>
+            
+            <div class="mt-2.5 flex items-center justify-between text-on-surface-variant font-mono text-[11px]">
+              <span>Fig. 1.0 — Site Supervision &amp; Structural Execution</span>
+              <span>Kingdom of Saudi Arabia</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Vision & Mission: Two Architectural Columns with 1px Vertical Divider -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl border-b border-tertiary-fixed bg-surface-container-low/60">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-tertiary-fixed bg-surface">
+            
+            <!-- Left Column: Vision -->
+            <div class="lg:col-span-6 p-8 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-tertiary-fixed relative">
+              <div class="absolute top-4 right-4 font-mono text-xs text-tertiary-fixed-dim tracking-widest select-none">
+                [A-01]
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-6">
+                  <span class="w-3 h-[1px] bg-secondary"></span>
+                  <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">VISION</span>
+                </div>
+                <h3 class="font-headline-md text-headline-sm lg:text-headline-md text-primary-container leading-snug">
+                  To set the standard for excellence in modern construction, building a legacy defined by trust, superior quality and enduring design.
+                </h3>
+              </div>
+              <div class="pt-10 mt-10 border-t border-tertiary-fixed flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+                <span class="uppercase tracking-wider">Benchmark Delivery</span>
+                <span class="font-mono text-secondary">01 / PERSPECTIVE</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Mission -->
+            <div class="lg:col-span-6 p-8 lg:p-14 flex flex-col justify-between relative">
+              <div class="absolute top-4 right-4 font-mono text-xs text-tertiary-fixed-dim tracking-widest select-none">
+                [A-02]
+              </div>
+              <div>
+                <div class="flex items-center gap-2 mb-6">
+                  <span class="w-3 h-[1px] bg-secondary"></span>
+                  <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">MISSION</span>
+                </div>
+                <h3 class="font-headline-md text-headline-sm lg:text-headline-md text-primary-container leading-snug">
+                  To deliver enduring, high-quality spaces through purposeful, precise construction, guided by integrity and superior craftsmanship.
+                </h3>
+              </div>
+              <div class="pt-10 mt-10 border-t border-tertiary-fixed flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+                <span class="uppercase tracking-wider">Precision Operations</span>
+                <span class="font-mono text-secondary">02 / DISCIPLINE</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section "How We Work": Numbered List Separated by Thin Hairlines -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl border-b border-tertiary-fixed bg-surface">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-baseline mb-12">
+            <div class="lg:col-span-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2.5 h-[1px] bg-secondary"></span>
+                <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">OPERATING FRAMEWORK</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary-container font-serif">
+                How we work
+              </h2>
+            </div>
+            <div class="lg:col-span-8">
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                Our operational methodology applies rigid quality controls, continuous on-site superintendence, and clear technical communication at each stage of construction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Numbered Hairline List Rows -->
+          <div class="border-t border-tertiary-fixed">
+            
+            <!-- Row 01 -->
+            <div class="py-8 lg:py-10 border-b border-tertiary-fixed grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline hover:bg-surface-container-low transition-colors duration-150 px-2 lg:px-4">
+              <div class="lg:col-span-2">
+                <span class="font-mono text-xl lg:text-2xl text-secondary font-light">01</span>
+              </div>
+              <div class="lg:col-span-8">
+                <p class="font-headline-sm text-headline-sm text-primary-container">
+                  Experienced engineers, supervisors and skilled manpower.
+                </p>
+              </div>
+              <div class="lg:col-span-2 text-left lg:text-right">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-mono">HUMAN CAPITAL</span>
+              </div>
+            </div>
+
+            <!-- Row 02 -->
+            <div class="py-8 lg:py-10 border-b border-tertiary-fixed grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline hover:bg-surface-container-low transition-colors duration-150 px-2 lg:px-4">
+              <div class="lg:col-span-2">
+                <span class="font-mono text-xl lg:text-2xl text-secondary font-light">02</span>
+              </div>
+              <div class="lg:col-span-8">
+                <p class="font-headline-sm text-headline-sm text-primary-container">
+                  Commitment to safety, quality and client satisfaction.
+                </p>
+              </div>
+              <div class="lg:col-span-2 text-left lg:text-right">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-mono">QA / QC / HSE</span>
+              </div>
+            </div>
+
+            <!-- Row 03 -->
+            <div class="py-8 lg:py-10 border-b border-tertiary-fixed grid grid-cols-1 lg:grid-cols-12 gap-6 items-baseline hover:bg-surface-container-low transition-colors duration-150 px-2 lg:px-4">
+              <div class="lg:col-span-2">
+                <span class="font-mono text-xl lg:text-2xl text-secondary font-light">03</span>
+              </div>
+              <div class="lg:col-span-8">
+                <p class="font-headline-sm text-headline-sm text-primary-container">
+                  Clear planning and coordination on projects of every size.
+                </p>
+              </div>
+              <div class="lg:col-span-2 text-left lg:text-right">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-mono">CONTROLS</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section "Our Group": Technical Ledger / Architectural Table -->
+      <section class="w-full px-margin-mobile lg:px-margin py-space-xl border-b border-tertiary-fixed bg-surface">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-4">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2.5 h-[1px] bg-secondary"></span>
+                <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">OUR GROUP</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary-container font-serif">
+                International Affiliates &amp; Technical Reach
+              </h2>
+            </div>
+            <p class="font-mono text-xs text-on-surface-variant max-w-sm">
+              Global engineering partnerships and talent mobilization channels empowering regional Saudi projects.
+            </p>
+          </div>
+
+          <!-- Ledger Headers -->
+          <div class="hidden md:grid grid-cols-12 gap-4 pb-3 border-b border-tertiary-fixed text-on-surface-variant font-mono text-[11px] uppercase tracking-wider px-2">
+            <div class="col-span-4">Entity &amp; Practice</div>
+            <div class="col-span-2">Jurisdiction</div>
+            <div class="col-span-6">Scope of Technical Capability</div>
+          </div>
+
+          <!-- Clean Ledger Rows -->
+          <div class="divide-y divide-tertiary-fixed border-b border-tertiary-fixed font-body-md">
+            
+            <!-- Row 1: Tijari Builders -->
+            <div class="py-6 px-2 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 items-baseline hover:bg-surface-container-low transition-colors duration-150">
+              <div class="md:col-span-4 flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-secondary flex-shrink-0"></span>
+                <span class="font-headline-sm text-[19px] text-primary-container font-serif font-medium">Tijari Builders</span>
+              </div>
+              <div class="md:col-span-2">
+                <span class="inline-flex items-center px-2 py-0.5 font-mono text-xs bg-surface-container text-on-surface border border-tertiary-fixed">
+                  Bangladesh
+                </span>
+              </div>
+              <div class="md:col-span-6">
+                <p class="text-body-md text-on-surface-variant">
+                  Mobilises trained manpower to match project requirements.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 2: ASAT Consulting Engineers -->
+            <div class="py-6 px-2 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 items-baseline hover:bg-surface-container-low transition-colors duration-150">
+              <div class="md:col-span-4 flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-secondary flex-shrink-0"></span>
+                <span class="font-headline-sm text-[19px] text-primary-container font-serif font-medium">ASAT Consulting Engineers</span>
+              </div>
+              <div class="md:col-span-2">
+                <span class="inline-flex items-center px-2 py-0.5 font-mono text-xs bg-surface-container text-on-surface border border-tertiary-fixed">
+                  India
+                </span>
+              </div>
+              <div class="md:col-span-6">
+                <p class="text-body-md text-on-surface-variant">
+                  Engineering solutions, including support on the Hyderabad Metro and Riyadh Metro.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 3: Lexistruct Consulting Engineers -->
+            <div class="py-6 px-2 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 items-baseline hover:bg-surface-container-low transition-colors duration-150">
+              <div class="md:col-span-4 flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-secondary flex-shrink-0"></span>
+                <span class="font-headline-sm text-[19px] text-primary-container font-serif font-medium">Lexistruct Consulting Engineers</span>
+              </div>
+              <div class="md:col-span-2">
+                <span class="inline-flex items-center px-2 py-0.5 font-mono text-xs bg-surface-container text-on-surface border border-tertiary-fixed">
+                  India
+                </span>
+              </div>
+              <div class="md:col-span-6">
+                <p class="text-body-md text-on-surface-variant">
+                  Project control support: estimation, planning and contracts management.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Footnote Ledger Label -->
+          <div class="pt-4 flex items-center justify-between text-on-surface-variant font-mono text-[11px]">
+            <span>REGIONAL MOBILISATION CAPACITY: ACTIVE</span>
+            <span>INTEGRATED TECHNICAL NETWORK</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing Call to Action: Navy Deep Band with Architectural Lattice Texture -->
+      <section class="w-full bg-primary-container text-on-primary relative overflow-hidden py-24 lg:py-28 px-margin-mobile lg:px-margin">
+        <!-- Subtle Mashrabiya Geometric Lattice Pattern Overlay -->
+        <div class="absolute inset-0 pointer-events-none opacity-[0.05]">
+          <svg class="w-full h-full text-secondary-fixed" fill="none" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern height="80" id="cta-mashrabiya" patternUnits="userSpaceOnUse" width="80">
+                <polygon points="40,8 72,40 40,72 8,40" stroke="currentColor" stroke-width="0.8"></polygon>
+                <polygon points="40,20 60,40 40,60 20,40" stroke="currentColor" stroke-width="0.5"></polygon>
+                <line stroke="currentColor" stroke-width="0.5" x1="0" x2="80" y1="40" y2="40"></line>
+                <line stroke="currentColor" stroke-width="0.5" x1="40" x2="40" y1="0" y2="80"></line>
+                <circle cx="40" cy="40" r="4" stroke="currentColor" stroke-width="0.5"></circle>
+              </pattern>
+            </defs>
+            <rect fill="url(#cta-mashrabiya)" height="100%" width="100%"></rect>
+          </svg>
+        </div>
+
+        <!-- Editorial Accent Border Line -->
+        <div class="absolute top-0 left-0 right-0 h-[1px] bg-secondary-fixed-dim/30"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <div class="lg:col-span-8 space-y-4">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-[1px] bg-secondary-fixed"></span>
+                <span class="font-label-eyebrow text-label-eyebrow text-secondary-fixed uppercase tracking-[0.2em]">ENGAGEMENT &amp; CONSULTATION</span>
+              </div>
+              <h2 class="font-display text-headline-lg lg:text-display text-on-primary tracking-tight font-serif">
+                Talk to us about your project.
+              </h2>
+              <p class="font-body-md text-body-md text-tertiary-fixed-dim max-w-xl">
+                Our Riyadh project estimation and civil engineering desk is available for technical reviews, tender documentation, and capability presentations.
+              </p>
+            </div>
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-center gap-4 pt-4 lg:pt-0">
+              <a class="inline-flex items-center justify-center bg-secondary-fixed text-on-secondary-fixed hover:bg-white hover:text-primary-container font-label-md text-label-md uppercase tracking-[0.08em] px-9 py-4 border border-secondary-fixed transition-colors duration-150 rounded-none w-full sm:w-auto text-center" href="contact.html">
+                Contact
+              </a>
+              <span class="font-mono text-[11px] text-tertiary-fixed-dim tracking-wider uppercase">
+                Headquarters: Al Murabba, Riyadh
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+        
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-lg">
+          <div class="space-y-space-md">
+            <a href="/" class="inline-block focus:outline-none mb-2">
+              <img alt="Elevate Builders - CR: 7049953909" class="h-12 sm:h-14 w-auto object-contain" src="/assets/logo.png"/>
+            </a>
+            <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Premier Civil Contracting &amp; Engineering</p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Civil, infrastructure and finishing works across Saudi Arabia.</p>
+          </div>
+          <div class="pt-space-lg border-t border-tertiary-fixed mt-space-lg">
+            <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-space-xs">Registered Headquarters</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-sm">
+              7755 Prince Abdulaziz ibn Mussaed ibn Jalawi, Al Murabba Dist. 12612, Riyadh, Saudi Arabia
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-3 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Navigation</span>
+          <nav class="flex flex-col space-y-space-sm border-l border-tertiary-fixed pl-space-md">
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="index.html">Home</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="about.html">About</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="services.html">Services</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="projects.html">Projects</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="credentials.html">Credentials</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="contact.html">Contact</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="index.html#quote-dialog">Request a Quote</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Status -->
+        <div class="lg:col-span-4 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Direct Inquiries</span>
+          <div class="space-y-space-md border-l border-tertiary-fixed pl-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Telephone</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="tel:+966558943663">+966 558943663</a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Direct Correspondence</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:Info@elevatebuilders.com.sa">Info@elevatebuilders.com.sa</a>
+            </div>
+            <div class="pt-space-sm">
+              <div class="inline-flex items-center gap-space-xs px-3 py-1.5 bg-surface border border-tertiary-fixed">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase text-primary-container">Riyadh Operations Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-space-xl pt-space-md border-t border-tertiary-fixed flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+        <p>© 2026 Elevate Builders Company. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <span class="text-secondary uppercase tracking-widest">Commercial Registration 7049953909</span>
+          <span class="hidden md:inline text-tertiary-fixed-dim">|</span>
+          <span class="uppercase">Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactivity Scripts -->
+  <script>
+    (function() {
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    })();
+  </script>
+  <script src="/assets/motion.js" defer></script>
+</body>
+</html>
+

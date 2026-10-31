@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Elevate Builders — Architectural Motion & Animation Engine
+   Designed for Monolithic Stability, Precision & Editorial Elegance
+   ========================================================================== */
+
+/* 1. Global Scroll Behavior & Hairline Progress Bar */
+html {
+  scroll-behavior: smooth;
+}
+
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #080237 0%, #6C5C3E 50%, #B8A582 100%);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 100;
+  pointer-events: none;
+  transition: transform 0.08s linear;
+}
+
+/* 2. Header Nav Link & Button Change Animations */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 2px 8px 2px;
+  letter-spacing: 0.06em;
+  transition: color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #6C5C3E; /* Desert Sand */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #080237 !important;
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-link.active-link {
+  color: #080237 !important;
+}
+
+.nav-link.active-link::after {
+  transform: scaleX(1);
+  background: #080237; /* Monolith Navy */
+}
+
+/* Header CTA Button Kinetics with Shimmer Sweep */
+.header-cta-btn {
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.08em;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.3s ease;
+}
+
+.header-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.header-cta-btn:hover::before {
+  left: 140%;
+}
+
+.header-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 2, 55, 0.16);
+}
+
+.header-cta-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* 3. "What We Do" Editorial Rows Seamless Reveal & Hover */
+.what-we-do-row {
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              padding-left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.what-we-do-row::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #6C5C3E, #B8A582);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.what-we-do-row:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.what-we-do-row:hover {
+  transform: translateX(8px);
+  background-color: #F5F4F0 !important;
+}
+
+.what-we-do-row .row-number {
+  transition: color 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+.what-we-do-row:hover .row-number {
+  color: #6C5C3E !important;
+  transform: scale(1.15) translateX(2px);
+}
+
+.what-we-do-row .row-arrow {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+  display: inline-flex;
+}
+
+.what-we-do-row:hover .row-arrow {
+  transform: translateX(6px);
+  color: #6C5C3E;
+}
+
+/* 4. Scroll Reveal Transitions (GPU Accelerated) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale.is-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger Delays for Grid Cards & Spec Strips */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 480ms; }
+
+/* 5. Architectural Card & Plate Micro-Interactions */
+.architectural-card {
+  transition: border-color 0.35s ease,
+              background-color 0.3s ease,
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.architectural-card:hover {
+  border-color: #6C5C3E; /* Desert Sand hairline highlight */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(8, 2, 55, 0.05);
+}
+
+.image-plate {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-plate img {
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s ease;
+  will-change: transform;
+}
+
+.image-plate:hover img,
+.group:hover .image-plate img {
+  transform: scale(1.04);
+}
+
+/* 6. Back-to-Top Floating Navigation Action */
+#back-to-top-btn {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(250, 249, 245, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid #E4E2DC;
+  color: #080237;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+#back-to-top-btn.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#back-to-top-btn:hover {
+  background-color: #080237;
+  color: #FAF9F5;
+  border-color: #080237;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(8, 2, 55, 0.18);
+}
+
+/* 7. Infinite Client Logo Marquee / Slideshow */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+  width: max-content;
+  animation: marquee-scroll-reverse 26s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-track,
+.marquee-mask:hover .marquee-track,
+.marquee-container:hover .marquee-track-reverse,
+.marquee-mask:hover .marquee-track-reverse {
+  animation-play-state: paused;
+}
+
+.client-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.5rem;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: grayscale(100%) contrast(108%);
+  opacity: 0.7;
+}
+
+.client-logo-item:hover {
+  filter: grayscale(0%) contrast(100%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+/* 8. Reduced Motion Compatibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .what-we-do-row {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .image-plate img {
+    transition: none !important;
+  }
+  #scroll-progress-bar,
+  #back-to-top-btn {
+    display: none;
+  }
+}
+
+/* 9. Project Card Carousel Scroll-Snap & Scrollbar Reset */
+.carousel-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none !important;
+}
+
