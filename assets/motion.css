@@ -4,19 +4,35 @@
    ========================================================================== */
 
 /* 1. Global Viewport Hardening, Scroll Behavior & Hairline Progress Bar */
-html,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow-x: hidden !important;
-  max-width: 100vw;
+  overflow-x: hidden;
   width: 100%;
-  position: relative;
   margin: 0;
   padding: 0;
   -webkit-overflow-scrolling: touch;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Architectural Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF9F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8C5D0;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6C5C3E;
 }
 
 #scroll-progress-bar {

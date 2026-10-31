@@ -15,26 +15,44 @@
   <link rel="icon" type="image/png" href="/assets/logo-emblem.png"/>
   <link rel="apple-touch-icon" href="/assets/logo-emblem.png"/>
 
-  <style>
+    <style>
     @layer base {
-      html, body {
+      html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overflow-x: hidden;
+        width: 100%;
         margin: 0;
         padding: 0;
       }
-      body {
-        overscroll-behavior: none;
-      }
-      main > :first-child {
+
+      main> :first-child {
         margin-top: 0 !important;
       }
-      main > :last-child {
+
+      main> :last-child {
         margin-bottom: 0 !important;
       }
     }
+
+    /* Architectural Subtle Scrollbar */
     ::-webkit-scrollbar {
-      display: none;
+      width: 8px;
     }
-  
+    ::-webkit-scrollbar-track {
+      background: #FAF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C8C5D0;
+      border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6C5C3E;
+    }
+
     /* Bulletproof Mobile Navigation & Slide-down Animation */
     @keyframes mobileMenuSlideDown {
       from {
