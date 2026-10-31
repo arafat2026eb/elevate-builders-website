@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>404 — Record Not Found | Elevate Builders</title>
+  <meta name="description" content="The requested page or document record could not be found in the Elevate Builders registry."/>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png"/>
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png"/>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "tertiary": "#0b0c09",
+            "tertiary-fixed": "#e4e2dc",
+            "surface": "#faf9f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["IBM Plex Sans", "sans-serif"],
+            "serif": ["Newsreader", "serif"],
+            "sans": ["IBM Plex Sans", "sans-serif"],
+            "mono": ["IBM Plex Sans", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="/assets/motion.css"/>
+
+  <!-- Open Graph / Social Previews -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Elevate Builders"/>
+  <meta property="og:image" content="/assets/og-image.png"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="/assets/og-image.png"/>
+</head>
+
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container antialiased flex flex-col min-h-screen">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed">
+    <div class="h-20 w-full max-w-[1440px] mx-auto px-6 md:px-16 flex items-center justify-between gap-4">
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="/assets/logo.png"/>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 text-xs uppercase tracking-wider font-sans font-medium">
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/">Home</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/about">About</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/services">Services</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/projects">Projects</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/credentials">Credentials</a>
+        <a class="text-on-surface-variant hover:text-primary-container transition-colors" href="/contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="inline-flex items-center justify-center bg-primary-container text-on-primary text-xs uppercase px-5 lg:px-7 py-3 border border-primary-container hover:bg-secondary hover:border-secondary transition-all" href="/contact">
+          Request a quote
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN ERROR VIEWPORT -->
+  <main class="w-full pt-20 flex-1 flex items-center justify-center py-16 px-6">
+    <div class="max-w-xl w-full border border-tertiary-fixed bg-surface-container-lowest p-8 md:p-12 relative">
+      <!-- Coordinate Header Bar -->
+      <div class="flex items-center justify-between border-b border-tertiary-fixed pb-3 mb-8">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-secondary"></span>
+          <span class="font-mono text-xs uppercase tracking-wider text-secondary">REGISTRY ROUTE EXCEPTION</span>
+        </div>
+        <span class="font-mono text-xs text-on-surface-variant">HTTP 404</span>
+      </div>
+
+      <!-- Main Headline -->
+      <span class="font-mono text-xs uppercase tracking-widest text-secondary block mb-2">DRAWING RECORD NOT FOUND</span>
+      <h1 class="font-headline text-3xl md:text-4xl text-primary-container font-serif tracking-tight mb-4">
+        The specified document or route does not exist.
+      </h1>
+
+      <p class="font-body text-sm text-on-surface-variant leading-relaxed mb-8">
+        The requested URL path has either been relocated, archived, or was referenced incorrectly. Please verify the URL structure or navigate back to the primary operational registry.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4 border-t border-tertiary-fixed">
+        <a href="/" class="inline-flex items-center justify-center bg-primary-container text-on-primary text-xs uppercase px-6 py-3 border border-primary-container hover:bg-secondary hover:border-secondary transition-colors">
+          Return to Home
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center bg-transparent text-primary-container text-xs uppercase px-6 py-3 border border-tertiary-fixed hover:bg-surface-container transition-colors">
+          Contact Tender Desk
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface py-8 px-6 md:px-16 text-xs font-mono text-on-surface-variant flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p>© 2026 Elevate Builders Company. CR: 7049953909 · Kingdom of Saudi Arabia</p>
+    <a href="/" class="hover:text-primary-container underline uppercase">Return to Main Registry</a>
+  </footer>
+
+</body>
+</html>

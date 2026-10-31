@@ -1,0 +1,19 @@
+{
+  "name": "elevate-builders-website",
+  "version": "1.0.0",
+  "description": "Elevate Builders Corporate Website — Civil, Infrastructure and Finishing Works, Riyadh KSA",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "elevate-builders",
+    "construction",
+    "civil-engineering",
+    "infrastructure",
+    "riyadh",
+    "saudi-arabia"
+  ],
+  "author": "Elevate Builders Company",
+  "license": "UNLICENSED"
+}
