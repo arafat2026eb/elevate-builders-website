@@ -1,7 +1,7 @@
 /**
  * Elevate Builders — Precision Architectural Motion Engine
  * Delivers institutional smoothness, scroll-linked progress, number ticker animations,
- * subtle photography parallax, back-to-top navigation, and staggered section reveals.
+ * subtle photography parallax, back-to-top navigation, staggered reveals, and kinetic mobile menu.
  */
 
 (function () {
@@ -259,6 +259,82 @@
     });
   }
 
+  // 8. Mobile Navigation Toggle & Drawer Controller with Smooth Kinetics
+  function initMobileNavigation() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+
+    // Inject 3-bar hamburger architecture if not already present
+    if (!btn.querySelector('.nav-icon-bar')) {
+      btn.innerHTML = `
+        <span class="nav-icon-bar"></span>
+        <span class="nav-icon-bar"></span>
+        <span class="nav-icon-bar"></span>
+      `;
+    }
+
+    // Set initial aria and class state
+    btn.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('hidden');
+    if (!menu.classList.contains('menu-expanded')) {
+      menu.classList.add('menu-collapsed');
+    }
+
+    function toggle(open) {
+      const willOpen = open !== undefined ? open : !btn.classList.contains('is-active');
+      if (willOpen) {
+        btn.classList.add('is-active');
+        menu.classList.remove('menu-collapsed');
+        menu.classList.add('menu-expanded');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.classList.remove('is-active');
+        menu.classList.remove('menu-expanded');
+        menu.classList.add('menu-collapsed');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      toggle();
+    });
+
+    // Close on click outside
+    document.addEventListener('click', function (e) {
+      if (btn.classList.contains('is-active') && !btn.contains(e.target) && !menu.contains(e.target)) {
+        toggle(false);
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && btn.classList.contains('is-active')) {
+        toggle(false);
+        btn.focus();
+      }
+    });
+
+    // Close when tapping any link inside
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', function () {
+        toggle(false);
+      });
+    });
+
+    // Close on window resize to desktop breakpoint
+    window.addEventListener(
+      'resize',
+      function () {
+        if (window.innerWidth >= 768 && btn.classList.contains('is-active')) {
+          toggle(false);
+        }
+      },
+      { passive: true }
+    );
+  }
+
   // Initialize all motion modules
   function initAll() {
     initProgressBar();
@@ -268,6 +344,7 @@
     initStatCounters();
     initHeaderElevation();
     initKineticDetails();
+    initMobileNavigation();
   }
 
   if (document.readyState === 'loading') {

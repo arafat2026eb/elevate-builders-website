@@ -193,15 +193,18 @@
         </a>
         
         <!-- Mobile Menu Button - Strictly hidden on md and up -->
-        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 flex items-center justify-center border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors">
-          <span class="material-symbols-outlined text-[24px]">menu</span>
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+          class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors duration-150">
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
         </button>
       </div>
 
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+    <div id="mobile-menu" class="menu-collapsed md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
       <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
         <div class="pb-2 border-b border-tertiary-fixed mb-1">
           <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png"/>
@@ -796,15 +799,8 @@
   <!-- Interactivity Scripts -->
   <script>
     (function() {
-      // Mobile Menu Toggle
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileBtn && mobileMenu) {
-        mobileBtn.addEventListener('click', function() {
-          mobileMenu.classList.toggle('hidden');
-        });
-      }
-    })();
+      // Mobile menu is powered with kinetics by motion.js
+})();
   </script>
   <script src="/assets/motion.js" defer></script>
 </body>
