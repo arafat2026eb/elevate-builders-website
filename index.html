@@ -19,7 +19,11 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     rel="stylesheet" />
 
-    <style>
+      <style>
+    :root {
+      --header-progress: 0;
+    }
+
     @layer base {
       html {
         overflow-x: hidden;
@@ -76,6 +80,155 @@
     #mobile-menu:not(.hidden) {
       display: flex !important;
       animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* ==========================================================================
+       MOBILE HEADER & HERO EDITORIAL SYSTEM (Clean, uncluttered, whitespace-first)
+       ========================================================================== */
+    @media (max-width: 1023px) {
+      header#site-header {
+        height: calc(64px + env(safe-area-inset-top, 0px)) !important;
+        padding-top: env(safe-area-inset-top, 0px) !important;
+        background-color: rgba(247, 246, 242, var(--header-progress, 0)) !important;
+        border-bottom: 1px solid rgba(228, 226, 220, var(--header-progress, 0)) !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow: none !important;
+        transition: none !important;
+      }
+
+      /* Logo Crossfade: white logo over transparent hero -> navy logo over off-white header */
+      .header-logo-white {
+        opacity: calc(1 - var(--header-progress, 0));
+        transition: opacity 0.1s linear;
+      }
+
+      .header-logo-navy {
+        opacity: var(--header-progress, 0);
+        transition: opacity 0.1s linear;
+      }
+
+      /* Hamburger Lines: 1px thin, white at top, navy on scroll */
+      #mobile-menu-btn {
+        width: 38px !important;
+        height: 38px !important;
+        background: transparent !important;
+        border-radius: 2px !important;
+        border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.6) calc((1 - var(--header-progress, 0)) * 100%), #E4E2DC) !important;
+      }
+
+      #mobile-menu-btn .nav-icon-bar {
+        width: 18px !important;
+        height: 1px !important;
+        background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+      }
+
+      #mobile-menu-btn.is-active .nav-icon-bar {
+        background-color: #6C5C3E !important;
+      }
+
+      /* Header Button on Mobile: white at top -> navy after scroll */
+      .mobile-header-btn {
+        height: 38px !important;
+        padding: 0 14px !important;
+        border-radius: 2px !important;
+        font-family: 'IBM Plex Sans', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        text-transform: none !important;
+        background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+        color: color-mix(in srgb, #1F1B4D calc((1 - var(--header-progress, 0)) * 100%), #FFFFFF) !important;
+        border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.4) calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+        transition: opacity 0.15s ease;
+      }
+
+      .mobile-header-btn:active {
+        opacity: 0.85;
+      }
+
+      /* Hero Mobile Layout */
+      .hero-mobile-container {
+        height: 100svh;
+        min-height: 600px;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero-mobile-content {
+        animation: heroFadeUp 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .hero-mobile-headline {
+        font-family: 'Newsreader', serif;
+        font-size: clamp(34px, 9.5vw, 44px);
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+        text-wrap: balance;
+        color: #FFFFFF;
+      }
+
+      .hero-mobile-paragraph {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: rgba(255, 255, 255, 0.85);
+        max-width: 34ch;
+        margin-top: 20px;
+      }
+
+      .hero-btn-primary {
+        height: 52px;
+        border-radius: 2px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: none;
+        background-color: #FFFFFF;
+        color: #1F1B4D;
+        transition: opacity 0.15s ease;
+      }
+
+      .hero-btn-primary:active {
+        opacity: 0.9;
+      }
+
+      .hero-btn-secondary {
+        height: 52px;
+        border-radius: 2px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: none;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        color: #FFFFFF;
+        transition: opacity 0.15s ease;
+      }
+
+      .hero-btn-secondary:active {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-mobile-content {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
     }
   </style>
 
@@ -215,16 +368,21 @@
   class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
 
   <!-- HEADER -->
-  <header
-    class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+  <header id="site-header"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
     <div
-      class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+      class="h-16 lg:h-20 w-full max-w-[1440px] mx-auto px-6 md:px-margin flex items-center justify-between gap-4">
 
-      <!-- Brand Logo -->
-      <div class="flex items-center shrink-0">
-        <a class="flex items-center group focus:outline-none" href="/">
-          <img alt="Elevate Builders - CR: 7049953909"
-            class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+      <!-- Brand Logo (White on transparent mobile hero, Navy after scroll & on desktop) -->
+      <div class="flex items-center shrink-0 relative">
+        <a class="flex items-center group focus:outline-none relative h-8 sm:h-9 lg:h-12 w-auto" href="/">
+          <!-- Mobile White Logo -->
+          <img alt="Elevate Builders"
+            class="header-logo-white lg:hidden absolute left-0 top-0 h-8 sm:h-9 w-auto object-contain pointer-events-none"
+            src="/assets/logo-white.png" />
+          <!-- Regular Navy Logo -->
+          <img alt="Elevate Builders"
+            class="header-logo-navy h-8 sm:h-9 lg:h-12 w-auto object-contain"
             src="/assets/logo.png" />
         </a>
       </div>
@@ -240,19 +398,19 @@
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
       </nav>
 
-      <!-- Desktop CTA with Shimmer & Mobile Toggle -->
-      <div class="flex items-center gap-3 shrink-0">
-        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200"
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
+        <a class="mobile-header-btn lg:header-cta-btn inline-flex items-center justify-center font-label-md text-label-md uppercase px-4 lg:px-7 py-2 lg:py-3 border border-primary-container rounded-[2px] transition-all duration-200"
           href="/contact">
           Request a quote
         </a>
 
         <!-- Mobile Menu Button - Strictly hidden on md and up -->
         <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
-          class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors duration-150">
-          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
-          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
-          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          class="md:hidden flex flex-col items-center justify-center gap-[5px] transition-colors duration-150">
+          <span class="nav-icon-bar block transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block transition-all duration-300 origin-center"></span>
         </button>
       </div>
 
@@ -295,85 +453,55 @@
     <div class="flex flex-col w-full">
 
       <!-- SECTION 1: HERO VIEWPORT (Image-First Full-Bleed on Mobile / Editorial 2-Col on Desktop) -->
-      <section class="relative w-full overflow-hidden border-b border-tertiary-fixed -mt-20 pt-20 lg:mt-0 lg:pt-12 min-h-[100svh] min-h-[100dvh] lg:min-h-0 lg:h-auto flex flex-col justify-between bg-[#080237] lg:bg-surface">
+      <section class="relative w-full overflow-hidden border-b border-tertiary-fixed -mt-16 lg:mt-0 lg:pt-12 min-h-[100svh] min-h-[600px] lg:min-h-0 lg:h-auto flex flex-col justify-between bg-[#080237] lg:bg-surface">
 
-        <!-- MOBILE FULL-BLEED BACKGROUND & ARCHITECTURAL GRADIENT OVERLAY (Visible on < lg) -->
+        <!-- MOBILE FULL-BLEED BACKGROUND & OVERLAY TINT (Keep exact same image, crop, position & tint) -->
         <div class="lg:hidden absolute inset-0 w-full h-full pointer-events-none select-none z-0">
           <img
             src="/assets/hero-mobile-infrastructure.jpg"
-            alt="Elevate Builders — Monumental Civil Infrastructure Project in Riyadh, Saudi Arabia"
+            alt="Elevate Builders — Civil Infrastructure Project in Riyadh, Saudi Arabia"
             class="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.10]"
             loading="eager"
             fetchpriority="high"
             decoding="async"
           />
-          <!-- Multi-stop Architectural Dark Vignette Gradient for 100% Text Contrast & Luxury Tone -->
+          <!-- Existing Overlay Tint: Multi-stop Architectural Dark Vignette Gradient -->
           <div class="absolute inset-0 bg-gradient-to-t from-[#080237] via-[#080237]/75 to-[#080237]/45"></div>
           <!-- Fine Blueprint Hairline Grid Texture -->
           <div class="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#FAF9F5_1px,transparent_1px)] [background-size:16px_16px]"></div>
         </div>
 
         <!-- ==================== MOBILE HERO CONTENT (< lg) ==================== -->
-        <div class="lg:hidden relative z-10 w-full flex-1 flex flex-col justify-between px-margin-mobile pt-6 pb-8">
+        <!-- Clean, Left-Aligned & Anchored to the Bottom with 24px Side Padding and Safe-Area Bottom Padding -->
+        <div class="lg:hidden relative z-10 w-full flex-1 flex flex-col justify-end hero-mobile-container">
           
-          <!-- Top Technical Eyebrow & Status Badge -->
-          <div class="flex items-center justify-between gap-2 border-b border-white/15 pb-3">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-secondary"></span>
-              <span class="font-label-eyebrow text-[11px] uppercase text-[#E4E2DC] tracking-[0.2em] font-medium">
-                Riyadh, KSA • CR: 7049953909
-              </span>
-            </div>
-            <span class="font-mono text-[10px] text-[#B8A582] uppercase tracking-widest px-2 py-0.5 bg-white/10 border border-white/20">
-              ISO Certified
-            </span>
-          </div>
-
-          <!-- Main Narrative Column (Centered / Mobile Viewport Aligned) -->
-          <div class="my-auto py-6 space-y-4">
-            <div class="inline-block">
-              <span class="font-mono text-[11px] uppercase tracking-widest text-secondary-fixed bg-secondary-fixed/15 px-3 py-1 border border-secondary-fixed/30 backdrop-blur-sm">
-                Civil Infrastructure &amp; Engineering
-              </span>
-            </div>
-            
-            <h1 class="font-serif text-white text-[32px] sm:text-[40px] leading-[1.12] tracking-tight font-normal">
+          <div class="hero-mobile-content">
+            <!-- 1. Headline: Newsreader, 38px on 390px-wide screen, scaling fluidly with clamp(34px, 9.5vw, 44px), regular weight, text-wrap: balance -->
+            <h1 class="hero-mobile-headline font-serif text-white">
               Civil, infrastructure and finishing works across Saudi Arabia.
             </h1>
-            
-            <p class="font-body-md text-[#FAF9F5]/90 text-[14px] sm:text-[16px] leading-relaxed max-w-lg">
-              Elevate Builders delivers monolithic concrete engineering, deep utility culverts, and structural finishing from Riyadh, governed under ISO 9001, 14001, and 45001 standards.
+
+            <!-- 2. One Short Paragraph: IBM Plex Sans, 16px, line-height 1.55, 85% white, max-width 34ch, 20px below headline -->
+            <p class="hero-mobile-paragraph font-sans">
+              Elevate Builders delivers construction and manpower services from Riyadh, with ISO 9001, 14001 and 45001 certified management systems.
             </p>
 
-            <!-- Touch-optimized Full-width CTA Buttons -->
-            <div class="pt-3 flex flex-col sm:flex-row gap-3">
-              <a class="w-full sm:w-auto inline-flex items-center justify-center bg-secondary text-white font-label-md text-label-md uppercase px-8 py-4 border border-secondary hover:bg-white hover:text-primary transition-all duration-200 tracking-wider text-center font-medium shadow-md"
-                href="#quote-dialog">
+            <!-- 3 & 4. Primary & Secondary Buttons: Stacked, Full Width, 52px Tall, 2px Corner Radius, Sentence Case, 12px Gap, 32px below paragraph -->
+            <div class="flex flex-col gap-3 w-full mt-8">
+              <a href="#quote-dialog"
+                class="hero-btn-primary flex items-center justify-center w-full shadow-sm text-center">
                 Request a quote
               </a>
-              <a class="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 backdrop-blur-md text-[#FAF9F5] font-label-md text-label-md uppercase px-8 py-4 border border-white/30 hover:bg-white/20 transition-all duration-200 tracking-wider text-center"
-                href="/projects">
-                View projects (9) →
+              <a href="/projects"
+                class="hero-btn-secondary flex items-center justify-center w-full text-center">
+                View projects
               </a>
-            </div>
-          </div>
-
-          <!-- Bottom Coordinates & Real-time Datum Bar -->
-          <div class="border-t border-white/15 pt-3.5 flex items-center justify-between text-white/75 font-mono text-[11px] tracking-wider uppercase">
-            <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span class="text-white/90">Riyadh Ops Active</span>
-            </div>
-            <div class="flex items-center gap-2 text-white/60">
-              <span>24°42'N</span>
-              <span>/</span>
-              <span>46°40'E</span>
             </div>
           </div>
 
         </div>
 
-        <!-- ==================== DESKTOP HERO CONTENT (lg and above) ==================== -->
+        <!-- ==================== DESKTOP HERO CONTENT (lg and above: UNTOUCHED) ==================== -->
         <div class="hidden lg:block w-full max-w-[1440px] mx-auto px-margin pb-24">
           <div class="grid grid-cols-12 gap-gutter items-stretch">
 
@@ -1097,49 +1225,67 @@
 })();
   </script>
   <script src="/assets/motion.js" defer></script>
-  <script>
-    // Bulletproof Immediate Mobile Navigation Controller
+    <script>
+    // Bulletproof Immediate Mobile Navigation & Header Scroll-Progress Controller
     (function () {
+      // 1. Mobile Menu Drawer Toggle
       const btn = document.getElementById('mobile-menu-btn');
       const menu = document.getElementById('mobile-menu');
-      if (!btn || !menu) return;
-
-      // Force hidden on initial load
-      menu.classList.add('hidden');
-      btn.classList.remove('is-active');
-      btn.setAttribute('aria-expanded', 'false');
-
-      function closeMenu() {
+      if (btn && menu) {
+        menu.classList.add('hidden');
         btn.classList.remove('is-active');
         btn.setAttribute('aria-expanded', 'false');
-        menu.classList.add('hidden');
+
+        function closeMenu() {
+          btn.classList.remove('is-active');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.classList.add('hidden');
+        }
+
+        function toggleMenu(e) {
+          if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          if (menu.classList.contains('hidden')) {
+            btn.classList.add('is-active');
+            btn.setAttribute('aria-expanded', 'true');
+            menu.classList.remove('hidden');
+          } else {
+            closeMenu();
+          }
+        }
+
+        btn.onclick = toggleMenu;
+
+        document.addEventListener('click', function (e) {
+          if (!menu.classList.contains('hidden') && !btn.contains(e.target) && !menu.contains(e.target)) {
+            closeMenu();
+          }
+        });
+
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
+        });
       }
 
-      function toggleMenu(e) {
-        if (e) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-        if (menu.classList.contains('hidden')) {
-          btn.classList.add('is-active');
-          btn.setAttribute('aria-expanded', 'true');
-          menu.classList.remove('hidden');
-        } else {
-          closeMenu();
-        }
+      // 2. Continuous Header Transition by Scroll Position: progress = clamp(scrollY / 80, 0, 1)
+      let ticking = false;
+      function updateHeaderProgress() {
+        const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
+        const progress = Math.min(Math.max(scrollY / 80, 0), 1);
+        document.documentElement.style.setProperty('--header-progress', progress.toFixed(3));
+        ticking = false;
       }
 
-      btn.onclick = toggleMenu;
-
-      document.addEventListener('click', function (e) {
-        if (!menu.classList.contains('hidden') && !btn.contains(e.target) && !menu.contains(e.target)) {
-          closeMenu();
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(updateHeaderProgress);
+          ticking = true;
         }
-      });
+      }, { passive: true });
 
-      menu.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', closeMenu);
-      });
+      updateHeaderProgress();
     })();
   </script>
 </body>
