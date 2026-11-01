@@ -489,23 +489,39 @@
   <main class="w-full pt-0 lg:pt-20 bg-surface flex-1">
     <div class="flex flex-col w-full">
 
-      <!-- SECTION 1: HERO VIEWPORT (Image-First Full-Bleed on Mobile / Editorial 2-Col on Desktop) -->
-      <section id="hero-section" class="relative w-full overflow-hidden border-b border-tertiary-fixed h-[100dvh] min-h-[100dvh] lg:h-auto lg:min-h-0 lg:pt-12 flex flex-col justify-between bg-[#080237] lg:bg-surface">
+      <!-- SECTION 1: HERO VIEWPORT (Image-First Full-Bleed on Mobile & Desktop) -->
+      <section id="hero-section" class="relative w-full overflow-hidden border-b border-tertiary-fixed h-[100dvh] min-h-[100dvh] lg:h-[calc(100vh-80px)] lg:min-h-[640px] flex flex-col justify-end bg-[#080237]">
 
-        <!-- MOBILE FULL-BLEED BACKGROUND & OVERLAY TINT (Keep exact same image, crop, position & tint) -->
-        <div class="lg:hidden absolute inset-0 w-full h-full pointer-events-none select-none z-0">
+        <!-- FULL-BLEED BACKGROUND & OVERLAY TINT (Vertical for Mobile / Horizontal 16:9 for Desktop) -->
+        <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
+          <!-- Mobile Background Image -->
           <img
             src="/assets/hero-mobile-infrastructure.jpg"
-            alt="Elevate Builders — Civil Infrastructure Project in Riyadh, Saudi Arabia"
-            class="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.10]"
+            alt="Elevate Builders — Civil Infrastructure Project in Riyadh"
+            class="lg:hidden w-full h-full object-cover object-center filter brightness-[0.85] contrast-[1.10]"
             loading="eager"
             fetchpriority="high"
             decoding="async"
           />
-          <!-- Existing Overlay Tint: Multi-stop Architectural Dark Vignette Gradient -->
-          <div class="absolute inset-0 bg-gradient-to-t from-[#080237] via-[#080237]/75 to-[#080237]/45"></div>
+          <!-- Desktop Background Image (Horizontal 16:9 Panoramic) -->
+          <img
+            src="/assets/hero-desktop-infrastructure.jpg"
+            alt="Elevate Builders — Civil Infrastructure Project in Riyadh"
+            class="hidden lg:block w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.08]"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+
+          <!-- Mobile Overlay Gradient -->
+          <div class="lg:hidden absolute inset-0 bg-gradient-to-t from-[#080237] via-[#080237]/70 to-[#080237]/35"></div>
+          
+          <!-- Desktop Overlay Gradients: Left-to-right for text contrast, subtle bottom vignette -->
+          <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#080237]/90 via-[#080237]/50 to-transparent"></div>
+          <div class="hidden lg:block absolute inset-0 bg-gradient-to-t from-[#080237]/80 via-transparent to-black/20"></div>
+
           <!-- Fine Blueprint Hairline Grid Texture -->
-          <div class="absolute inset-0 opacity-[0.04] bg-[radial-gradient(#FAF9F5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div class="absolute inset-0 opacity-[0.035] bg-[radial-gradient(#FAF9F5_1px,transparent_1px)] [background-size:16px_16px]"></div>
         </div>
 
         <!-- ==================== MOBILE HERO CONTENT (< lg) ==================== -->
@@ -538,90 +554,30 @@
 
         </div>
 
-        <!-- ==================== DESKTOP HERO CONTENT (lg and above: UNTOUCHED) ==================== -->
-        <div class="hidden lg:block w-full max-w-[1440px] mx-auto px-margin pb-24">
-          <div class="grid grid-cols-12 gap-gutter items-stretch">
+        <!-- ==================== DESKTOP HERO CONTENT (lg and above: Image-First Editorial) ==================== -->
+        <div class="hidden lg:flex relative z-10 w-full max-w-[1440px] mx-auto px-margin pb-16 xl:pb-20 flex-col justify-end h-full">
+          <div class="max-w-3xl">
+            <!-- Headline: Newsreader, fluid 46-60px, regular weight, text-wrap: balance -->
+            <h1 class="font-serif text-white text-4xl lg:text-5xl xl:text-[56px] font-normal leading-[1.08] tracking-[-0.01em] text-balance">
+              Civil, infrastructure and finishing works across Saudi Arabia.
+            </h1>
 
-            <!-- Narrative Architectural Column -->
-            <div class="col-span-6 flex flex-col justify-between pr-space-lg">
-              <div class="space-y-space-lg">
-                <div class="flex items-center gap-space-sm">
-                  <span class="w-1.5 h-1.5 bg-secondary"></span>
-                  <span class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-[0.2em]">
-                    Riyadh, Saudi Arabia — CR: 7049953909
-                  </span>
-                </div>
-                <h1
-                  class="font-display text-display text-primary-container leading-[1.08] max-w-xl">
-                  Civil, infrastructure and finishing works across Saudi Arabia.
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg leading-relaxed pt-space-xs">
-                  Elevate Builders delivers high-spec construction and technical engineering execution from Riyadh,
-                  governed under verified ISO 9001, 14001, and 45001 management systems.
-                </p>
-              </div>
+            <!-- Paragraph: IBM Plex Sans, 17px, line-height 1.6, white at 85% opacity, max-width 52ch -->
+            <p class="font-sans text-white/85 text-base lg:text-[17px] leading-[1.6] max-w-[52ch] mt-5">
+              Elevate Builders delivers construction and manpower services from Riyadh, with ISO 9001, 14001 and 45001 certified management systems.
+            </p>
 
-              <div
-                class="pt-space-xl mt-space-xl border-t border-tertiary-fixed flex items-center gap-space-md">
-                <a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-8 py-4 border border-primary-container hover:bg-secondary hover:border-secondary transition-colors duration-150"
-                  href="#quote-dialog">
-                  Request a quote
-                </a>
-                <a class="inline-flex items-center justify-center bg-transparent text-primary-container font-label-md text-label-md uppercase px-8 py-4 border border-primary-container hover:bg-primary-container hover:text-on-primary transition-colors duration-150"
-                  href="/projects">
-                  View projects
-                </a>
-                <div class="flex items-center pl-6 text-on-surface-variant font-label-sm text-label-sm">
-                  <span class="text-secondary font-mono mr-2">24°42'42"N</span>
-                  <span class="text-tertiary-fixed-dim mr-2">/</span>
-                  <span class="text-secondary font-mono">46°40'35"E</span>
-                </div>
-              </div>
+            <!-- Buttons: Side-by-side matching mobile styling, 52px tall, 2px radius, sentence case -->
+            <div class="flex items-center gap-4 mt-8">
+              <a href="#quote-dialog"
+                class="inline-flex items-center justify-center h-[52px] px-8 bg-white text-[#1F1B4D] font-sans text-sm font-medium rounded-[2px] hover:bg-white/90 transition-colors shadow-sm">
+                Request a quote
+              </a>
+              <a href="/projects"
+                class="inline-flex items-center justify-center h-[52px] px-8 bg-transparent text-white border border-white/70 font-sans text-sm font-medium rounded-[2px] hover:bg-white/10 hover:border-white transition-colors">
+                View projects
+              </a>
             </div>
-
-            <!-- Architectural Elevation Framing / Visual Viewport -->
-            <div class="col-span-6">
-              <div
-                class="relative w-full h-full min-h-[500px] bg-[#EAE8E2] border border-tertiary-fixed overflow-hidden flex flex-col justify-between p-6">
-
-                <!-- Top Technical Markers -->
-                <div
-                  class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm border-b border-tertiary-fixed pb-3">
-                  <span class="tracking-widest uppercase text-secondary font-semibold">Elevate Drawing Registry</span>
-                  <span class="font-mono text-tertiary">REF: PL-2026-RYD</span>
-                </div>
-
-                <!-- Center Crosshair & Editorial Image Frame -->
-                <div class="relative w-full flex-1 flex items-center justify-center py-6">
-                  <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
-                    <div class="w-full h-[1px] bg-tertiary-fixed"></div>
-                    <div class="absolute h-full w-[1px] bg-tertiary-fixed"></div>
-                    <div class="w-12 h-12 border border-secondary"></div>
-                  </div>
-
-                  <!-- Authentic Concrete Infrastructure Photography -->
-                  <div
-                    class="relative z-10 w-4/5 h-4/5 border border-tertiary-fixed overflow-hidden bg-surface-container-high shadow-none">
-                    <img
-                      class="w-full h-full object-cover grayscale contrast-125 hover:scale-[1.02] transition-transform duration-700"
-                      alt="Monolithic architectural reinforced concrete structure under clear high-contrast desert sunlight in Riyadh Saudi Arabia."
-                      src="/assets/hero-mobile-infrastructure.jpg" />
-                    <div
-                      class="absolute bottom-2 left-2 bg-surface/90 px-2.5 py-1 text-primary-container font-label-sm text-label-sm border border-tertiary-fixed">
-                      Plate 01: Riyadh Civil Infrastructure
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Coordinates & Ratio Notation -->
-                <div
-                  class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm border-t border-tertiary-fixed pt-3">
-                  <span class="font-mono uppercase text-secondary">Ratio 16:9 • Scale 1:200</span>
-                  <span class="font-mono tracking-wider">SEC: 01-CIVIL</span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
