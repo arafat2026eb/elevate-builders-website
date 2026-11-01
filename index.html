@@ -82,97 +82,145 @@
       animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Desktop Header System: Solid Clean White Background & Subtle Border */
-    @media (min-width: 1024px) {
-      header#site-header {
-        background-color: #FFFFFF !important;
-        border-bottom: 1px solid #E4E2DC !important;
-      }
+    /* ==========================================================================
+       EDITORIAL HEADER & HERO SYSTEM (Transparent at top -> Solid on scroll)
+       Seamless Viewport Fitting on All Displays (Desktop & Mobile)
+       ========================================================================== */
+    header#site-header {
+      background-color: rgba(255, 255, 255, var(--header-progress, 0)) !important;
+      border-bottom: 1px solid rgba(228, 226, 220, var(--header-progress, 0)) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none !important;
+      transition: none !important;
     }
 
-    /* ==========================================================================
-       MOBILE HEADER & HERO EDITORIAL SYSTEM (Clean, uncluttered, whitespace-first)
-       ========================================================================== */
     @media (max-width: 1023px) {
       header#site-header {
         height: calc(64px + env(safe-area-inset-top, 0px)) !important;
         padding-top: env(safe-area-inset-top, 0px) !important;
         background-color: rgba(247, 246, 242, var(--header-progress, 0)) !important;
         border-bottom: 1px solid rgba(228, 226, 220, var(--header-progress, 0)) !important;
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-        box-shadow: none !important;
-        transition: none !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      header#site-header {
+        height: 80px !important;
+        background-color: rgba(255, 255, 255, var(--header-progress, 0)) !important;
+        border-bottom: 1px solid rgba(228, 226, 220, var(--header-progress, 0)) !important;
+      }
+    }
+
+    /* Logo Crossfade: white logo over transparent hero -> navy logo over solid header */
+    .header-logo-white {
+      opacity: calc(1 - var(--header-progress, 0)) !important;
+      transition: opacity 0.1s linear;
+    }
+
+    .header-logo-navy {
+      opacity: var(--header-progress, 0) !important;
+      transition: opacity 0.1s linear;
+    }
+
+    /* Desktop Navigation Links: Crisp White at top -> Navy/dark charcoal after scroll */
+    @media (min-width: 768px) {
+      header#site-header nav .nav-link {
+        color: color-mix(in srgb, rgba(255, 255, 255, 0.9) calc((1 - var(--header-progress, 0)) * 100%), #474743) !important;
+        transition: color 0.15s ease;
       }
 
-      /* Logo Crossfade: white logo over transparent hero -> navy logo over off-white header */
-      .header-logo-white {
-        opacity: calc(1 - var(--header-progress, 0));
-        transition: opacity 0.1s linear;
+      header#site-header nav .nav-link:hover {
+        color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
       }
 
-      .header-logo-navy {
-        opacity: var(--header-progress, 0);
-        transition: opacity 0.1s linear;
+      header#site-header nav .nav-link.active-link {
+        color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+        font-weight: 600 !important;
       }
 
-      /* Hamburger Lines: 1px thin, white at top, navy on scroll */
+      header#site-header nav .nav-link::after {
+        background: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #080237) !important;
+      }
+
       #mobile-menu-btn {
-        width: 38px !important;
-        height: 38px !important;
-        background: transparent !important;
-        border-radius: 2px !important;
-        border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.6) calc((1 - var(--header-progress, 0)) * 100%), #E4E2DC) !important;
+        display: none !important;
       }
+    }
 
-      #mobile-menu-btn .nav-icon-bar {
-        width: 18px !important;
-        height: 1px !important;
-        background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
-      }
+    /* Hamburger Lines: 1px thin, white at top, navy on scroll */
+    #mobile-menu-btn {
+      width: 38px !important;
+      height: 38px !important;
+      background: transparent !important;
+      border-radius: 2px !important;
+      border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.6) calc((1 - var(--header-progress, 0)) * 100%), #E4E2DC) !important;
+    }
 
-      #mobile-menu-btn.is-active .nav-icon-bar {
-        background-color: #6C5C3E !important;
-      }
+    #mobile-menu-btn .nav-icon-bar {
+      width: 18px !important;
+      height: 1px !important;
+      background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+    }
 
-      /* Header Button on Mobile: white at top -> navy after scroll */
-      .mobile-header-btn {
-        height: 38px !important;
-        padding: 0 14px !important;
-        border-radius: 2px !important;
-        font-family: 'IBM Plex Sans', sans-serif !important;
-        font-size: 13px !important;
-        font-weight: 500 !important;
-        text-transform: none !important;
-        background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
-        color: color-mix(in srgb, #1F1B4D calc((1 - var(--header-progress, 0)) * 100%), #FFFFFF) !important;
-        border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.4) calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
-        transition: opacity 0.15s ease;
-      }
+    #mobile-menu-btn.is-active .nav-icon-bar {
+      background-color: #6C5C3E !important;
+    }
 
-      .mobile-header-btn:active {
-        opacity: 0.85;
-      }
+    /* Header Buttons (Mobile & Desktop): white at top -> navy after scroll */
+    .mobile-header-btn,
+    .header-cta-btn {
+      border-radius: 2px !important;
+      font-family: 'IBM Plex Sans', sans-serif !important;
+      font-weight: 500 !important;
+      text-transform: none !important;
+      background-color: color-mix(in srgb, #FFFFFF calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+      color: color-mix(in srgb, #1F1B4D calc((1 - var(--header-progress, 0)) * 100%), #FFFFFF) !important;
+      border: 1px solid color-mix(in srgb, rgba(255, 255, 255, 0.4) calc((1 - var(--header-progress, 0)) * 100%), #1F1B4D) !important;
+      transition: opacity 0.15s ease;
+    }
 
-      /* Hero Mobile Layout - Full Bleed 100% Seamless Mobile Viewport */
-      main {
-        padding-top: 0 !important;
-      }
+    .mobile-header-btn {
+      height: 38px !important;
+      padding: 0 14px !important;
+      font-size: 13px !important;
+    }
 
-      #hero-section {
-        position: relative !important;
-        margin-top: 0 !important;
-        width: 100% !important;
-        height: 100vh !important;
-        height: 100svh !important;
-        height: 100dvh !important;
-        min-height: 100vh !important;
-        min-height: 100svh !important;
-        min-height: 100dvh !important;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: flex-end !important;
-        overflow: hidden !important;
+    .header-cta-btn {
+      font-size: 14px !important;
+    }
+
+    .mobile-header-btn:active,
+    .header-cta-btn:active {
+      opacity: 0.85;
+    }
+
+    /* Hero Full Bleed 100% Seamless Viewport Across All Screens (Desktop & Mobile) */
+    main {
+      padding-top: 0 !important;
+    }
+
+    #hero-section {
+      position: relative !important;
+      margin-top: 0 !important;
+      width: 100% !important;
+      height: 100vh !important;
+      height: 100svh !important;
+      height: 100dvh !important;
+      min-height: 100vh !important;
+      min-height: 100svh !important;
+      min-height: 100dvh !important;
+      max-height: 100vh !important;
+      max-height: 100dvh !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-end !important;
+      overflow: hidden !important;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-desktop-container {
+        display: none !important;
       }
 
       .hero-mobile-container {
@@ -195,6 +243,17 @@
         width: 100% !important;
         animation: heroFadeUp 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-mobile-container {
+        display: none !important;
+      }
+
+      .hero-desktop-container {
+        display: flex !important;
+      }
+    }
 
       .hero-mobile-headline {
         font-family: 'Newsreader', serif;
@@ -406,18 +465,18 @@
 
   <!-- HEADER -->
   <header id="site-header"
-    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:bg-white lg:border-b lg:border-tertiary-fixed">
+    class="fixed top-0 left-0 right-0 z-50">
     <div
       class="h-16 lg:h-20 w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-margin flex items-center justify-between gap-4">
 
-      <!-- Brand Logo (White on transparent mobile hero, Navy after scroll & on desktop) -->
+      <!-- Brand Logo (White on transparent hero, Navy after scroll) -->
       <div class="flex items-center shrink-0 relative">
         <a class="flex items-center group focus:outline-none relative h-11 sm:h-11 lg:h-12 w-auto" href="/">
-          <!-- Mobile White Logo -->
+          <!-- White Logo (visible over transparent hero at top) -->
           <img alt="Elevate Builders"
-            class="header-logo-white lg:hidden absolute left-0 top-1/2 -translate-y-1/2 h-11 sm:h-11 w-auto object-contain pointer-events-none"
+            class="header-logo-white absolute left-0 top-1/2 -translate-y-1/2 h-11 sm:h-11 lg:h-12 w-auto object-contain pointer-events-none"
             src="/assets/logo-white.png" />
-          <!-- Regular Navy Logo -->
+          <!-- Regular Navy Logo (fades in smoothly on scroll) -->
           <img alt="Elevate Builders"
             class="header-logo-navy h-11 sm:h-11 lg:h-12 w-auto object-contain"
             src="/assets/logo.png" />
@@ -427,17 +486,17 @@
       <!-- Desktop Navigation with Animated Sliding Hairlines -->
       <nav
         class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
-        <a class="nav-link active-link text-primary-container font-semibold" href="/">Home</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/services">Services</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
-        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+        <a class="nav-link active-link font-semibold" href="/">Home</a>
+        <a class="nav-link hover:text-white" href="/about">About</a>
+        <a class="nav-link hover:text-white" href="/services">Services</a>
+        <a class="nav-link hover:text-white" href="/projects">Projects</a>
+        <a class="nav-link hover:text-white" href="/credentials">Credentials</a>
+        <a class="nav-link hover:text-white" href="/contact">Contact</a>
       </nav>
 
       <!-- CTA & Mobile Toggle -->
       <div class="flex items-center gap-2.5 sm:gap-3 shrink-0">
-        <a class="mobile-header-btn lg:header-cta-btn inline-flex items-center justify-center font-label-md text-label-md uppercase px-4 lg:px-7 py-2 lg:py-3 border border-primary-container rounded-[2px] transition-all duration-200"
+        <a class="header-cta-btn inline-flex items-center justify-center font-label-md text-label-md uppercase px-4 lg:px-7 py-2 lg:py-3 border rounded-[2px]"
           href="/contact">
           Request a quote
         </a>
@@ -486,11 +545,11 @@
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="w-full pt-0 lg:pt-20 bg-surface flex-1">
+  <main class="w-full pt-0 bg-surface flex-1">
     <div class="flex flex-col w-full">
 
       <!-- SECTION 1: HERO VIEWPORT (Image-First Full-Bleed on Mobile & Desktop) -->
-      <section id="hero-section" class="relative w-full overflow-hidden border-b border-tertiary-fixed h-[100dvh] min-h-[100dvh] lg:h-[calc(100vh-80px)] lg:min-h-[640px] flex flex-col justify-end bg-[#080237]">
+      <section id="hero-section" class="relative w-full overflow-hidden border-b border-tertiary-fixed h-[100dvh] min-h-[100dvh] max-h-[100dvh] flex flex-col justify-end bg-[#080237]">
 
         <!-- FULL-BLEED BACKGROUND & OVERLAY TINT (Vertical for Mobile / Horizontal 16:9 for Desktop) -->
         <div class="absolute inset-0 w-full h-full pointer-events-none select-none z-0 overflow-hidden">
@@ -516,7 +575,8 @@
           <!-- Mobile Overlay Gradient -->
           <div class="lg:hidden absolute inset-0 bg-gradient-to-t from-[#080237] via-[#080237]/70 to-[#080237]/35"></div>
           
-          <!-- Desktop Overlay Gradients: Left-to-right for text contrast, subtle bottom vignette -->
+          <!-- Desktop Overlay Gradients: Left-to-right for text contrast, top vignette for header legibility, bottom vignette -->
+          <div class="hidden lg:block absolute top-0 left-0 right-0 h-36 bg-gradient-to-b from-[#080237]/75 via-[#080237]/30 to-transparent"></div>
           <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#080237]/90 via-[#080237]/50 to-transparent"></div>
           <div class="hidden lg:block absolute inset-0 bg-gradient-to-t from-[#080237]/80 via-transparent to-black/20"></div>
 
@@ -555,7 +615,7 @@
         </div>
 
         <!-- ==================== DESKTOP HERO CONTENT (lg and above: Image-First Editorial) ==================== -->
-        <div class="hidden lg:flex relative z-10 w-full max-w-[1440px] mx-auto px-margin pb-16 xl:pb-20 flex-col justify-end h-full">
+        <div class="hero-desktop-container relative z-10 w-full max-w-[1440px] mx-auto px-margin pb-16 xl:pb-24 flex-col justify-end h-full">
           <div class="max-w-3xl">
             <!-- Headline: Newsreader, fluid 46-60px, regular weight, text-wrap: balance -->
             <h1 class="font-serif text-white text-4xl lg:text-5xl xl:text-[56px] font-normal leading-[1.08] tracking-[-0.01em] text-balance">
