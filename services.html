@@ -219,7 +219,42 @@
       <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/">Home</a>
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
-        <a class="nav-link active-link text-primary-container font-semibold" href="/services">Services</a>
+
+        <!-- Services with Dropdown -->
+        <div class="relative group">
+          <a class="nav-link active-link text-primary-container font-semibold flex items-center gap-1" href="/services">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 pointer-events-none">expand_more</span>
+          </a>
+          <!-- Services Dropdown Panel -->
+          <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="w-72 bg-surface-container-lowest border border-tertiary-fixed shadow-2xl py-2">
+              <a href="/services/civil-structural" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">01 Civil &amp; Structural</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Foundations, concrete &amp; framing</span>
+              </a>
+              <a href="/services/infrastructure" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">02 Infrastructure</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">MV-culverts, utilities &amp; earthworks</span>
+              </a>
+              <a href="/services/fit-out-finishing" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">03 Fit-out &amp; Finishing</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Interiors, DCP/Fosroc coatings &amp; MEP</span>
+              </a>
+              <a href="/services/manpower-supply" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">04 Manpower Supply</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Ajeer-compliant certified trade crews</span>
+              </a>
+              <div class="mt-1 pt-2 border-t border-tertiary-fixed px-4 py-1.5 bg-surface-container-low">
+                <a href="/services" class="text-[11px] uppercase tracking-wider font-semibold text-secondary hover:text-primary-container flex items-center justify-between">
+                  <span>Explore All 04 Sectors</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
         <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
@@ -250,7 +285,21 @@
         </div>
         <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/">Home</a>
         <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/about">About</a>
-        <a class="py-2 border-b border-tertiary-fixed text-primary-container font-semibold" href="/services">Services</a>
+        
+        <!-- Mobile Services with Sub-Links -->
+        <div class="py-2 border-b border-tertiary-fixed">
+          <div class="flex items-center justify-between">
+            <a class="text-primary-container font-semibold" href="/services">Services</a>
+            <span class="text-[11px] font-mono text-secondary">04 SECTORS</span>
+          </div>
+          <div class="pl-3 pt-2 space-y-1.5 border-l-2 border-secondary/30 ml-1 mt-1 text-body-sm normal-case">
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/civil-structural">01 Civil &amp; Structural</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/infrastructure">02 Infrastructure</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/fit-out-finishing">03 Fit-out &amp; Finishing</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/manpower-supply">04 Manpower Supply</a>
+          </div>
+        </div>
+
         <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
         <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
         <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
@@ -370,6 +419,69 @@
             <!-- CAPABILITIES CONTENT STREAM (9 COLUMNS) -->
             <div class="lg:col-span-9 flex flex-col space-y-24 lg:space-y-32">
               
+              <!-- 4 VISUAL SECTOR CARDS (Direct In-Depth Exploration) -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-12 border-b border-tertiary-fixed">
+                <!-- Card 01 -->
+                <a href="/services/civil-structural" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed p-5 hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high border border-tertiary-fixed mb-4">
+                    <img src="/assets/projects/azrb-concrete-03.jpg" alt="Civil &amp; Structural Works" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+                    <div class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-primary-container border border-tertiary-fixed uppercase">01 // STRUCTURAL</div>
+                    <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-secondary border border-tertiary-fixed uppercase">SBC-301</div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">Civil &amp; Structural</h3>
+                  <p class="text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">Structural foundations, monolithic reinforced concrete, steel frameworks, and industrial construction.</p>
+                  <div class="mt-auto pt-3 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-semibold text-primary-container group-hover:text-secondary">
+                    <span>Learn In-Depth</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </a>
+
+                <!-- Card 02 -->
+                <a href="/services/infrastructure" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed p-5 hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high border border-tertiary-fixed mb-4">
+                    <img src="/assets/projects/diriyah-culvert-01.jpg" alt="Infrastructure Works" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+                    <div class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-primary-container border border-tertiary-fixed uppercase">02 // INFRASTRUCTURE</div>
+                    <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-secondary border border-tertiary-fixed uppercase">UTILITIES</div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">Infrastructure</h3>
+                  <p class="text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">MV-culverts, stormwater networks, water transmission pipelines, earthworks, and sub-grade corridors.</p>
+                  <div class="mt-auto pt-3 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-semibold text-primary-container group-hover:text-secondary">
+                    <span>Learn In-Depth</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </a>
+
+                <!-- Card 03 -->
+                <a href="/services/fit-out-finishing" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed p-5 hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high border border-tertiary-fixed mb-4">
+                    <img src="/assets/projects/gallery/02_dg-ii-infra-epoxy/01.jpeg" alt="Fit-out &amp; Finishing" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+                    <div class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-primary-container border border-tertiary-fixed uppercase">03 // FINISHING</div>
+                    <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-secondary border border-tertiary-fixed uppercase">DCP / FOSROC</div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">Fit-out &amp; Finishing</h3>
+                  <p class="text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">Commercial interior fit-outs, certified DCP &amp; Fosroc protective epoxy coatings, partitions &amp; tiling.</p>
+                  <div class="mt-auto pt-3 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-semibold text-primary-container group-hover:text-secondary">
+                    <span>Learn In-Depth</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </a>
+
+                <!-- Card 04 -->
+                <a href="/services/manpower-supply" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed p-5 hover:border-secondary transition-all duration-300 shadow-sm hover:shadow-md">
+                  <div class="relative w-full aspect-[16/9] overflow-hidden bg-surface-container-high border border-tertiary-fixed mb-4">
+                    <img src="/assets/services/manpower-supply.jpg" alt="Manpower Supply" class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500" />
+                    <div class="absolute top-2.5 left-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-primary-container border border-tertiary-fixed uppercase">04 // MANPOWER</div>
+                    <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 bg-surface/90 text-[10px] font-mono text-secondary border border-tertiary-fixed uppercase">AJEER COMPLIANT</div>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">Manpower Supply</h3>
+                  <p class="text-body-sm text-on-surface-variant line-clamp-2 leading-relaxed mb-4">Ajeer-compliant construction labour, technical trades, certified equipment operators, and safety supervisors.</p>
+                  <div class="mt-auto pt-3 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-semibold text-primary-container group-hover:text-secondary">
+                    <span>Learn In-Depth</span>
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                  </div>
+                </a>
+              </div>
+
               <!-- SECTION 01: Civil & Structural (Text Left, Photo Right) -->
               <article class="scroll-mt-28 flex flex-col space-y-space-lg" id="service-01">
                 <div class="flex items-baseline justify-between border-b border-tertiary-fixed pb-space-sm">
@@ -413,29 +525,35 @@
                         <span class="font-label-sm text-label-sm text-secondary">01.5</span>
                       </div>
                     </div>
-                    <div class="pt-space-sm">
+                    <div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <span class="font-label-sm text-label-sm text-on-surface-variant font-mono block">COMPLIANCE: SAUDI BUILDING CODE (SBC) STANDARDS</span>
+                      <a href="/services/civil-structural" class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary-container font-semibold hover:text-secondary group/link">
+                        <span>Explore Specification</span>
+                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
                     </div>
                   </div>
 
                   <!-- Photo Column (RIGHT) -->
                   <div class="lg:col-span-6 flex flex-col mt-6 lg:mt-0">
-                    <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group">
-                      <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-transform duration-700 group-hover:scale-105" alt="Monolithic architectural reinforced concrete formwork, industrial grade footing excavation with precision rebar cages in Riyadh" src="/assets/projects/azrb-concrete-03.jpg"/>
-                      <div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
-                      
-                      <!-- Overlay metadata -->
-                      <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                        <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 01 — STRUCTURAL</span>
-                        <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed">PROJECT PHOTO</span>
-                      </div>
-                      <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
-                        <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
-                          <span>REF: 24.7136° N, 46.6753° E</span>
-                          <span class="text-secondary font-medium">CAST-IN-PLACE CORE</span>
+                    <a href="/services/civil-structural" class="group block focus:outline-none">
+                      <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group-hover:border-secondary transition-colors duration-300">
+                        <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" alt="Monolithic architectural reinforced concrete formwork, industrial grade footing excavation with precision rebar cages in Riyadh" src="/assets/projects/azrb-concrete-03.jpg"/>
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                        
+                        <!-- Overlay metadata -->
+                        <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                          <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 01 — STRUCTURAL</span>
+                          <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed flex items-center gap-1">VIEW SPEC <span>→</span></span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
+                          <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
+                            <span>REF: 24.7136° N, 46.6753° E</span>
+                            <span class="text-secondary font-medium">CAST-IN-PLACE CORE</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
 
                 </div>
@@ -454,22 +572,24 @@
                   
                   <!-- Photo Column (LEFT) -->
                   <div class="lg:col-span-6 order-2 lg:order-1 flex flex-col mt-6 lg:mt-0">
-                    <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group">
-                      <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-transform duration-700 group-hover:scale-105" alt="Expansive civil earthworks and deep underground utility pipeline trenching in arid limestone terrain" src="/assets/projects/diriyah-culvert-01.jpg"/>
-                      <div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
-                      
-                      <!-- Overlay metadata -->
-                      <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                        <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 02 — SUB-GRADE</span>
-                        <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed">PROJECT PHOTO</span>
-                      </div>
-                      <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
-                        <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
-                          <span>REF: SUB-GRADE UTILITY CORRIDOR</span>
-                          <span class="text-secondary font-medium">SITE DRAINAGE</span>
+                    <a href="/services/infrastructure" class="group block focus:outline-none">
+                      <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group-hover:border-secondary transition-colors duration-300">
+                        <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" alt="Expansive civil earthworks and deep underground utility pipeline trenching in arid limestone terrain" src="/assets/projects/diriyah-culvert-01.jpg"/>
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                        
+                        <!-- Overlay metadata -->
+                        <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                          <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 02 — SUB-GRADE</span>
+                          <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed flex items-center gap-1">VIEW SPEC <span>→</span></span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
+                          <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
+                            <span>REF: SUB-GRADE UTILITY CORRIDOR</span>
+                            <span class="text-secondary font-medium">SITE DRAINAGE</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
 
                   <!-- Textual Column (RIGHT) -->
@@ -504,8 +624,12 @@
                         <span class="font-label-sm text-label-sm text-secondary">02.5</span>
                       </div>
                     </div>
-                    <div class="pt-space-sm">
+                    <div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <span class="font-label-sm text-label-sm text-on-surface-variant font-mono block">TOPOGRAPHY &amp; SURVEYING ACCREDITED</span>
+                      <a href="/services/infrastructure" class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary-container font-semibold hover:text-secondary group/link">
+                        <span>Explore Specification</span>
+                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
                     </div>
                   </div>
 
@@ -566,29 +690,35 @@
                         <span class="font-label-sm text-label-sm text-secondary">03.7</span>
                       </div>
                     </div>
-                    <div class="pt-space-sm">
+                    <div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <span class="font-label-sm text-label-sm text-on-surface-variant font-mono block">SPECIALIST COATINGS: DCP &amp; FOSROC SYSTEM SPECIFIER</span>
+                      <a href="/services/fit-out-finishing" class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary-container font-semibold hover:text-secondary group/link">
+                        <span>Explore Specification</span>
+                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
                     </div>
                   </div>
 
                   <!-- Photo Column (RIGHT) -->
                   <div class="lg:col-span-6 flex flex-col mt-6 lg:mt-0">
-                    <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group">
-                      <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-transform duration-700 group-hover:scale-105" alt="Refined contemporary corporate headquarters interior in Riyadh, seamless epoxy floor, walnut acoustic slats" src="/assets/projects/dg-infra-epoxy-01.jpg"/>
-                      <div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
-                      
-                      <!-- Overlay metadata -->
-                      <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                        <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 03 — INTERIOR FIT-OUT</span>
-                        <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed">PROJECT PHOTO</span>
-                      </div>
-                      <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
-                        <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
-                          <span>REF: ARCHITECTURAL JOINERY &amp; COATINGS</span>
-                          <span class="text-secondary font-medium">PRIME GRADE</span>
+                    <a href="/services/fit-out-finishing" class="group block focus:outline-none">
+                      <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group-hover:border-secondary transition-colors duration-300">
+                        <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" alt="Refined contemporary corporate headquarters interior in Riyadh, seamless epoxy floor, walnut acoustic slats" src="/assets/projects/gallery/02_dg-ii-infra-epoxy/01.jpeg"/>
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                        
+                        <!-- Overlay metadata -->
+                        <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                          <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 03 — INTERIOR FIT-OUT</span>
+                          <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed flex items-center gap-1">VIEW SPEC <span>→</span></span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
+                          <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
+                            <span>REF: ARCHITECTURAL JOINERY &amp; COATINGS</span>
+                            <span class="text-secondary font-medium">PRIME GRADE</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
 
                 </div>
@@ -607,22 +737,24 @@
                   
                   <!-- Photo Column (LEFT) -->
                   <div class="lg:col-span-6 order-2 lg:order-1 flex flex-col mt-6 lg:mt-0">
-                    <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group">
-                      <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-transform duration-700 group-hover:scale-105" alt="Technical surveying station and laser leveling precision equipment set on a structured engineering grid" src="/assets/projects/tcil-telecom-01.jpg"/>
-                      <div class="absolute inset-0 bg-primary/20 pointer-events-none"></div>
-                      
-                      <!-- Overlay metadata -->
-                      <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-                        <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 04 — TECHNICAL MOBILIZATION</span>
-                        <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed">PROJECT PHOTO</span>
-                      </div>
-                      <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
-                        <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
-                          <span>REF: SKILLED CREWS &amp; RIGOROUS SAFETY</span>
-                          <span class="text-secondary font-medium">SAUDI ARAMCO COMPLIANT</span>
+                    <a href="/services/manpower-supply" class="group block focus:outline-none">
+                      <div class="relative w-full aspect-[4/3] bg-surface-container-high border border-tertiary-fixed overflow-hidden flex flex-col justify-between group-hover:border-secondary transition-colors duration-300">
+                        <img class="w-full h-full object-cover grayscale contrast-125 opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0" alt="Elevate Builders site engineers, certified trade crew and workforce on a major civil project in Saudi Arabia" src="/assets/services/manpower-supply.jpg"/>
+                        <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-300 pointer-events-none"></div>
+                        
+                        <!-- Overlay metadata -->
+                        <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                          <span class="bg-surface/95 px-2.5 py-1 text-[11px] font-mono text-primary-container tracking-wider border border-tertiary-fixed">PLATE 04 — WORKFORCE MOBILIZATION</span>
+                          <span class="bg-surface/95 px-2 py-0.5 text-[10px] font-mono text-secondary border border-tertiary-fixed flex items-center gap-1">VIEW SPEC <span>→</span></span>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3 border border-tertiary-fixed pointer-events-none">
+                          <div class="flex justify-between items-center text-[11px] font-mono text-primary-container">
+                            <span>REF: AJEER &amp; QIWA COMPLIANT</span>
+                            <span class="text-secondary font-medium">CERTIFIED CREWS</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
 
                   <!-- Textual Column (RIGHT) -->
@@ -657,8 +789,12 @@
                         <span class="font-label-sm text-label-sm text-secondary">04.5</span>
                       </div>
                     </div>
-                    <div class="pt-space-sm">
+                    <div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <span class="font-label-sm text-label-sm text-on-surface-variant font-mono block">AJEER COMPLIANCE &amp; CERTIFIED OCCUPATIONAL HEALTH</span>
+                      <a href="/services/manpower-supply" class="inline-flex items-center gap-2 font-label-md text-label-md uppercase tracking-wider text-primary-container font-semibold hover:text-secondary group/link">
+                        <span>Explore Specification</span>
+                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
+                      </a>
                     </div>
                   </div>
 
