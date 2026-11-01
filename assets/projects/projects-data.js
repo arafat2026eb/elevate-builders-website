@@ -33,16 +33,40 @@ window.PROJECTS_DATA = {
     category: "infrastructure",
     images: [
       {
-        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/01.jpg",
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/01.jpeg",
         width: 1200,
-        height: 788,
-        alt: "Finished interior underground MV-culvert corridor with reflective epoxy coating applied to concrete substrate"
+        height: 1600,
+        alt: "Finished interior underground MV-culvert corridor with protective epoxy coating applied to concrete substrate"
       },
       {
-        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/02.jpg",
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/02.jpeg",
         width: 1200,
-        height: 563,
-        alt: "Longitudinal view of multi-cell utility tunnel showing smooth protective epoxy wall and floor coating"
+        height: 1600,
+        alt: "Quality assurance dry film thickness (DFT) testing on epoxy coating with PosiTector gauge"
+      },
+      {
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/03.jpeg",
+        width: 1200,
+        height: 1600,
+        alt: "Jacobs engineering supervision and Elevate technical team inspecting epoxy coating application"
+      },
+      {
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/04.jpeg",
+        width: 1200,
+        height: 1600,
+        alt: "Longitudinal corridor view of completed epoxy coating across structural culvert walls"
+      },
+      {
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/05.jpeg",
+        width: 900,
+        height: 1600,
+        alt: "Substrate fairing and intermediate epoxy coating application in progress on culvert walls"
+      },
+      {
+        src: "/assets/projects/gallery/02_dg-ii-infra-epoxy/06.jpeg",
+        width: 900,
+        height: 1600,
+        alt: "Structural concrete box culvert portal and access scaffolding prior to coating application"
       }
     ]
   },
