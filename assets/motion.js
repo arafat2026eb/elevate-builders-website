@@ -40,8 +40,10 @@
     if (!btn) {
       btn = document.createElement('button');
       btn.id = 'back-to-top-btn';
+      btn.type = 'button';
       btn.setAttribute('aria-label', 'Return to top of page');
-      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">arrow_upward</span>';
+      btn.className = 'group';
+      btn.innerHTML = '<svg class="w-5 h-5 transition-transform duration-200 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
       document.body.appendChild(btn);
     }
 
