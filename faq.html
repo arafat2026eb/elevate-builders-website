@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>Frequently Asked Questions (FAQ) — Elevate Builders | Saudi Arabia</title>
+  <meta name="description"
+    content="Find answers to common questions about Elevate Builders: Commercial Registration (CR: 7049953909), ISO certifications, Ajeer compliance, civil, MEP and infrastructure capabilities in Riyadh, KSA." />
+  <link rel="canonical" href="https://elevatebuilders.com.sa/faq" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+
+  <style>
+    @layer base {
+      html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    /* Architectural Subtle Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #C8C5D0;
+      border-radius: 0px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6C5C3E;
+    }
+
+    /* Mobile Navigation & Slide-down Animation */
+    @keyframes mobileMenuSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #mobile-menu.hidden {
+      display: none !important;
+    }
+
+    #mobile-menu:not(.hidden) {
+      display: flex !important;
+      animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Strictly hide mobile menu button and mobile drawer on desktop */
+    @media (min-width: 768px) {
+      #mobile-menu-btn,
+      #mobile-menu {
+        display: none !important;
+      }
+    }
+
+    /* Accordion transitions */
+    .faq-answer {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+      opacity: 0;
+    }
+    .faq-item.is-open .faq-answer {
+      max-height: 600px !important;
+      opacity: 1 !important;
+    }
+    .faq-item.is-open .faq-icon {
+      transform: rotate(45deg);
+      color: #080237;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8783bc",
+            "primary-fixed": "#e3dfff",
+            "primary-fixed-dim": "#c5c0fd",
+            "on-primary-fixed": "#181446",
+            "on-primary-fixed-variant": "#444174",
+            "inverse-primary": "#c5c0fd",
+
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#706142",
+            "secondary-fixed": "#f5e0ba",
+            "secondary-fixed-dim": "#d8c49f",
+            "on-secondary-fixed": "#241a03",
+            "on-secondary-fixed-variant": "#534529",
+
+            "tertiary": "#0b0c09",
+            "tertiary-container": "#22221f",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#8a8984",
+            "tertiary-fixed": "#e4e2dc",
+            "tertiary-fixed-dim": "#c8c6c1",
+            "on-tertiary-fixed": "#1b1c18",
+            "on-tertiary-fixed-variant": "#474743",
+
+            "surface": "#faf9f5",
+            "surface-dim": "#dbdad6",
+            "surface-bright": "#faf9f5",
+            "surface-variant": "#e3e2df",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "surface-container-high": "#e9e8e4",
+            "surface-container-highest": "#e3e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "inverse-surface": "#30312e",
+            "inverse-on-surface": "#f2f1ed",
+            "surface-tint": "#5c588e",
+
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a",
+
+            "outline": "#787680",
+            "outline-variant": "#c8c5d0",
+
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.5rem",
+            "margin": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "display-mobile": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-eyebrow": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-eyebrow": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="icon" type="image/png" href="/assets/logo-emblem.png" />
+  <link rel="apple-touch-icon" href="/assets/logo-emblem.png" />
+
+  <!-- Robots & Geographic SEO -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="geo.region" content="SA-01" />
+  <meta name="geo.placename" content="Riyadh, Saudi Arabia" />
+  <meta name="geo.position" content="24.7136;46.6753" />
+  <meta name="ICBM" content="24.7136, 46.6753" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Elevate Builders" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="ar_SA" />
+  <meta property="og:url" content="https://elevatebuilders.com.sa/faq" />
+  <meta property="og:title" content="Frequently Asked Questions (FAQ) — Elevate Builders | Saudi Arabia" />
+  <meta property="og:description"
+    content="Find answers to common questions about Elevate Builders: Commercial Registration (CR: 7049953909), ISO certifications, Ajeer compliance, civil, MEP and infrastructure capabilities in Riyadh, KSA." />
+  <meta property="og:image" content="https://elevatebuilders.com.sa/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Elevate Builders FAQ - Riyadh Saudi Arabia" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Frequently Asked Questions (FAQ) — Elevate Builders | Saudi Arabia" />
+  <meta name="twitter:description"
+    content="Find answers to common questions about Elevate Builders: Commercial Registration (CR: 7049953909), ISO certifications, Ajeer compliance, civil, MEP and infrastructure capabilities in Riyadh, KSA." />
+  <meta name="twitter:image" content="https://elevatebuilders.com.sa/assets/og-image.png" />
+
+  <!-- Structured Data (JSON-LD) for AEO & Knowledge Graph -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://elevatebuilders.com.sa/faq#webpage",
+      "url": "https://elevatebuilders.com.sa/faq",
+      "name": "Frequently Asked Questions — Elevate Builders",
+      "description": "Common questions regarding Elevate Builders licensing, certifications, capabilities, Ajeer workforce compliance, and contracting procedures in Saudi Arabia.",
+      "isPartOf": { "@id": "https://elevatebuilders.com.sa/#website" },
+      "breadcrumb": { "@id": "https://elevatebuilders.com.sa/faq#breadcrumb" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Elevate Builders' official registration and licensing status in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elevate Builders is a fully licensed contracting company operating under Saudi Ministry of Commerce Commercial Registration (CR) Number 7049953909. We hold valid ZATCA tax clearance, chamber of commerce registration, and active pre-qualification status with tier-one developers across the Kingdom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What international ISO quality, environmental, and safety certifications do you hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elevate Builders operates under three globally verified ISO standards: ISO 9001:2015 (Quality Management System), ISO 14001:2015 (Environmental Management System), and ISO 45001:2018 (Occupational Health & Safety Management System)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you an approved applicator for specialized construction chemicals and epoxy coatings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Elevate Builders is an official and approved applicator for leading multinational construction chemical manufacturers, including Fosroc and DCP (Don Construction Products), certified for high-performance epoxy resin coatings, concrete repair, and protective waterproof membranes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What core contracting disciplines and services does Elevate Builders execute?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We execute five core disciplines: 01 Civil & Structural Works (heavy concrete foundations, monolithic slabs, framing), 02 Infrastructure Works (sub-grade utility corridors, medium-voltage culverts, stormwater), 03 Architectural Fit-out & Finishing (commercial interiors, acoustic assemblies, epoxy), 04 Manpower Supply (Ajeer-compliant certified trade crews), and 05 Mechanical, Electrical & Plumbing (turnkey MEP systems under SBC & NFPA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are your trade crews and workforce 100% compliant with Ajeer and Qiwa platforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 100% of our mobilized workforce strictly complies with the Ministry of Human Resources' Ajeer and Qiwa systems. Every worker carries official professional accreditations, medical insurance coverage, and verified safety certifications for rapid deployment to tier-one sites."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical mobilization timeline for manpower and field crews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For standard projects located in Riyadh and the Central Province, our trade crews and supervisors can be mobilized on site within 48 to 72 hours following contract execution and gate pass processing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which engineering codes govern your civil and MEP installations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All works are engineered and executed in compliance with the Saudi Building Code (SBC-301 for Structural, SBC-401 for Electrical, SBC-501 for Mechanical, SBC-801 for Fire Safety), alongside ASTM testing standards, ASHRAE 90.1, SMACNA, and Civil Defense inspection requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can clients submit a Request for Quotation (RFQ) or tender package?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tender packages, drawings, and Bills of Quantities (BoQs) can be submitted directly through our website contact portal, emailed to Info@elevatebuilders.com.sa, or coordinated directly with our estimation desk by phone at +966 558943663."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://elevatebuilders.com.sa/faq#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elevatebuilders.com.sa/" },
+        { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://elevatebuilders.com.sa/faq" }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+    <div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+
+      <!-- Brand Logo -->
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="/assets/logo.png" />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+
+        <!-- Services Dropdown Option -->
+        <div class="relative group">
+          <a class="nav-link flex items-center gap-1 text-on-surface-variant hover:text-primary-container" href="/services">
+            <span>Services</span>
+            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <!-- Services Dropdown Panel -->
+          <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="w-72 bg-surface-container-lowest border border-tertiary-fixed shadow-2xl py-2">
+              <a href="/services/civil-structural" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">01 Civil &amp; Structural</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Foundations, concrete &amp; framing</span>
+              </a>
+              <a href="/services/infrastructure" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">02 Infrastructure</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">MV-culverts, utilities &amp; earthworks</span>
+              </a>
+              <a href="/services/fit-out-finishing" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">03 Fit-out &amp; Finishing</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Interiors, DCP/Fosroc coatings &amp; MEP</span>
+              </a>
+              <a href="/services/manpower-supply" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">04 Manpower Supply</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Ajeer-compliant certified trade crews</span>
+              </a>
+              <a href="/services/mep" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">05 Mechanical, Electrical &amp; Plumbing (MEP)</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">HVAC, power distribution, life safety &amp; BMS</span>
+              </a>
+              <div class="mt-1 pt-2 border-t border-tertiary-fixed px-4 py-1.5 bg-surface-container-low">
+                <a href="/services" class="text-[11px] uppercase tracking-wider font-semibold text-secondary hover:text-primary-container flex items-center justify-between">
+                  <span>Explore All 05 Sectors</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200" href="/contact">
+          Request a quote
+        </a>
+
+        <!-- Mobile Menu Button - Strictly hidden on md and up -->
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+          class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors duration-150">
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
+        <div class="pb-2 border-b border-tertiary-fixed mb-1">
+          <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png" />
+        </div>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+
+        <!-- Mobile Services with Sub-Links -->
+        <div class="py-2 border-b border-tertiary-fixed">
+          <div class="flex items-center justify-between">
+            <a class="text-on-surface-variant hover:text-primary-container font-semibold" href="/services">Services</a>
+            <span class="text-[11px] font-mono text-secondary">05 SECTORS</span>
+          </div>
+          <div class="pl-3 pt-2 space-y-1.5 border-l-2 border-secondary/30 ml-1 mt-1 text-body-sm normal-case">
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/civil-structural">01 Civil &amp; Structural</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/infrastructure">02 Infrastructure</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/fit-out-finishing">03 Fit-out &amp; Finishing</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/manpower-supply">04 Manpower Supply</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/mep">05 Mechanical, Electrical &amp; Plumbing (MEP)</a>
+          </div>
+        </div>
+
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+        <a class="py-2 border-b border-tertiary-fixed text-primary-container font-semibold" href="/faq">FAQ</a>
+      </nav>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase py-3.5 border border-primary-container hover:bg-secondary transition-colors" href="/contact">
+          Request a quote
+        </a>
+      </div>
+      <div class="pt-2 flex flex-col text-on-surface-variant font-label-sm text-label-sm gap-1">
+        <span>Riyadh Desk: <a href="tel:+966558943663" class="text-primary-container underline">+966 558943663</a></span>
+        <span>Commercial Registration: 7049953909</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow pt-24 sm:pt-28">
+
+    <!-- HERO HEADER SECTION -->
+    <section class="w-full bg-surface border-b border-tertiary-fixed">
+      <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-10 pb-12 lg:pb-16">
+        
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-label-sm font-mono text-on-surface-variant mb-6">
+          <a href="/" class="hover:text-primary-container transition-colors">Home</a>
+          <span class="text-tertiary-fixed-dim">/</span>
+          <span class="text-secondary font-semibold">FAQ</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end justify-between">
+          <div class="lg:col-span-8 flex flex-col space-y-4">
+            <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em] block">
+              Knowledge Base &amp; Technical Queries
+            </span>
+            <h1 class="font-display text-headline-lg lg:text-display text-primary-container leading-[1.08] tracking-tight">
+              Frequently Asked Questions
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl font-normal leading-relaxed pt-2">
+              Key operational, regulatory, and technical information regarding Elevate Builders: corporate registration, ISO governance, Ajeer compliance, execution capabilities, and tendering procedures in Saudi Arabia.
+            </p>
+          </div>
+
+          <!-- Quick Contact Pill -->
+          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-end">
+            <a href="/contact" class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-7 py-3.5 border border-primary-container hover:bg-secondary hover:border-secondary transition-all">
+              Submit Tender / BoQ
+            </a>
+            <span class="text-[12px] font-mono text-on-surface-variant">Hotline: <a href="tel:+966558943663" class="text-primary-container underline font-medium">+966 558943663</a></span>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap gap-2.5 mt-10 pt-6 border-t border-tertiary-fixed">
+          <button class="faq-filter-btn px-4 py-2 border border-primary-container bg-primary-container text-on-primary text-label-sm font-mono uppercase transition-colors" data-category="all">
+            All Questions (10)
+          </button>
+          <button class="faq-filter-btn px-4 py-2 border border-tertiary-fixed bg-surface hover:bg-surface-container text-on-surface text-label-sm font-mono uppercase transition-colors" data-category="licensing">
+            Licensing &amp; Credentials
+          </button>
+          <button class="faq-filter-btn px-4 py-2 border border-tertiary-fixed bg-surface hover:bg-surface-container text-on-surface text-label-sm font-mono uppercase transition-colors" data-category="capabilities">
+            Capabilities &amp; Scope
+          </button>
+          <button class="faq-filter-btn px-4 py-2 border border-tertiary-fixed bg-surface hover:bg-surface-container text-on-surface text-label-sm font-mono uppercase transition-colors" data-category="workforce">
+            Workforce &amp; Ajeer
+          </button>
+          <button class="faq-filter-btn px-4 py-2 border border-tertiary-fixed bg-surface hover:bg-surface-container text-on-surface text-label-sm font-mono uppercase transition-colors" data-category="tendering">
+            Tendering &amp; Operations
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION LIST SECTION -->
+    <section class="w-full bg-surface py-12 lg:py-20 border-b border-tertiary-fixed">
+      <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+        <div class="max-w-4xl mx-auto space-y-4">
+
+          <!-- FAQ 01: Licensing -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="licensing">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                What is Elevate Builders' official registration and licensing status in Saudi Arabia?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Elevate Builders is a fully licensed general contracting entity legally registered with the Saudi Ministry of Commerce under Commercial Registration (CR) Number <strong>7049953909</strong>.
+                </p>
+                <p>
+                  We maintain active tax clearance with ZATCA (Zakat, Tax and Customs Authority), registration with the Riyadh Chamber of Commerce, and active vendor pre-qualifications with leading national developers, industrial authorities, and utility providers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 02: ISO Certifications -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="licensing">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                What international ISO quality, environmental, and safety certifications do you hold?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Elevate Builders operates under an Integrated Management System governed by three internationally accredited ISO certifications:
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>ISO 9001:2015:</strong> Quality Management System ensuring systematic inspection, testing plans (ITP), and material verification.</li>
+                  <li><strong>ISO 14001:2015:</strong> Environmental Management System governing sustainable site waste disposal, dust suppression, and spill prevention.</li>
+                  <li><strong>ISO 45001:2018:</strong> Occupational Health and Safety Management System mandating daily pre-shift toolbox briefings, PPE enforcement, and incident prevention.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 03: Applicator Status -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="licensing">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                Are you an approved applicator for specialized construction chemicals and epoxy coatings?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Yes. Elevate Builders is an official certified applicator for multinational building chemical manufacturers, including <strong>Fosroc</strong> and <strong>DCP (Don Construction Products)</strong>.
+                </p>
+                <p>
+                  Our specialized teams are certified for high-tolerance industrial epoxy flooring, polyurea protective linings, chemical-resistant bund wall coatings, elastomeric joint sealants, and structural concrete repair systems.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 04: Core Disciplines -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="capabilities">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                What core contracting disciplines and services does Elevate Builders execute?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>We deliver comprehensive execution across five defined sectors:</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>01 Civil &amp; Structural Works:</strong> Deep raft foundations, monolithic concrete casting, structural steel framing, and industrial retention bunkers.</li>
+                  <li><strong>02 Infrastructure Works:</strong> Sub-grade dry/wet utilities, medium-voltage (MV) culverts, stormwater conduits, and high-density bulk earthworks.</li>
+                  <li><strong>03 Architectural Fit-out &amp; Finishing:</strong> Turnkey commercial interiors, acoustic wall systems, porcelain tiling, and calibrated epoxy floors.</li>
+                  <li><strong>04 Manpower Supply:</strong> Certified trade crews (carpenters, steel fixers, technicians) deployed with 100% Ajeer contractual compliance.</li>
+                  <li><strong>05 Mechanical, Electrical &amp; Plumbing (MEP):</strong> Industrial HVAC ducting, power substations, fire protection piping, and sanitary drainage.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 05: Building Codes -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="capabilities">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                Which engineering codes and quality benchmarks govern your construction projects?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  All engineering design coordination, material selection, and field execution comply strictly with the <strong>Saudi Building Code (SBC)</strong>:
+                </p>
+                <p>
+                  Structural works adhere to SBC-301 and SBC-801; electrical systems to SBC-401 and IEEE standards; mechanical installations to SBC-501 and ASHRAE 90.1; and fire life safety systems to NFPA 13, NFPA 72, and Saudi Civil Defense regulations. Material quality is independently verified via ASTM compression, slump, and density testing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 06: Ajeer Compliance -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="workforce">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                Are your trade crews and workforce 100% compliant with Ajeer and Qiwa platforms?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Yes, 100% of our mobilized trade personnel and field staff operate under legal, verifiable contractual agreements processed directly through the Ministry of Human Resources' <strong>Ajeer</strong> and <strong>Qiwa</strong> platforms.
+                </p>
+                <p>
+                  We issue electronic Ajeer notices prior to site entry, provide full medical insurance, maintain centralized company camp lodging, and guarantee compliance with Saudi labour legislation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 07: Mobilization Timeline -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="workforce">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                What is your standard mobilization timeline for trade personnel and site equipment?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  For projects situated within Riyadh and the Central Province, initial crew mobilization begins within <strong>48 to 72 hours</strong> following contract signing, Ajeer electronic contract activation, and security gate pass issuance.
+                </p>
+                <p>
+                  For large-scale remote infrastructure programs or major regional developments (e.g., Western Region or Eastern Province), phased workforce mobilization is scheduled according to approved project baseline programs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 08: Geographic Coverage -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="tendering">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                Which geographic areas and development zones across Saudi Arabia do you serve?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Elevate Builders is headquartered in Riyadh, with primary mobilization concentration across the <strong>Riyadh Province</strong> (including Diriyah Gate, King Salman Park corridors, and industrial logistics parks).
+                </p>
+                <p>
+                  We also maintain operational logistics to mobilize execution teams and equipment across the Eastern Province (Dammam, Khobar, Jubail), Western Region (Jeddah, Makkah), and strategic giga-project developments Kingdom-wide.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 09: Turnkey vs Subcontract -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="tendering">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                Do you undertake turnkey general contracting or specialized sub-contract packages?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  We offer flexible contracting models tailored to project scale:
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Turnkey Contracting:</strong> Complete design coordination, procurement, civil structure, MEP, and architectural finishing for commercial and industrial facilities.</li>
+                  <li><strong>Specialized Trade Sub-contracting:</strong> Discrete packages for main contractors, such as heavy foundation casting, subterranean MV culverts, certified Fosroc/DCP epoxy flooring, or MEP installations.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10: How to Tender -->
+          <div class="faq-item border border-tertiary-fixed bg-surface-container-lowest transition-all hover:border-secondary" data-category="tendering">
+            <button class="faq-trigger w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none" aria-expanded="false">
+              <span class="font-headline-sm text-[18px] sm:text-[20px] text-primary-container font-serif">
+                How can clients submit a Request for Quotation (RFQ) or Bill of Quantities (BoQ)?
+              </span>
+              <svg class="faq-icon w-6 h-6 text-secondary shrink-0 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v12m6-6H6" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pt-2 pb-6 border-t border-tertiary-fixed/40 text-body-md text-on-surface-variant leading-relaxed space-y-2">
+                <p>
+                  Clients, consultants, and procurement managers can submit project drawings, technical specifications, and BoQs through multiple direct channels:
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Online Tender Portal:</strong> Click <a href="/contact" class="text-primary-container underline font-semibold">Request a quote</a> to submit project parameters.</li>
+                  <li><strong>Direct Email:</strong> Send tender documentation to <a href="mailto:Info@elevatebuilders.com.sa" class="text-primary-container underline font-semibold">Info@elevatebuilders.com.sa</a>.</li>
+                  <li><strong>Estimation Desk:</strong> Speak directly with our commercial estimation team at <a href="tel:+966558943663" class="text-primary-container underline font-semibold">+966 558943663</a>.</li>
+                </ul>
+                <p class="pt-2">Our commercial team typically provides initial pre-qualification confirmations within 24 hours.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="w-full bg-primary-container text-on-primary">
+      <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-16 lg:py-24">
+        <div class="max-w-3xl space-y-6">
+          <span class="font-label-eyebrow text-label-eyebrow text-secondary-fixed uppercase tracking-[0.2em] block">
+            Tender &amp; Estimation Desk
+          </span>
+          <h2 class="font-display text-headline-lg lg:text-display leading-tight">
+            Have a specific project or technical inquiry?
+          </h2>
+          <p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+            Our estimation and technical coordination team in Riyadh is prepared to review your project drawings, BoQs, and specifications for immediate quotation.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a class="inline-flex items-center justify-center bg-surface-container-lowest text-primary-container font-label-md text-label-md uppercase px-8 py-4 border border-surface-container-lowest hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-colors duration-150" href="/contact">
+              Request a quote
+            </a>
+            <a class="inline-flex items-center justify-center bg-transparent text-on-primary font-label-md text-label-md uppercase px-8 py-4 border border-tertiary-fixed/30 hover:border-on-primary transition-colors duration-150" href="tel:+966558943663">
+              Call +966 558943663
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-lg">
+          <div class="space-y-space-md">
+            <a href="/" class="inline-block focus:outline-none mb-2">
+              <img alt="Elevate Builders - CR: 7049953909" class="h-12 sm:h-14 w-auto object-contain" src="/assets/logo.png" />
+            </a>
+            <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Premier Civil Contracting &amp; Engineering</p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Civil, infrastructure, fit-out, and MEP works across Saudi Arabia.</p>
+          </div>
+          <div class="pt-space-lg border-t border-tertiary-fixed mt-space-lg">
+            <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-space-xs">Registered Headquarters</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-sm">
+              7755 Prince Abdulaziz ibn Mussaed ibn Jalawi, Al Murabba Dist. 12612, Riyadh, Saudi Arabia
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-3 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Navigation</span>
+          <nav class="flex flex-col space-y-space-sm border-l border-tertiary-fixed pl-space-md">
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/">Home</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/about">About</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/services">Services</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/projects">Projects</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/credentials">Credentials</a>
+            <a class="font-label-md text-label-md uppercase text-primary-container font-semibold" href="/faq">FAQ</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/contact">Contact</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/contact">Request a Quote</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Status -->
+        <div class="lg:col-span-4 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Direct Inquiries</span>
+          <div class="space-y-space-md border-l border-tertiary-fixed pl-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Telephone</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="tel:+966558943663">+966 558943663</a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Direct Correspondence</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:Info@elevatebuilders.com.sa">Info@elevatebuilders.com.sa</a>
+            </div>
+            <div class="pt-space-sm">
+              <div class="inline-flex items-center gap-space-xs px-3 py-1.5 bg-surface border border-tertiary-fixed">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase text-primary-container">Riyadh Operations Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-space-xl pt-space-md border-t border-tertiary-fixed flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+        <p>© 2026 Elevate Builders Company. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <a href="/faq" class="text-primary-container hover:underline font-medium">FAQ</a>
+          <span class="text-tertiary-fixed-dim">|</span>
+          <span class="text-secondary uppercase tracking-widest">CR 7049953909</span>
+          <span class="hidden md:inline text-tertiary-fixed-dim">|</span>
+          <span class="uppercase">Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE ACCORDION SCRIPT -->
+  <script>
+    function initFAQ() {
+      // Mobile Drawer Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          mobileBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // FAQ Accordion Toggle
+      const triggers = document.querySelectorAll('.faq-trigger');
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const item = trigger.closest('.faq-item');
+          const isCurrentlyOpen = item.classList.contains('is-open');
+
+          // Close all
+          document.querySelectorAll('.faq-item').forEach(it => {
+            it.classList.remove('is-open', 'border-secondary', 'bg-surface-container-low');
+            it.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+          });
+
+          // Toggle current
+          if (!isCurrentlyOpen) {
+            item.classList.add('is-open', 'border-secondary', 'bg-surface-container-low');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Category Filtering
+      const filterBtns = document.querySelectorAll('.faq-filter-btn');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-category');
+
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary', 'border-primary-container');
+            b.classList.add('bg-surface', 'text-on-surface', 'border-tertiary-fixed');
+          });
+
+          btn.classList.add('bg-primary-container', 'text-on-primary', 'border-primary-container');
+          btn.classList.remove('bg-surface', 'text-on-surface', 'border-tertiary-fixed');
+
+          faqItems.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            if (cat === 'all' || itemCat === cat) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+      initFAQ();
+    }
+  </script>
+
+</body>
+</html>
