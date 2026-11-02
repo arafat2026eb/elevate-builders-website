@@ -340,8 +340,8 @@
     );
   }
 
-  // Initialize all motion modules
-  function initAll() {
+  // Non-critical background kinetic modules deferred to idle time
+  function scheduleNonCritical() {
     initProgressBar();
     initBackToTop();
     initScrollReveal();
@@ -349,7 +349,16 @@
     initStatCounters();
     initHeaderElevation();
     initKineticDetails();
+  }
+
+  // Initialize critical modules immediately, defer heavy observers to idle
+  function initAll() {
     initMobileNavigation();
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(scheduleNonCritical, { timeout: 1200 });
+    } else {
+      setTimeout(scheduleNonCritical, 100);
+    }
   }
 
   if (document.readyState === 'loading') {
