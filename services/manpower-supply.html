@@ -33,6 +33,14 @@
       display: flex !important;
       animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
+
+    /* Strictly hide mobile menu button and mobile drawer on desktop */
+    @media (min-width: 768px) {
+      #mobile-menu-btn,
+      #mobile-menu {
+        display: none !important;
+      }
+    }
   </style>
 
   <!-- Tailwind CSS CDN & Design System Tokens -->
