@@ -905,37 +905,46 @@
 
   <!-- Filter & Mobile Menu Interactivity -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Category Filter logic
-      const buttons = document.querySelectorAll('#filter-controls .filter-btn');
-      const cards = document.querySelectorAll('#projects-grid .project-card');
+    (function () {
+      function initProjectFilters() {
+        const buttons = document.querySelectorAll('#filter-controls .filter-btn');
+        const cards = document.querySelectorAll('#projects-grid .project-card');
 
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.getAttribute('data-filter');
+        if (!buttons.length || !cards.length) return;
 
-          buttons.forEach(b => {
-            b.classList.remove('text-primary-container', 'font-semibold', 'after:w-full');
-            b.classList.add('text-on-surface-variant', 'after:w-0');
-          });
-          btn.classList.add('text-primary-container', 'font-semibold', 'after:w-full');
-          btn.classList.remove('text-on-surface-variant', 'after:w-0');
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const filter = btn.getAttribute('data-filter');
 
-          cards.forEach(card => {
-            const category = card.getAttribute('data-category');
-            if (filter === 'all' || category === filter) {
-              card.style.display = 'flex';
-            } else {
-              card.style.display = 'none';
-            }
+            // Update button visual states
+            buttons.forEach(b => {
+              b.classList.remove('text-primary-container', 'font-semibold', 'after:w-full', 'active');
+              b.classList.add('text-on-surface-variant', 'after:w-0');
+            });
+            btn.classList.add('text-primary-container', 'font-semibold', 'after:w-full', 'active');
+            btn.classList.remove('text-on-surface-variant', 'after:w-0');
+
+            // Show/hide cards matching category
+            cards.forEach(card => {
+              const category = card.getAttribute('data-category');
+              if (filter === 'all' || category === filter) {
+                card.classList.remove('hidden');
+                card.style.display = 'flex';
+              } else {
+                card.classList.add('hidden');
+                card.style.display = 'none';
+              }
+            });
           });
         });
-      });
-
-      // Mobile Menu Drawer Toggle
-      // Mobile menu is powered by motion.js
       }
-    });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initProjectFilters);
+      } else {
+        initProjectFilters();
+      }
+    })();
   </script>
   <script>
     // Bulletproof Immediate Mobile Navigation Controller
