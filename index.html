@@ -1257,13 +1257,13 @@
           <!-- Progress Dots / Hairline Bar Indicators -->
           <div class="mt-6 flex items-center justify-center pt-4 border-t border-tertiary-fixed">
             <div class="flex items-center gap-2" id="field-carousel-indicators" role="tablist" aria-label="Slide indicators">
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-primary-container w-8" data-target="0" aria-label="Go to slide 1"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="1" aria-label="Go to slide 2"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="2" aria-label="Go to slide 3"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="3" aria-label="Go to slide 4"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="4" aria-label="Go to slide 5"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="5" aria-label="Go to slide 6"></button>
-              <button type="button" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="6" aria-label="Go to slide 7"></button>
+              <button type="button" role="tab" aria-selected="true" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-primary-container w-8" data-target="0" aria-label="Slide 1"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="1" aria-label="Slide 2"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="2" aria-label="Slide 3"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="3" aria-label="Slide 4"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="4" aria-label="Slide 5"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="5" aria-label="Slide 6"></button>
+              <button type="button" role="tab" aria-selected="false" class="carousel-dot h-1.5 transition-all duration-300 rounded-none bg-tertiary-fixed hover:bg-secondary/60 w-3" data-target="6" aria-label="Slide 7"></button>
             </div>
           </div>
 
@@ -1803,9 +1803,11 @@
           if (idx === currentIndex) {
             dot.classList.remove('bg-tertiary-fixed', 'w-3');
             dot.classList.add('bg-primary-container', 'w-8');
+            dot.setAttribute('aria-selected', 'true');
           } else {
             dot.classList.remove('bg-primary-container', 'w-8');
             dot.classList.add('bg-tertiary-fixed', 'w-3');
+            dot.setAttribute('aria-selected', 'false');
           }
         });
       }
