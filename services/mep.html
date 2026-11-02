@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Mechanical, Electrical &amp; Plumbing (MEP) — Elevate Builders | Saudi Arabia</title>
+  <meta name="description" content="Turnkey commercial and industrial MEP contracting in Riyadh: HVAC ducting, power distribution MDBs, Civil Defense approved fire protection, and commercial plumbing under SBC and NFPA compliance."/>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <style>
+    @layer base {
+      html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      main> :first-child { margin-top: 0 !important; }
+      main> :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #FAF9F5; }
+    ::-webkit-scrollbar-thumb { background: #C8C5D0; border-radius: 0px; }
+    ::-webkit-scrollbar-thumb:hover { background: #6C5C3E; }
+    @keyframes mobileMenuSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #mobile-menu.hidden { display: none !important; }
+    #mobile-menu:not(.hidden) {
+      display: flex !important;
+      animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN & Design System Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#080237",
+            "primary-container": "#1f1b4d",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#8783bc",
+            "primary-fixed": "#e3dfff",
+            "primary-fixed-dim": "#c5c0fd",
+            "on-primary-fixed": "#181446",
+            "on-primary-fixed-variant": "#444174",
+            "inverse-primary": "#c5c0fd",
+
+            "secondary": "#6c5c3e",
+            "secondary-container": "#f3ddb7",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#706142",
+            "secondary-fixed": "#f5e0ba",
+            "secondary-fixed-dim": "#d8c49f",
+            "on-secondary-fixed": "#241a03",
+            "on-secondary-fixed-variant": "#534529",
+
+            "tertiary": "#0b0c09",
+            "tertiary-container": "#22221f",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#8a8984",
+            "tertiary-fixed": "#e4e2dc",
+            "tertiary-fixed-dim": "#c8c6c1",
+            "on-tertiary-fixed": "#1b1c18",
+            "on-tertiary-fixed-variant": "#474743",
+
+            "surface": "#faf9f5",
+            "surface-dim": "#dbdad6",
+            "surface-bright": "#faf9f5",
+            "surface-variant": "#e3e2df",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f5f4f0",
+            "surface-container": "#efeeea",
+            "surface-container-high": "#e9e8e4",
+            "surface-container-highest": "#e3e2df",
+            "on-surface": "#1b1c1a",
+            "on-surface-variant": "#47464f",
+            "inverse-surface": "#30312e",
+            "inverse-on-surface": "#f2f1ed",
+            "surface-tint": "#5c588e",
+
+            "background": "#faf9f5",
+            "on-background": "#1b1c1a",
+            "outline": "#787680",
+            "outline-variant": "#c8c5d0",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a"
+          },
+          borderRadius: {
+            "DEFAULT": "0px",
+            "none": "0px",
+            "sm": "0px",
+            "md": "0px",
+            "lg": "0px",
+            "xl": "0px",
+            "full": "9999px"
+          },
+          spacing: {
+            "margin-mobile": "1.5rem",
+            "margin": "4rem",
+            "gutter-mobile": "1rem",
+            "gutter": "2rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "3rem"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "label-eyebrow": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"],
+            "label-sm": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "400" }],
+            "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.015em", fontWeight: "400" }],
+            "headline-sm": ["22px", { lineHeight: "28px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-eyebrow": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }],
+            "label-md": ["13px", { lineHeight: "18px", letterSpacing: "0.04em", fontWeight: "500" }],
+            "label-sm": ["11px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link href="/assets/logo-emblem.png" rel="icon" type="image/png"/>
+  <link href="/assets/logo-emblem.png" rel="apple-touch-icon"/>
+  <link rel="stylesheet" href="/assets/motion.css"/>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-tertiary-fixed transition-all duration-300">
+    <div class="h-20 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center shrink-0">
+        <a class="flex items-center group focus:outline-none" href="/">
+          <img alt="Elevate Builders - CR: 7049953909" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]" src="/assets/logo.png"/>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation with Animated Dropdown -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8 font-label-md text-label-md uppercase tracking-wider">
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+
+        <!-- Services with Dropdown -->
+        <div class="relative group">
+          <a class="nav-link active-link text-primary-container font-semibold flex items-center gap-1" href="/services">
+            <span>Services</span>
+            <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:rotate-180 pointer-events-none">expand_more</span>
+          </a>
+          <!-- Services Dropdown Panel -->
+          <div class="absolute left-0 top-full pt-2 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+            <div class="w-80 bg-surface-container-lowest border border-tertiary-fixed shadow-2xl py-2">
+              <a href="/services/civil-structural" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">01 Civil &amp; Structural</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Foundations, concrete &amp; framing</span>
+              </a>
+              <a href="/services/infrastructure" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">02 Infrastructure</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">MV-culverts, utilities &amp; earthworks</span>
+              </a>
+              <a href="/services/fit-out-finishing" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">03 Fit-out &amp; Finishing</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Interiors, DCP/Fosroc coatings &amp; joinery</span>
+              </a>
+              <a href="/services/manpower-supply" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40">
+                <span class="font-medium text-body-sm text-primary-container block group-hover/item:text-secondary transition-colors">04 Manpower Supply</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">Ajeer-compliant certified trade crews</span>
+              </a>
+              <a href="/services/mep" class="block px-4 py-2.5 hover:bg-surface-container-low transition-colors group/item border-t border-tertiary-fixed/40 bg-surface-container-low/60">
+                <span class="font-semibold text-body-sm text-secondary block group-hover/item:text-secondary transition-colors">05 Mechanical, Electrical &amp; Plumbing (MEP)</span>
+                <span class="text-[11px] text-on-surface-variant block font-mono normal-case">HVAC, power distribution, life safety &amp; BMS</span>
+              </a>
+              <div class="mt-1 pt-2 border-t border-tertiary-fixed px-4 py-1.5 bg-surface-container-low">
+                <a href="/services" class="text-[11px] uppercase tracking-wider font-semibold text-secondary hover:text-primary-container flex items-center justify-between">
+                  <span>Explore All 05 Sectors</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="nav-link text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Toggle -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="header-cta-btn inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-5 lg:px-7 py-3 border border-primary-container rounded-none hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-all duration-200" href="/contact">
+          Request a quote
+        </a>
+        
+        <button id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false"
+          class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-[5px] border border-tertiary-fixed text-primary-container hover:bg-surface-container-low transition-colors duration-150">
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+          <span class="nav-icon-bar block w-5 h-[1.75px] bg-primary-container transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-tertiary-fixed bg-surface px-margin-mobile py-6 flex flex-col space-y-4 shadow-lg">
+      <nav class="flex flex-col space-y-3 font-label-md text-label-md uppercase">
+        <div class="pb-2 border-b border-tertiary-fixed mb-1">
+          <img alt="Elevate Builders" class="h-8 w-auto object-contain" src="/assets/logo.png"/>
+        </div>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/">Home</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/about">About</a>
+        
+        <!-- Mobile Services with Sub-Links -->
+        <div class="py-2 border-b border-tertiary-fixed">
+          <div class="flex items-center justify-between">
+            <a class="text-primary-container font-semibold" href="/services">Services</a>
+            <span class="text-[11px] font-mono text-secondary">05 SECTORS</span>
+          </div>
+          <div class="pl-3 pt-2 space-y-1.5 border-l-2 border-secondary ml-1 mt-1 text-body-sm normal-case">
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/civil-structural">01 Civil &amp; Structural</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/infrastructure">02 Infrastructure</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/fit-out-finishing">03 Fit-out &amp; Finishing</a>
+            <a class="block py-1 text-on-surface-variant hover:text-primary-container text-[13px]" href="/services/manpower-supply">04 Manpower Supply</a>
+            <a class="block py-1 text-secondary font-semibold text-[13px]" href="/services/mep">05 Mechanical, Electrical &amp; Plumbing (MEP)</a>
+          </div>
+        </div>
+
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/projects">Projects</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/credentials">Credentials</a>
+        <a class="py-2 border-b border-tertiary-fixed text-on-surface-variant hover:text-primary-container" href="/contact">Contact</a>
+      </nav>
+      <div class="pt-2">
+        <a class="w-full flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase py-3.5 border border-primary-container hover:bg-secondary transition-colors" href="/contact">
+          Request a quote
+        </a>
+      </div>
+      <div class="pt-2 flex flex-col text-on-surface-variant font-label-sm text-label-sm gap-1">
+        <span>Riyadh Desk: <a href="tel:+966558943663" class="text-primary-container underline">+966 558943663</a></span>
+        <span>Commercial Registration: 7049953909</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w-full pt-20 bg-surface flex-1">
+    <div class="flex flex-col w-full">
+
+      <!-- HERO / BREADCRUMB HEADER -->
+      <section class="w-full bg-surface border-b border-tertiary-fixed">
+        <div class="w-full px-margin-mobile lg:px-margin py-12 lg:py-20 max-w-[1440px] mx-auto">
+          
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-label-sm font-mono text-on-surface-variant uppercase mb-6" aria-label="Breadcrumb">
+            <a href="/" class="hover:text-primary-container transition-colors">Home</a>
+            <span class="text-tertiary-fixed-dim">/</span>
+            <a href="/services" class="hover:text-primary-container transition-colors">Services</a>
+            <span class="text-tertiary-fixed-dim">/</span>
+            <span class="text-secondary font-semibold">05 Mechanical, Electrical &amp; Plumbing (MEP)</span>
+          </nav>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end justify-between">
+            <div class="lg:col-span-8 flex flex-col space-y-4">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-secondary"></span>
+                <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em]">PRACTICE SECTOR 05 // SPECIFICATION REF: SBC-401 / SBC-501 / NFPA</span>
+              </div>
+              <h1 class="font-display text-headline-lg lg:text-display text-primary-container leading-[1.08] tracking-tight">
+                Mechanical, Electrical &amp; Plumbing (MEP)
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl font-normal leading-relaxed pt-2">
+                Turnkey building services engineering, industrial HVAC ducting and chilled water networks, high-voltage power distribution, certified life safety fire suppression, and precision sanitary systems executed across Saudi Arabia.
+              </p>
+            </div>
+
+            <!-- Header Quick Action -->
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end justify-end">
+              <a href="/contact" class="inline-flex items-center justify-center bg-primary-container text-on-primary font-label-md text-label-md uppercase px-7 py-3.5 border border-primary-container hover:bg-secondary hover:border-secondary transition-all">
+                Submit MEP BoQ / Inquire
+              </a>
+              <span class="text-[12px] font-mono text-on-surface-variant">Hotline: <a href="tel:+966558943663" class="text-primary-container underline font-medium">+966 558943663</a></span>
+            </div>
+          </div>
+
+          <!-- TECHNICAL METADATA STRIP -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-12 pt-6 border-t border-tertiary-fixed text-on-surface-variant font-label-sm text-label-sm">
+            <div class="flex flex-col">
+              <span class="text-secondary uppercase tracking-widest text-[10px]">Governing Code</span>
+              <span class="text-primary-container font-medium mt-1">SBC-401 / SBC-501 / NFPA</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-secondary uppercase tracking-widest text-[10px]">Standard System</span>
+              <span class="text-primary-container font-medium mt-1">ASHRAE 90.1 / SMACNA / IEEE</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-secondary uppercase tracking-widest text-[10px]">Life Safety Approval</span>
+              <span class="text-primary-container font-medium mt-1">Civil Defense Certified Installation</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-secondary uppercase tracking-widest text-[10px]">Mobilization Zone</span>
+              <span class="text-primary-container font-medium mt-1">Riyadh &amp; Central Province</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VISUAL HERO PROJECT PLATE -->
+      <section class="w-full bg-surface border-b border-tertiary-fixed">
+        <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-10 lg:py-16">
+          <div class="relative w-full aspect-[21/9] min-h-[340px] max-h-[520px] bg-surface-container-high border border-tertiary-fixed overflow-hidden shadow-sm">
+            <img class="w-full h-full object-cover hover:scale-[1.02] transition-all duration-700" alt="Elevate Builders MEP engineering installation showing overhead cable trays, ducted HVAC systems, and fire protection piping in Riyadh" src="/assets/services/mep.jpg"/>
+            <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+            
+            <div class="absolute top-4 left-4 flex items-center gap-2">
+              <span class="bg-surface/95 px-3 py-1 text-[11px] font-mono text-primary-container uppercase border border-tertiary-fixed">PLATE 05.A — COMMERCIAL &amp; INDUSTRIAL MEP NETWORKS</span>
+              <span class="hidden sm:inline-block bg-surface/95 px-2.5 py-1 text-[10px] font-mono text-secondary uppercase border border-tertiary-fixed">SBC COMPLIANT</span>
+            </div>
+            <div class="absolute bottom-4 left-4 right-4 bg-surface/95 p-3.5 border border-tertiary-fixed flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-3 text-[12px] font-mono text-primary-container">
+                <span class="font-medium">CORE EXECUTION:</span>
+                <span>Overhead Cable Trays, Ducted HVAC, Chilled Water &amp; Certified Fire Suppression</span>
+              </div>
+              <span class="text-[11px] font-mono text-secondary">HYDROSTATIC &amp; MEGGER TESTED</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILED CAPABILITIES & SCOPE GRID -->
+      <section class="w-full bg-surface border-b border-tertiary-fixed">
+        <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-16 lg:py-24">
+          
+          <div class="max-w-3xl mb-12">
+            <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em] block mb-2">ENGINEERING BREAKDOWN</span>
+            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary-container font-serif">
+              Comprehensive building services engineered for continuous uptime and regulatory compliance.
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            
+            <!-- Item 1 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.1 // HVAC &amp; CLIMATE CONTROL</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">HVAC &amp; Air Distribution</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Chilled water piping, AHU/FCU plant installations, galvanized spiral and rectangular ductwork fabricated to SMACNA standards, VRF/VRV multi-split systems, and exhaust smoke extraction.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>ASHRAE 90.1 energy performance</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>Aerofoil dampers &amp; acoustic lining</li>
+              </ul>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.2 // ELECTRICAL POWER</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">LV &amp; MV Power Distribution</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Main distribution boards (MDBs/SMDBs), dry-type step-down transformers, heavy copper busway trunks, cable ladder routing, motor control centers (MCC), and emergency standby diesel generator synchronization.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>SEC-approved substation coordination</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>Form 4b type-tested switchgear panels</li>
+              </ul>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.3 // LIFE SAFETY</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">Fire Protection &amp; Suppression</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Civil Defense certified wet and dry pipe sprinkler systems, UL/FM diesel and electric fire booster pumps, clean-agent FM200/Novec gas suppression for mission-critical IT rooms, and landing hose reels.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>NFPA 13 &amp; 14 compliant hydraulics</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>Civil Defense inspection sign-off support</li>
+              </ul>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.4 // PLUMBING &amp; DRAINAGE</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">Domestic Water &amp; Drainage</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Multi-stage VFD pressure booster pump stations, thermal PPR and cross-linked PEX water lines, acoustic UPVC gravity soil and waste stacks, grease interceptors, and rainwater harvesting sumps.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>SBC-501 sanitary plumbing code</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>Hydrostatic testing at 1.5x design pressure</li>
+              </ul>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.5 // LOW CURRENT &amp; AUTOMATION</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">BMS, Security &amp; Telecom</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Centralized Building Management Systems (BACnet/Modbus BMS), Cat6A and multi-core optical fiber structured cabling, IP CCTV video security networks, access control gates, and public address evacuation.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>High-density server room rack containment</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>CITC certified cabling standards</li>
+              </ul>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="p-6 bg-surface-container-lowest border border-tertiary-fixed flex flex-col justify-between hover:border-secondary transition-colors">
+              <div>
+                <span class="font-mono text-[12px] text-secondary font-semibold block mb-3">05.6 // COMMISSIONING</span>
+                <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif mb-2">Testing, Adjusting &amp; Balancing (TAB)</h3>
+                <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                  Full pre-commissioning air volume calibration, hydronic valve balancing, calibrated infrared thermographic panel audits, Megger insulation verification, and integrated system commissioning.
+                </p>
+              </div>
+              <ul class="pt-4 border-t border-tertiary-fixed space-y-1.5 text-[12px] font-mono text-primary-container">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>NEBB / AABC procedural standards</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span>Detailed closeout documentation &amp; O&amp;M manuals</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- QUALITY & VERIFICATION PROTOCOL (TABULAR) -->
+      <section class="w-full bg-surface-container-low border-b border-tertiary-fixed">
+        <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-16 lg:py-20">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+              <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em] block mb-2">QA/QC REGIME</span>
+              <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary-container font-serif">
+                MEP Testing &amp; Commissioning Verification
+              </h2>
+            </div>
+            <span class="text-label-sm font-mono text-on-surface-variant">GOVERNED UNDER ISO 9001:2015</span>
+          </div>
+
+          <div class="overflow-x-auto border border-tertiary-fixed bg-surface-container-lowest">
+            <table class="w-full text-left border-collapse text-body-sm">
+              <thead>
+                <tr class="border-b border-tertiary-fixed bg-surface-container font-mono text-[11px] uppercase tracking-wider text-primary-container">
+                  <th class="p-4 border-r border-tertiary-fixed">Testing Package</th>
+                  <th class="p-4 border-r border-tertiary-fixed">Standard / Code</th>
+                  <th class="p-4 border-r border-tertiary-fixed">Testing Protocol</th>
+                  <th class="p-4">Acceptance Criteria</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-tertiary-fixed font-normal text-on-surface">
+                <tr class="hover:bg-surface-container-low transition-colors">
+                  <td class="p-4 font-medium text-primary-container border-r border-tertiary-fixed">Hydrostatic Pipe Pressure Test</td>
+                  <td class="p-4 font-mono text-[12px] border-r border-tertiary-fixed">NFPA 13 / SBC-501</td>
+                  <td class="p-4 border-r border-tertiary-fixed">All chilled water &amp; fire sprinkler circuits</td>
+                  <td class="p-4 text-on-surface-variant">Tested at 200 psi (or 1.5x working pressure) for 2 hours with zero pressure drop</td>
+                </tr>
+                <tr class="hover:bg-surface-container-low transition-colors">
+                  <td class="p-4 font-medium text-primary-container border-r border-tertiary-fixed">Megger Insulation Resistance</td>
+                  <td class="p-4 font-mono text-[12px] border-r border-tertiary-fixed">SBC-401 / IEEE 43</td>
+                  <td class="p-4 border-r border-tertiary-fixed">All primary feeder cables &amp; switchboard busbars</td>
+                  <td class="p-4 text-on-surface-variant">1000V DC test yielding &ge; 50 MΩ phase-to-phase and phase-to-earth resistance</td>
+                </tr>
+                <tr class="hover:bg-surface-container-low transition-colors">
+                  <td class="p-4 font-medium text-primary-container border-r border-tertiary-fixed">Air Flow &amp; Duct Leakage (TAB)</td>
+                  <td class="p-4 font-mono text-[12px] border-r border-tertiary-fixed">SMACNA / NEBB Standards</td>
+                  <td class="p-4 border-r border-tertiary-fixed">100% of supply, return &amp; exhaust duct branches</td>
+                  <td class="p-4 text-on-surface-variant">Air volume within &plusmn;10% design CFM; Class 3 leakage compliance</td>
+                </tr>
+                <tr class="hover:bg-surface-container-low transition-colors">
+                  <td class="p-4 font-medium text-primary-container border-r border-tertiary-fixed">Life Safety &amp; Fire Alarm Integration</td>
+                  <td class="p-4 font-mono text-[12px] border-r border-tertiary-fixed">NFPA 72 / Civil Defense</td>
+                  <td class="p-4 border-r border-tertiary-fixed">Complete loop, detector &amp; sounder actuation</td>
+                  <td class="p-4 text-on-surface-variant">100% addressable triggering, elevator recall &amp; HVAC smoke damper trips</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROVEN RELEVANT PROJECTS -->
+      <section class="w-full bg-surface border-b border-tertiary-fixed">
+        <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-16 lg:py-20">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div>
+              <span class="font-label-eyebrow text-label-eyebrow text-secondary uppercase tracking-[0.2em] block mb-2">PROJECT CASE STUDIES</span>
+              <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg text-primary-container font-serif">
+                Delivered MEP Infrastructure
+              </h2>
+            </div>
+            <a href="/projects" class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary-container font-semibold flex items-center gap-1">
+              <span>View All Projects</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project 1 -->
+            <a href="/projects" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed hover:border-secondary transition-all">
+              <div class="relative w-full aspect-[16/9] bg-surface-container-high overflow-hidden">
+                <img src="/assets/projects/gallery/04_ppp4-almarai/01.jpg" alt="Almarai PPP4 Fleet Terminal MEP" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"/>
+                <div class="absolute top-3 left-3 bg-surface/95 px-2.5 py-1 text-[10px] font-mono text-primary-container border border-tertiary-fixed">01 // INDUSTRIAL MEP &amp; UTILITIES</div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">
+                    PPP4 Fleet &amp; Logistics Facility for Almarai
+                  </h3>
+                  <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                    Substation electrical distribution, commercial fleet fuel dispensing pumps, automated truck wash plumbing systems, and hazardous area explosion-proof installations.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-mono text-on-surface-variant">
+                  <span>LOCATION: RIYADH</span>
+                  <span class="text-primary-container font-semibold">DELIVERED 2025–2026</span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="/projects" class="group flex flex-col bg-surface-container-lowest border border-tertiary-fixed hover:border-secondary transition-all">
+              <div class="relative w-full aspect-[16/9] bg-surface-container-high overflow-hidden">
+                <img src="/assets/projects/banan-mall-01.jpg" alt="Banan Al Riyadh Commercial Center MEP" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"/>
+                <div class="absolute top-3 left-3 bg-surface/95 px-2.5 py-1 text-[10px] font-mono text-primary-container border border-tertiary-fixed">02 // COMMERCIAL MEP FIT-OUT</div>
+              </div>
+              <div class="p-6 flex flex-col justify-between flex-1">
+                <div>
+                  <h3 class="font-headline-sm text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors mb-2">
+                    Banan Al Riyadh Commercial Complex MEP Works
+                  </h3>
+                  <p class="text-body-sm text-on-surface-variant leading-relaxed mb-4">
+                    Complete building services package: ducted VRF air conditioning, smoke exhaust ventilation, MDB sub-stations, domestic water boosting, and addressable fire alarm network.
+                  </p>
+                </div>
+                <div class="pt-4 border-t border-tertiary-fixed flex items-center justify-between text-label-sm font-mono text-on-surface-variant">
+                  <span>LOCATION: RIYADH</span>
+                  <span class="text-primary-container font-semibold">COMPLETED 2023</span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PREV / NEXT SERVICE ACCORDION -->
+      <section class="w-full bg-surface border-b border-tertiary-fixed">
+        <div class="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-tertiary-fixed">
+          
+          <!-- Previous (Points to Sector 04 Manpower Supply) -->
+          <a href="/services/manpower-supply" class="p-8 lg:p-12 flex flex-col group hover:bg-surface-container-low transition-colors">
+            <span class="text-[11px] font-mono text-secondary uppercase tracking-widest mb-2">← Previous Practice Sector 04</span>
+            <span class="font-display text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors">
+              Manpower Supply &amp; Technical Trades
+            </span>
+            <p class="text-body-sm text-on-surface-variant mt-2">Ajeer-compliant certified trade crews, equipment operators, and safety supervisors.</p>
+          </a>
+
+          <!-- Next Service (Back to Sector 01 Civil & Structural) -->
+          <a href="/services/civil-structural" class="p-8 lg:p-12 flex flex-col group hover:bg-surface-container-low transition-colors text-left md:text-right">
+            <span class="text-[11px] font-mono text-secondary uppercase tracking-widest mb-2">Next Practice Sector 01 →</span>
+            <span class="font-display text-headline-sm text-primary-container font-serif group-hover:text-secondary transition-colors">
+              Civil &amp; Structural Works
+            </span>
+            <p class="text-body-sm text-on-surface-variant mt-2">Monolithic concrete casting, deep rafts, foundations, and structural steel framing.</p>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- CONSULTATION & CALL TO ACTION -->
+      <section class="w-full bg-primary-container text-on-primary">
+        <div class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-16 lg:py-24">
+          <div class="max-w-3xl space-y-6">
+            <span class="font-label-eyebrow text-label-eyebrow text-secondary-fixed uppercase tracking-[0.2em] block">DIRECT PROCUREMENT LIAISON</span>
+            <h2 class="font-display text-headline-lg lg:text-display leading-tight">
+              Ready to submit MEP drawings or request a technical BoQ review?
+            </h2>
+            <p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+              Our Riyadh engineering team reviews single-line diagrams (SLD), mechanical equipment schedules, and load calculations. We respond with formal technical proposals within 48 business hours.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a class="inline-flex items-center justify-center bg-surface-container-lowest text-primary-container font-label-md text-label-md uppercase px-8 py-4 border border-surface-container-lowest hover:bg-secondary hover:border-secondary hover:text-on-secondary transition-colors duration-150" href="/contact">
+                Request a quote
+              </a>
+              <a class="inline-flex items-center justify-center bg-transparent text-on-primary font-label-md text-label-md uppercase px-8 py-4 border border-tertiary-fixed/30 hover:border-on-primary transition-colors duration-150" href="tel:+966558943663">
+                Call +966 558943663
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-low border-t border-tertiary-fixed text-on-surface">
+    <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+        
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-lg">
+          <div class="space-y-space-md">
+            <a href="/" class="inline-block focus:outline-none mb-2">
+              <img alt="Elevate Builders - CR: 7049953909" class="h-12 sm:h-14 w-auto object-contain" src="/assets/logo.png"/>
+            </a>
+            <p class="font-label-eyebrow text-label-eyebrow uppercase text-secondary tracking-widest">Premier Civil Contracting &amp; Engineering</p>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Civil, infrastructure, MEP, and finishing works across Saudi Arabia.</p>
+          </div>
+          <div class="pt-space-lg border-t border-tertiary-fixed mt-space-lg">
+            <p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary mb-space-xs">Registered Headquarters</p>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-sm">
+              7755 Prince Abdulaziz ibn Mussaed ibn Jalawi, Al Murabba Dist. 12612, Riyadh, Saudi Arabia
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="lg:col-span-3 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Navigation</span>
+          <nav class="flex flex-col space-y-space-sm border-l border-tertiary-fixed pl-space-md">
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/">Home</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/about">About</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/services">Services</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/projects">Projects</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/credentials">Credentials</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/contact">Contact</a>
+            <a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary-container transition-colors" href="/contact">Request a Quote</a>
+          </nav>
+        </div>
+
+        <!-- Column 3: Contact & Status -->
+        <div class="lg:col-span-4 flex flex-col space-y-space-md mt-6 lg:mt-0">
+          <span class="font-label-eyebrow text-label-eyebrow uppercase text-primary-container">Direct Inquiries</span>
+          <div class="space-y-space-md border-l border-tertiary-fixed pl-space-md">
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Telephone</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="tel:+966558943663">+966 558943663</a>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label-sm text-label-sm uppercase text-secondary">Direct Correspondence</span>
+              <a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:Info@elevatebuilders.com.sa">Info@elevatebuilders.com.sa</a>
+            </div>
+            <div class="pt-space-sm">
+              <div class="inline-flex items-center gap-space-xs px-3 py-1.5 bg-surface border border-tertiary-fixed">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                <span class="font-label-sm text-label-sm uppercase text-primary-container">Riyadh Operations Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-space-xl pt-space-md border-t border-tertiary-fixed flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+        <p>© 2026 Elevate Builders Company. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <span class="text-secondary uppercase tracking-widest">Commercial Registration 7049953909</span>
+          <span class="hidden md:inline text-tertiary-fixed-dim">|</span>
+          <span class="uppercase">Kingdom of Saudi Arabia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/motion.js" defer></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      menu.classList.add('hidden');
+      btn.classList.remove('is-active');
+      btn.setAttribute('aria-expanded', 'false');
+
+      function closeMenu() {
+        btn.classList.remove('is-active');
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.add('hidden');
+      }
+
+      function toggleMenu(e) {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (menu.classList.contains('hidden')) {
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-expanded', 'true');
+          menu.classList.remove('hidden');
+        } else {
+          closeMenu();
+        }
+      }
+
+      btn.onclick = toggleMenu;
+
+      document.addEventListener('click', function (e) {
+        if (!menu.classList.contains('hidden') && !btn.contains(e.target) && !menu.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+    })();
+  </script>
+</body>
+</html>
