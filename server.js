@@ -3,6 +3,24 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
+// Zero-dependency local .env loader
+const envFile = path.join(__dirname, '.env');
+if (fs.existsSync(envFile)) {
+  try {
+    const lines = fs.readFileSync(envFile, 'utf8').split('\n');
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eq = trimmed.indexOf('=');
+      if (eq > 0) {
+        const k = trimmed.slice(0, eq).trim();
+        const v = trimmed.slice(eq + 1).trim().replace(/^["']|["']$/g, '');
+        if (!process.env[k]) process.env[k] = v;
+      }
+    }
+  } catch (e) {}
+}
+
 const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = __dirname;
 
@@ -30,6 +48,13 @@ const server = http.createServer((req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
 
   let reqPath = decodeURI(req.url.split('?')[0]);
+
+  // Route API requests to Serverless functions
+  if (reqPath === '/api/contact' || reqPath === '/api/contact.js') {
+    const contactHandler = require('./api/contact.js');
+    return contactHandler(req, res);
+  }
+
   if (reqPath === '/' || reqPath === '') {
     reqPath = '/index.html';
   }
