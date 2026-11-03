@@ -42,9 +42,9 @@ function getEnvVar(targetKey) {
   return null;
 }
 
-// Fallback recipient configuration (overridable via CONTACT_TO_EMAILS)
+// Recipient configuration (overridable via CONTACT_TO_EMAILS)
 const DEFAULT_TO_EMAILS = ['abdullah@elevatebuilders.com.sa', 'arafat@elevatebuilders.com.sa'];
-const DEFAULT_FROM_EMAIL = 'Elevate Builders Inquiries <onboarding@resend.dev>';
+const DEFAULT_FROM_EMAIL = 'Elevate Builders Inquiries <inquiries@elevatebuilders.com.sa>';
 
 function formatServiceScope(scope) {
   const map = {
@@ -513,32 +513,7 @@ module.exports = async function handler(req, res) {
   };
 
   try {
-    let result = await sendResendRequest(apiKey, emailPayload);
-
-    // Graceful handling of Resend Sandbox constraint (before domain is verified in Resend)
-    if (result.status === 403 && result.data && result.data.message && result.data.message.includes('testing emails')) {
-      console.warn('[Resend Warning] Unverified domain detected. Rerouting to registered Resend account owner in sandbox mode.');
-      
-      const sandboxPayload = {
-        ...emailPayload,
-        to: ['elevatebuilders25@gmail.com'],
-        html: generateHtmlEmail(templateData, true)
-      };
-
-      const fallbackResult = await sendResendRequest(apiKey, sandboxPayload);
-      if (fallbackResult.status >= 200 && fallbackResult.status < 300) {
-        const responseData = {
-          success: true,
-          referenceId,
-          timestamp,
-          sandbox: true,
-          notice: 'Inquiry cataloged successfully. (Delivered to registered account owner during sandbox testing).'
-        };
-        if (res.status) return res.status(200).json(responseData);
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        return res.end(JSON.stringify(responseData));
-      }
-    }
+    const result = await sendResendRequest(apiKey, emailPayload);
 
     if (result.status >= 200 && result.status < 300) {
       const responseData = {
