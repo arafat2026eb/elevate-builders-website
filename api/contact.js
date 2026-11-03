@@ -43,7 +43,11 @@ function getEnvVar(targetKey) {
 }
 
 // Recipient configuration (overridable via CONTACT_TO_EMAILS)
-const DEFAULT_TO_EMAILS = ['abdullah@elevatebuilders.com.sa', 'arafat@elevatebuilders.com.sa'];
+const DEFAULT_TO_EMAILS = [
+  'abdullah@elevatebuilders.com.sa',
+  'arafat@elevatebuilders.com.sa',
+  'elevatebuilders25@gmail.com'
+];
 const DEFAULT_FROM_EMAIL = 'Elevate Builders Inquiries <inquiries@elevatebuilders.com.sa>';
 
 function formatServiceScope(scope) {
@@ -489,7 +493,7 @@ module.exports = async function handler(req, res) {
 
   const apiKey = getEnvVar('RESEND_API_KEY') || getEnvVar('RESEND_KEY') || getEnvVar('RESEND_TOKEN') || getEnvVar('RESEND_API');
   if (!apiKey) {
-    console.error('[API Config Error] RESEND_API_KEY environment variable is not defined.');
+    console.error('[API Config Error] RESEND_API_KEY is not defined.');
     const response = { error: 'Email delivery service configuration is missing. Please set RESEND_API_KEY in environment and redeploy in Vercel.' };
     if (res.status) return res.status(500).json(response);
     res.writeHead(500, { 'Content-Type': 'application/json' });
