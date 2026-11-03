@@ -28,6 +28,20 @@ if (!process.env.RESEND_API_KEY) {
   }
 }
 
+// Flexible environment variable extractor (handles trailing whitespace, case differences, and quotes)
+function getEnvVar(targetKey) {
+  if (process.env[targetKey]) {
+    return String(process.env[targetKey]).trim().replace(/^["']|["']$/g, '');
+  }
+  const cleanTarget = targetKey.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  for (const [k, v] of Object.entries(process.env)) {
+    if (k.trim().toUpperCase().replace(/[^A-Z0-9]/g, '') === cleanTarget) {
+      if (typeof v === 'string') return v.trim().replace(/^["']|["']$/g, '');
+    }
+  }
+  return null;
+}
+
 // Fallback recipient configuration (overridable via CONTACT_TO_EMAILS)
 const DEFAULT_TO_EMAILS = ['abdullah@elevatebuilders.com.sa', 'arafat@elevatebuilders.com.sa'];
 const DEFAULT_FROM_EMAIL = 'Elevate Builders Inquiries <onboarding@resend.dev>';
@@ -473,19 +487,19 @@ module.exports = async function handler(req, res) {
     timestamp
   };
 
-  const apiKey = process.env.RESEND_API_KEY;
+  const apiKey = getEnvVar('RESEND_API_KEY') || getEnvVar('RESEND_KEY') || getEnvVar('RESEND_TOKEN') || getEnvVar('RESEND_API');
   if (!apiKey) {
     console.error('[API Config Error] RESEND_API_KEY environment variable is not defined.');
-    const response = { error: 'Email delivery service configuration is missing. Please set RESEND_API_KEY in environment.' };
+    const response = { error: 'Email delivery service configuration is missing. Please set RESEND_API_KEY in environment and redeploy in Vercel.' };
     if (res.status) return res.status(500).json(response);
     res.writeHead(500, { 'Content-Type': 'application/json' });
     return res.end(JSON.stringify(response));
   }
-  const toEmails = (process.env.CONTACT_TO_EMAILS || DEFAULT_TO_EMAILS.join(','))
+  const toEmails = (getEnvVar('CONTACT_TO_EMAILS') || getEnvVar('TO_EMAILS') || DEFAULT_TO_EMAILS.join(','))
     .split(',')
     .map(e => e.trim())
     .filter(Boolean);
-  const fromEmail = process.env.RESEND_FROM_EMAIL || DEFAULT_FROM_EMAIL;
+  const fromEmail = getEnvVar('RESEND_FROM_EMAIL') || getEnvVar('FROM_EMAIL') || DEFAULT_FROM_EMAIL;
 
   const subject = `New Tender Inquiry — ${templateData.fullName}${templateData.company ? ` (${templateData.company})` : ''} [Ref: ${referenceId}]`;
 
